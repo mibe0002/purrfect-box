@@ -3,6 +3,34 @@
 @tailwind utilities;
 
 @layer base {
+  /* fonts */
+  @font-face {
+    font-family: "montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonte/montserrat.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "dynapuff";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonte/dynapuff.woff2") format("woff2");
+  }
+
+  /* generelle styles */
+  html {
+    @apply font-montserrat;
+    @apply text-m-h1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-dynapuff;
+  }
+
   h1,
   h3,
   h4,
@@ -21,5 +49,12 @@
 
   footer {
     @apply bg-blue-200;
+  }
+
+  /* desktop styles */
+  @media (min-width: 768px) {
+    h1 {
+      @apply text-d-h1;
+    }
   }
 }

@@ -165,8 +165,8 @@ export default {
 
       /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
-        display: ["DynaPuff", "system - ui"] /* eksempel på ekstra font */,
+        montserrat: ["Montserrat", "sans-serif"],
+        dynapuff: ["DynaPuff", "serif"] /* eksempel på ekstra font */,
       },
 
       /* Tilføj dit typografiske hierarki herunder */
