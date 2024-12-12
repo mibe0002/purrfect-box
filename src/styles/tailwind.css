@@ -21,7 +21,26 @@
   /* generelle styles */
   html {
     @apply font-montserrat;
+  }
+
+  h1 {
     @apply text-m-h1;
+  }
+
+  h2 {
+    @apply text-m-h2;
+  }
+
+  h3 {
+    @apply text-m-h3;
+  }
+
+  h4 {
+    @apply text-m-h4;
+  }
+
+  body {
+    @apply text-m-body;
   }
 
   h1,
@@ -55,6 +74,22 @@
   @media (min-width: 768px) {
     h1 {
       @apply text-d-h1;
+    }
+
+    h2 {
+      @apply text-d-h2;
+    }
+
+    h3 {
+      @apply text-d-h3;
+    }
+
+    h4 {
+      @apply text-d-h4;
+    }
+
+    body {
+      @apply text-d-body;
     }
   }
 }
