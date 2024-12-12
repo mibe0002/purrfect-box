@@ -3,8 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  h1,
+  h3,
+  h4,
   p {
-    @apply text-base;
-    @apply text-neutral-900;
+    @apply text-blue-950;
+  }
+
+  h2 {
+    @apply text-blue-800;
+  }
+
+  header,
+  main {
+    @apply bg-blue-50;
+  }
+
+  footer {
+    @apply bg-blue-200;
   }
 }

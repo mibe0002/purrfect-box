@@ -127,6 +127,9 @@ export default {
           900: "#6E3915",
           950: "#401C08",
         },
+        trustpilot: {
+          trustpilot: "#00B67A",
+        },
       },
 
       /* Tilføj din egen spacing nedenfor */
