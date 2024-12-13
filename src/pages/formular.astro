@@ -6,76 +6,157 @@ import { Image } from 'astro:assets';
 // import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Purrfect Box">
-	<article>
-		<h1>Fomular</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<!-- <Image src={thumbsup} alt=""></Image> -->
-	</article>
+	
 
-    <section class="grid lg:grid-cols-[1fr_5fr] mx-m-sm lg:mx-d-3xl">
+    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl">
         <div class="bg-blue-200">
-            <h2>Basic box</h2>
+            <h2 class="">Basic box</h2>
         </div>
 
-        <div class="bg-blue-200">
-            <h3>Dine informationer</h3>
+        <div class="bg-blue-200 px-d-m">
+            <h3 class="mb-d-xs pt-d-m">Dine informationer</h3>
             <form class="">
             <div class="mb-5">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+                <label for="email" class=" mb-2 text-blue-950 ">Din email*</label>
+                <input type="email" id="email" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="navn@purrfect.com" required />
             </div>
             <div class="mb-5">
-                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+                <label for="password" class=" mb-2 text-blue-950 ">Dit password*</label>
+                <input type="password" id="password" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
             </div>
             <div class="mb-5">
-                <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
-                <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+                <label for="repeat-password" class=" mb-2 text-blue-950 ">Gentag password*</label>
+                <input type="password" id="repeat-password" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
             </div>
             </form>
 
-            <h3>Dine informationer</h3>
+            <h3 class="mb-d-xs pt-d-m">Fakturaadresse</h3>
             <form class="">
-                <div class="grid grid-cols-[1fr_1fr]">
+                <div class="grid lg:grid-cols-[1fr_1fr] gap-d-xs">
                     <div class="mb-5">
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
+                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                     <div class="mb-5">
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                        <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-[4fr_2fr_1fr]">
-                    <div class="mb-5">
-                        <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">password</label>
-                        <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">password</label>
-                        <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">password</label>
-                        <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
+                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                 </div>
 
-                 <div class="grid grid-cols-[1fr_1fr]">
+                <div class="grid lg:grid-cols-[4fr_2fr_1fr] gap-d-xs">
                     <div class="mb-5">
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+                        <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
+                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                     <div class="mb-5">
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                        <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+                        <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
+                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
+                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
                     </div>
                 </div>
 
+                 <div class="grid grid-cols-[1fr_1fr] gap-d-xs">
+                    <div class="mb-5">
+                        <label for="countries" class=" mb-2 text-gray-900 ">Select your country</label>
+                        <select id="countries" class="bg-blue-50 border  text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 ">
+
+                            <option>Danmark</option>
+                        </select>
+                    </div>
+                    <div class="mb-5">
+                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
+                        <input type="text" id="text" class="shadow-sm bg-blue-50 border text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                    </div>
+                </div>
             </form>
+
+            <h3 class="mb-d-xs pt-d-m">Levering</h3>
+            <fieldset>
+            <legend class="sr-only">Countries</legend>
+
+            <div class="flex items-center mb-4">
+                <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4  focus:ring-2 focus:ring-blue-300  " checked>
+                <label for="country-option-1" class="   text-gray-900 ">
+               Postnord
+                </label>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4  focus:ring-2 focus:ring-blue-300  ">
+                <label for="country-option-2" class="  text-gray-900 ">
+                GLS
+                </label>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4  focus:ring-2 focus:ring-blue-300">
+                <label for="country-option-3" class="  text-gray-900 ">
+                DAO
+                </label>
+            </div>
+
+            </fieldset>
+
+            <h3 class="mb-d-xs pt-d-m">Betaling</h3>
+            <form class="">
+                <div class="grid lg:grid-cols-[3fr_2fr_1fr] gap-d-xs">
+                    <div class="">
+              <label for="card-number-input" class=" text-gray-900 "> Card number* </label>
+              <input type="text" id="card-number-input" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
+            </div>
+
+            <div>
+              <label for="card-expiration-input" class=" text-gray-900 ">Card expiration* </label>
+              <div class="relative">
+                <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
+                  
+                </div>
+                <input datepicker-format="mm/yy" id="card-expiration-input" type="text" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 " placeholder="12/23" required />
+              </div>
+            </div>
+            <div>
+              <label for="cvv-input" class=" flex items-center gap-1 text-gray-900 ">
+                CVV*
+                <div id="cvv-desc" role="tooltip" class="tooltip invisible absolute z-10  rounded-lg bg-gray-900 px-3 py-2 text-white opacity-0 shadow-sm transition-opacity duration-300 ">
+                  The last 3 digits on back of card
+                </div>
+              </label>
+              <input type="number" id="cvv-input" max="999" aria-describedby="helper-text-explanation" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500" placeholder="•••" required />
+            </div>
+          </div>
+            </form>
+
+            <h3 class="mb-d-xs pt-d-m">Bekræft ordre</h3>
+            <fieldset>
+            <legend class="sr-only">Checkbox variants</legend>
+
+            <div class="flex items-center mb-4">
+                <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 " >
+                <label for="checkbox-1" class=" text-gray-900 ">Jeg accepterer <a href="#" class="text-blue-600 hover:underline ">handelsbetingelserne*</a>.</label>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 ">
+                <label for="checkbox-2" class=" text-gray-900 ">Tilmeld dig vores nyhedsbrev</label>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 ">
+                <label for="checkbox-3" class=" text-gray-900 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
+            </div>
+            </fieldset>
+             
+            <div class="flex justify-center">
+             <Button>Klik!</Button>
+             </div>
         </div>
+
+       
     </section>
 
+
+    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 </MainLayout>
