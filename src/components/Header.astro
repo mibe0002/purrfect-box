@@ -1,16 +1,68 @@
 ---
 import { Image } from 'astro:assets';
 import logo from "../assets/images/logo.svg";
+import catlogin from "../assets/images/login.svg";
+import cart from "../assets/images/cart.svg";
 import Link from './Link.astro';
-
+import Button from './Button.astro';
 ---
-<div>
+<div class="w-screen h-auto py-m-s lg:py-d-s px-m-sm lg:px-d-3xl flex flex-row items-center justify-between">
+    <!-- Logo og burger ikon for mobil -->
+    <div class="w-full flex flex-row items-center justify-between lg:hidden">
+        <Link href="/">
+            <Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="lg:hidden"></Image>
+        </Link>
+        <button id="menu-toggle" class="ml-m-5xl block lg:hidden focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Desktop links -->
     <div>
-        <ul class="w-full h-auto flex flex-row items-center gap-d-s">
-            <li><Link href="/"><Image src={logo} alt=""></Image></Link></li>
-            <li><Link href="#processen" variant="textlink" size="standard">Processen</Link></li>
-            <li><Link href="#faq">FAQ</Link></li>
-            <li><Link href="/about" variant="primary" size="small">Om os</Link></li>
+        <ul class="hidden flex-row items-center lg:flex lg:gap-d-s">
+            <li><Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="hidden lg:inline"></Image></Link></li>
+            <li><Link href="#processen" variant="primary" size="large">Processen</Link></li>
+            <li><Link href="#faq"  variant="primary" size="large">FAQ</Link></li>
+            <li><Link href="/about" variant="primary" size="large">Om os</Link></li>
         </ul>
     </div>
+
+    <!-- Purr Box Button og Cart for desktop -->
+    <div class="hidden lg:flex flex-row items-center gap-d-s">
+        <Button variant="primary" size="desktop">Purr Box</Button>
+        <div class="flex flex-row items-center">
+            <Image src={catlogin} alt="Kattehovede ikon ved login" loading="eager"></Image>
+            <p><Link href="/" variant="primary" size="large">Login</Link></p>
+        </div>
+        <Image src={cart} alt="Indkøbsvogn" loading="eager"></Image>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden lg:hidden flex-col gap-d-s w-full absolute top-full left-0 bg-white shadow-lg p-4">
+        <ul class="flex flex-col gap-4 items-start">
+            <li><Link href="#processen" variant="primary" size="standard">Processen</Link></li>
+            <li><Link href="#faq" variant="primary" size="standard">FAQ</Link></li>
+            <li><Link href="/about" variant="primary" size="standard">Om os</Link></li>
+        </ul>
+        <Button variant="primary" size="mobile">Purr Box</Button>
+        <div class="flex flex-row items-center mt-4">
+            <Image src={catlogin} alt="Kattehovede ikon ved login" loading="eager"></Image>
+            <p><Link href="/">Login</Link></p>
+        </div>
+        <Image src={cart} alt="Indkøbsvogn" loading="eager" class="mt-4"></Image>
+    </div>
 </div>
+
+<script>
+    document.getElementById('menu-toggle').onclick = () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+};
+
+window.onclick = (e) => {
+    if (!e.target.closest('#menu-toggle') && !e.target.closest('#mobile-menu')) {
+        document.getElementById('mobile-menu').classList.add('hidden');
+    }
+};
+</script>

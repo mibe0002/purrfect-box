@@ -98,8 +98,10 @@ export default {
       /* Tilføj dit typografiske hierarki herunder */
       fontSize: {
         "d-h1": ["4rem", { lineHeight: "2.5rem" }],
-        "d-h2": ["3rem", { lineHeight: "1.8rem" }],
-        "d-h3": ["2.7rem", { lineHeight: "1.3rem" }],
+        // "d-h2": ["3rem", { lineHeight: "1.8rem" }],
+        // "d-h3": ["2.7rem", { lineHeight: "1.3rem" }],
+        "d-h2": ["2.7rem", { lineHeight: "1.8rem" }],
+        "d-h3": ["1.8rem", { lineHeight: "1.3rem" }],
         "d-h4": ["1rem", { lineHeight: "1.6rem" }],
         "d-body": ["1rem", { lineHeight: "1.6rem" }],
         "d-body-sm": ["0.6rem", { lineHeight: "1.6rem" }],
