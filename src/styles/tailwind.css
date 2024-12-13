@@ -7,14 +7,14 @@
   @font-face {
     font-family: "montserrat";
     font-style: normal;
-    font-weight: 400;
+    /* font-weight: 400; */
     src: url("../fonte/montserrat.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "dynapuff";
     font-style: normal;
-    font-weight: 700;
+    /* font-weight: 700; */
     src: url("../fonte/dynapuff.woff2") format("woff2");
   }
 
