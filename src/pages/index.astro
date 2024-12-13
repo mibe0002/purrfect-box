@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
+import CardForside from "../components/CardForside.astro";
 import { Image } from "astro:assets";
 import herobillede from "../assets/images/forside_hero.jpg";
 import displaybox from "../assets/images/promo2.jpg";
@@ -34,7 +34,7 @@ import kat1 from "../assets/images/forside_kat.svg";
       </div>
     </div>
   </article>
-  <article class="lg:px-d-5xl">
+  <article class="lg:mx-d-5xl">
     <h2 class="font-bold pt-d-m pb-d-s">
       Alt din kat har brug for - leveret direkte til døren
     </h2>
@@ -102,7 +102,7 @@ import kat1 from "../assets/images/forside_kat.svg";
           </p>
         </div>
       </div>
-      <div class="rounded-default">
+      <div class="">
         <Image
           class="rounded-default py-d-s"
           src={displaybox}
@@ -200,24 +200,67 @@ import kat1 from "../assets/images/forside_kat.svg";
       </div>
     </div>
   </article>
-
-  <style>
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .brands {
-      display: flex;
-      width: max-content; /* Tilpasser bredden til indholdet */
-    }
-
-    .animate-scroll {
-      animation: scroll 20s linear infinite;
-    }
-  </style>
+  <article class="mx-d-ml">
+    <h2 class="font-bold pt-d-lg pb-d-sm">
+      Hvilken Purr Box skal din kat have?
+    </h2>
+    <div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr] gap-sm px-3xl">
+      <CardForside
+        cardimage="../img/basicbox2.jpg"
+        cardimagealt="Et billede af vores Basic Box med beige baggrund"
+        navn="Basic Box"
+        pris="119 DKK/MD"
+        punkt1="5 produkter i denne boks"
+        punkt2="Vælg dine egne brands"
+        punkt3="Opsig når som helst"
+      />
+      <CardForside
+        cardimage="../img/deluxe2.jpg"
+        cardimagealt="Et billede af vores Basic Box med beige baggrund"
+        navn="Premium Box"
+        pris="149 DKK/MD"
+        punkt1="7 produkter i denne boks"
+        punkt2="Vælg dine egne brands"
+        punkt3="Opsig når som helst"
+      />
+      <CardForside
+        cardimage="../img/premium2.jpg"
+        cardimagealt="Et billede af vores Basic Box med beige baggrund"
+        navn="Deluxe Box"
+        pris="199 DKK/MD"
+        punkt1="9 produkter i denne boks"
+        punkt2="Vælg dine egne brands"
+        punkt3="Opsig når som helst"
+      />
+      <CardForside
+        cardimage="../img/custom2.jpg"
+        cardimagealt="Et billede af vores Basic Box med beige baggrund"
+        navn="Custom Box"
+        pris="299 DKK/MD"
+        punkt1="Vælg op til 14 produkter"
+        punkt2="Vælg dine egne brands"
+        punkt3="Opsig når som helst"
+      />
+    </div>
+  </article>
+  <article class="pt-d-lg"></article>
 </MainLayout>
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .brands {
+    display: flex;
+    width: max-content; /* Tilpasser bredden til indholdet */
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+</style>
