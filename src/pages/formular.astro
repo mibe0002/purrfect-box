@@ -6,20 +6,15 @@ import { Image } from 'astro:assets';
 // import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Purrfect Box">
-	<article>
-		<h1>Fomular</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<!-- <Image src={thumbsup} alt=""></Image> -->
-	</article>
+	
 
-    <section class="grid lg:grid-cols-[1fr_5fr] mx-m-sm lg:mx-d-3xl">
+    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl">
         <div class="bg-blue-200">
             <h2 class="">Basic box</h2>
         </div>
 
-        <div class="bg-blue-200">
-            <h3 class="">Dine informationer</h3>
+        <div class="bg-blue-200 px-d-m">
+            <h3 class="mb-d-xs pt-d-m">Dine informationer</h3>
             <form class="">
             <div class="mb-5">
                 <label for="email" class=" mb-2 text-blue-950 ">Din email*</label>
@@ -35,12 +30,12 @@ import { Image } from 'astro:assets';
             </div>
             </form>
 
-            <h3>Dine informationer</h3>
+            <h3 class="mb-d-xs pt-d-m">Fakturaadresse</h3>
             <form class="">
-                <div class="grid lg:grid-cols-[1fr_1fr]">
+                <div class="grid lg:grid-cols-[1fr_1fr] gap-d-xs">
                     <div class="mb-5">
-                        <label for="email" class=" mb-2 text-blue-950 ">Your email</label>
-                        <input type="email" id="email" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="name@flowbite.com" required />
+                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
+                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                     <div class="mb-5">
                         <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
@@ -48,7 +43,7 @@ import { Image } from 'astro:assets';
                     </div>
                 </div>
 
-                <div class="grid lg:grid-cols-[4fr_2fr_1fr]">
+                <div class="grid lg:grid-cols-[4fr_2fr_1fr] gap-d-xs">
                     <div class="mb-5">
                         <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
                         <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
@@ -63,7 +58,7 @@ import { Image } from 'astro:assets';
                     </div>
                 </div>
 
-                 <div class="grid grid-cols-[1fr_1fr]">
+                 <div class="grid grid-cols-[1fr_1fr] gap-d-xs">
                     <div class="mb-5">
                         <label for="countries" class=" mb-2 text-gray-900 ">Select your country</label>
                         <select id="countries" class="bg-blue-50 border  text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 ">
@@ -78,6 +73,7 @@ import { Image } from 'astro:assets';
                 </div>
             </form>
 
+            <h3 class="mb-d-xs pt-d-m">Levering</h3>
             <fieldset>
             <legend class="sr-only">Countries</legend>
 
@@ -104,8 +100,9 @@ import { Image } from 'astro:assets';
 
             </fieldset>
 
+            <h3 class="mb-d-xs pt-d-m">Betaling</h3>
             <form class="">
-                <div class="grid lg:grid-cols-[4fr_2fr_1fr]">
+                <div class="grid lg:grid-cols-[3fr_2fr_1fr] gap-d-xs">
                     <div class="">
               <label for="card-number-input" class=" text-gray-900 "> Card number* </label>
               <input type="text" id="card-number-input" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
@@ -132,6 +129,7 @@ import { Image } from 'astro:assets';
           </div>
             </form>
 
+            <h3 class="mb-d-xs pt-d-m">Bekræft ordre</h3>
             <fieldset>
             <legend class="sr-only">Checkbox variants</legend>
 
@@ -150,9 +148,15 @@ import { Image } from 'astro:assets';
                 <label for="checkbox-3" class=" text-gray-900 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
             </div>
             </fieldset>
-
+             
+            <div class="flex justify-center">
+             <Button>Klik!</Button>
+             </div>
         </div>
+
+       
     </section>
 
 
+    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 </MainLayout>
