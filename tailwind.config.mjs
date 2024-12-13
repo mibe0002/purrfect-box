@@ -68,6 +68,7 @@ export default {
         "d-lg": "64px",
         "d-xl": "80px",
         "d-2xl": "96px",
+        // margin sider
         "d-3xl": "104px",
         "d-4xl": "112px",
         "d-5xl": "128px",
@@ -76,6 +77,7 @@ export default {
         "m-xxs": "4px",
         "m-xs": "8px",
         "m-s": "16px",
+        // margin sider
         "m-sm": "24px",
         "m-m": "32px",
         "m-ml": "40px",
