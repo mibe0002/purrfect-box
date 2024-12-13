@@ -1,12 +1,16 @@
 ---
+import { Image } from 'astro:assets';
+import logo from "../assets/images/logo.svg";
+import Link from './Link.astro';
+
 ---
 <div>
-Header - tilføj navigation mm.
-
-<ul class="menu pb-[80px]">
-        <li><a href="/">forside</a></li>
-        <li><a href="/productlist">productlist</a></li>
-        <li><a href="/formular">form</a></li>
-        <li><a href="/about">om os</a></li>
-    </ul>
+    <div>
+        <ul class="w-full h-auto flex flex-row items-center gap-d-s">
+            <li><Link href="/"><Image src={logo} alt=""></Image></Link></li>
+            <li><Link href="#processen" variant="textlink" size="standard">Processen</Link></li>
+            <li><Link href="#faq">FAQ</Link></li>
+            <li><Link href="/about" variant="secondary" size="small">Om os</Link></li>
+        </ul>
+    </div>
 </div>
