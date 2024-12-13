@@ -19,10 +19,6 @@
   }
 
   /* generelle styles */
-  html {
-    @apply font-montserrat;
-  }
-
   h1 {
     @apply text-m-h1;
   }
@@ -62,8 +58,9 @@
   }
 
   header,
-  main {
+  body {
     @apply bg-blue-50;
+    @apply font-montserrat;
   }
 
   footer {
