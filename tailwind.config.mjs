@@ -127,8 +127,8 @@ export default {
 
       /* Border radius størrelser herunder */
       borderRadius: {
-        default: "0.9rem",
-        knapper: "0.6rem",
+        default: "1.6rem",
+        knapper: "0.9rem",
         none: "0px",
       },
 
