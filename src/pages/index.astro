@@ -4,7 +4,16 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import herobillede from "../assets/images/forside_hero.jpg";
-// import thumbsup from "../assets/images/thumbsup.png";
+import displaybox from "../assets/images/promo2.jpg";
+import pote from "../assets/images/paw.svg";
+import royal from "../assets/images/brand_royal.svg";
+import hills1 from "../assets/images/brand_hills.svg";
+import cosma from "../assets/images/brand_cosma.svg";
+import purina from "../assets/images/brand_purina.svg";
+import feringa from "../assets/images/brand_feringa.svg";
+import hills2 from "../assets/images/brand_hills2.svg";
+import concept from "../assets/images/brand_concept.svg";
+import kat1 from "../assets/images/forside_kat.svg";
 ---
 
 <MainLayout title="Purrfect Box">
@@ -15,10 +24,200 @@ import herobillede from "../assets/images/forside_hero.jpg";
         src={herobillede}
         alt="Billede der viser en orange kat ved siden af en Purrfect Box"
       />
-      <div class="absolute inset-0 flex items-center justify-center">
-        <h1 class="">Purrfect Box</h1>
+      <h1
+        class="font-bold flex absolute inset-0 bottom-60 items-center justify-center"
+      >
+        Purrfect Box
+      </h1>
+      <div class="absolute inset-0 bottom-20 flex items-center justify-center">
         <Button variant="primary" size="desktop">Køb din PurrBox nu</Button>
       </div>
     </div>
   </article>
+  <article class="lg:px-d-5xl">
+    <h2 class="font-bold pt-d-m pb-d-s">
+      Alt din kat har brug for - leveret direkte til døren
+    </h2>
+    <div class="lg:grid grid-cols-2">
+      <div class="pr-d-m">
+        <h3 class="font-bold py-d-s">Hvorfor PurrBox?</h3>
+        <p class="pb-d-s">
+          Vores abonnement til katteejere gør det nemt at tage sig af din kat.
+          Hver måned får du de vigtigste produkter som tørfoder, vådfoder,
+          kattegrus og andre uundværlige ting. Spar tid, undgå besværet, og
+          forkæl din kat med alt, den elsker – uden at løfte en pote!
+        </p>
+        <div class="pb-d-xs flex flex-row gap-1">
+          <Image
+            class=""
+            src={pote}
+            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+          />
+          <p>
+            <span class="font-bold">Leveret til døren</span> – Ingen tunge løft.
+          </p>
+        </div>
+        <div class="pb-d-xs flex flex-row gap-1">
+          <Image
+            class=""
+            src={pote}
+            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+          />
+          <p>
+            <span class="font-bold">Altid på lager</span> – Slut med at løbe tør
+            for nødvendigheder.
+          </p>
+        </div>
+        <div class="pb-d-xs flex flex-row gap-1">
+          <Image
+            class=""
+            src={pote}
+            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+          />
+          <p>
+            <span class="font-bold">Fleksibelt</span> – Juster, pause, stop når som
+            helst.
+          </p>
+        </div>
+        <div class="pb-d-xs flex flex-row gap-1">
+          <Image
+            class=""
+            src={pote}
+            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+          />
+          <p>
+            <span class="font-bold">Tilpasset din kat</span> – Produkter din kat
+            elsker.
+          </p>
+        </div>
+        <div class="pb-d-xs flex flex-row gap-1">
+          <Image
+            class=""
+            src={pote}
+            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+          />
+          <p>
+            <span class="font-bold">Høj kvalitet</span> – Kun det bedste for din
+            kat.
+          </p>
+        </div>
+      </div>
+      <div class="rounded-default">
+        <Image
+          class="rounded-default py-d-s"
+          src={displaybox}
+          alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+        />
+      </div>
+    </div>
+  </article>
+  <article>
+    <div class="mt-d-lg">
+      <div class="relative flex flex-row-reverse">
+        <Image
+          class=""
+          src={kat1}
+          alt="En blå kat der sidder ovenpå banneret med brands og stirrer på brugeren"
+        />
+      </div>
+      <div
+        class="rullende_brands bg-yellow-200 relative w-full h-auto overflow-hidden z-30 py-d-xs"
+      >
+        <div
+          class="brands flex items-center gap-[55px] w-[calc(200%)] h-auto animate-scroll"
+        >
+          <Image
+            class="w-[120px] mr-m-lg"
+            src={royal}
+            alt="Brand logo af Royal Canin for katte"
+          />
+          <Image
+            class="w-[70px] mr-m-lg"
+            src={hills1}
+            alt="Brand logo af Hills for katte"
+          />
+          <Image
+            class="w-[70px] mr-m-lg"
+            src={cosma}
+            alt="Brand logo af Cosma for katte"
+          />
+          <Image
+            class="w-[120px] mr-m-lg"
+            src={purina}
+            alt="Brand logo af Purina for katte"
+          />
+          <Image
+            class="w-[90px] mr-m-lg"
+            src={feringa}
+            alt="Brand logo af Feringa for katte"
+          />
+          <Image
+            class="w-[100px] mr-m-lg"
+            src={hills2}
+            alt="Brand logo af Hills Prescription Diet for katte"
+          />
+          <Image
+            class="w-[90px] mr-m-lg"
+            src={concept}
+            alt="Brand logo af Concept For Life for katte"
+          />
+          <Image
+            class="w-[120px] mr-m-lg"
+            src={royal}
+            alt="Brand logo af Royal Canin for katte"
+          />
+          <Image
+            class="w-[70px] mr-m-lg"
+            src={hills1}
+            alt="Brand logo af Hills for katte"
+          />
+          <Image
+            class="w-[70px] mr-m-lg"
+            src={cosma}
+            alt="Brand logo af Cosma for katte"
+          />
+          <Image
+            class="w-[120px] mr-m-lg"
+            src={purina}
+            alt="Brand logo af Purina for katte"
+          />
+          <Image
+            class="w-[90px] mr-m-lg"
+            src={feringa}
+            alt="Brand logo af Feringa for katte"
+          />
+          <Image
+            class="w-[100px] mr-m-lg"
+            src={hills2}
+            alt="Brand logo af Hills Prescription Diet for katte"
+          />
+          <Image
+            class="w-[90px] mr-m-lg"
+            src={concept}
+            alt="Brand logo af Concept For Life for katte"
+          />
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <style>
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .brands {
+      display: flex;
+      width: max-content; /* Tilpasser bredden til indholdet */
+    }
+
+    .animate-scroll {
+      animation: scroll 20s linear infinite;
+    }
+  </style>
 </MainLayout>
