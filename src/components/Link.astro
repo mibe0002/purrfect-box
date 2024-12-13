@@ -1,5 +1,29 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href="#", target="_self", variant="textlink", size="standard"} = Astro.props;
+
+//Alle knapper
+const linkStyling = "transition-colors duration-500 no-underline text-black"; 
+
+//Forskellige knapper (farver o.lign.)
+const variantClasses = {
+"textlink":"hover:underline",
+"primary": "bg-pink-200 hover:bg-pink-100 hover:text-grey-700 rounded-full",
+// "secondary": "uppercase hover:underline underline-offset-8 decoration-pink-900 decoration-2"
+"secondary": "relative transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-pink-900 before:origin-center before:h-[2px] before:w-0 hover:underline-offset-2 hover:before:w-[30%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-pink-900 after:origin-center after:h-[2px] after:w-0 hover:after:w-[30%] after:bottom-0 after:right-[50%]"
+// Animation fra: https://tailwindflex.com/@cagarcia2011/underline-hover-effect af Carlos Adrian Garcia
+};
+
+//Forskellige størrelser
+const sizeClasses = {
+"large": "px-12 py-6 text-lg",
+"medium": "px-10 py-4 text-base",
+"small": "px-8 py-2 text-sm",
+"standard":""
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<!-- <link class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></link> -->
+
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant],
+sizeClasses[size]]}><slot /></a>
