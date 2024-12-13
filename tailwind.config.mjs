@@ -68,9 +68,9 @@ export default {
         "d-lg": "64px",
         "d-xl": "80px",
         "d-2xl": "96px",
-        "d-3xl": "112px",
-        "d-4xl": "128px",
-        "d-5xl": "112px",
+        "d-3xl": "104px",
+        "d-4xl": "112px",
+        "d-5xl": "128px",
 
         // mobil
         "m-xxs": "4px",
