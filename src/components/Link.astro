@@ -3,22 +3,22 @@
 const { href="#", target="_self", variant="textlink", size="standard"} = Astro.props;
 
 //Alle knapper
-const linkStyling = "transition-colors duration-500 no-underline text-blue-950 font-medium font-dynapuff"; 
+const linkStyling = "transition-colors duration-500 no-underline text-blue-950 font-bold font-dynapuff"; 
 
 //Forskellige knapper (farver o.lign.)
 const variantClasses = {
 // "textlink":"hover:underline",
 // "other setting": "bg-pink-200 hover:bg-pink-100 hover:text-grey-700 rounded-full",
-"primary": "relative transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gradient-to-r from-yellow-200 before:origin-center before:h-[2px] before:w-0 hover:underline-offset-2 hover:before:w-[30%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-pink-900 after:origin-center after:h-[2px] after:w-0 hover:after:w-[30%] after:bottom-0 after:right-[50%]"
+"primary": "relative transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gradient-to-r from-yellow-800 before:origin-center before:h-[2px] before:w-0 hover:underline-offset-2 hover:before:w-[30%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gradient-to-l from-yellow-800 after:origin-center after:h-[2px] after:w-0 hover:after:w-[30%] after:bottom-0 after:right-[50%]"
 // Animation fra: https://tailwindflex.com/@cagarcia2011/underline-hover-effect af Carlos Adrian Garcia
 };
 
 //Forskellige størrelser
 const sizeClasses = {
-"large": "px-12 py-6 text-lg",
-"medium": "px-10 py-4 text-base",
-"small": "px-8 py-2 text-sm",
-"standard":""
+// "medium": "px-10 py-4 text-base",
+// "small": "px-8 py-2 text-sm",
+"standard":"text-m-h3 px-[16px] py-[10px]",
+"large": "text-d-h3 px-[24px] py-[6px]",
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
