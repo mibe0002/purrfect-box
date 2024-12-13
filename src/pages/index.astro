@@ -1,15 +1,24 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import herobillede from "../assets/images/forside_hero.jpg";
 // import thumbsup from "../assets/images/thumbsup.png";
 ---
+
 <MainLayout title="Purrfect Box">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<!-- <Image src={thumbsup} alt=""></Image> -->
-	</article>
+  <article>
+    <div class="">
+      <Image
+        class=""
+        src={herobillede}
+        alt="Billede der viser en orange kat ved siden af en Purrfect Box"
+      />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="">Purrfect Box</h1>
+        <Button variant="primary" size="desktop">Køb din PurrBox nu</Button>
+      </div>
+    </div>
+  </article>
 </MainLayout>
