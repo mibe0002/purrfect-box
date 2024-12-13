@@ -7,145 +7,139 @@ import { Image } from 'astro:assets';
 ---
 <MainLayout title="Purrfect Box">
 	
-
+<div class="gradient">
     <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl">
         <div class="bg-blue-200">
-            <h2 class="">Basic box</h2>
+            <h2 class="font-bold">Basic box</h2>
         </div>
 
         <div class="bg-blue-200 px-d-m">
-            <h3 class="mb-d-xs pt-d-m">Dine informationer</h3>
+            <h3 class="mb-d-xs pt-d-m font-bold">Dine informationer</h3>
             <form class="">
             <div class="mb-5">
-                <label for="email" class=" mb-2 text-blue-950 ">Din email*</label>
-                <input type="email" id="email" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="navn@purrfect.com" required />
+                <label for="email" class=" mb-2 text-blue-800 ">Din email*</label>
+                <input type="email" id="email" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="navn@purrfect.com" required />
             </div>
             <div class="mb-5">
-                <label for="password" class=" mb-2 text-blue-950 ">Dit password*</label>
-                <input type="password" id="password" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                <label for="password" class=" mb-2 text-blue-800 ">Dit password*</label>
+                <input type="password" id="password" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
             </div>
             <div class="mb-5">
-                <label for="repeat-password" class=" mb-2 text-blue-950 ">Gentag password*</label>
-                <input type="password" id="repeat-password" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                <label for="repeat-password" class=" mb-2 text-blue-800 ">Gentag password*</label>
+                <input type="password" id="repeat-password" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
             </div>
             </form>
 
-            <h3 class="mb-d-xs pt-d-m">Fakturaadresse</h3>
+            <h3 class="mb-d-xs pt-d-m font-bold	">Fakturaadresse</h3>
             <form class="">
                 <div class="grid lg:grid-cols-[1fr_1fr] gap-d-xs">
                     <div class="mb-5">
-                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
-                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <label for="text" class=" mb-2 text-blue-800 ">Fornavn*</label>
+                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                     <div class="mb-5">
-                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
-                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <label for="text" class=" mb-2 text-blue-800 ">Efternavn*</label>
+                        <input type="text" id="text" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                 </div>
 
                 <div class="grid lg:grid-cols-[4fr_2fr_1fr] gap-d-xs">
                     <div class="mb-5">
-                        <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
-                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <label for="repeat-text" class=" mb-2 text-blue-800 ">Adresse*</label>
+                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                     <div class="mb-5">
-                        <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
-                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                        <label for="repeat-text" class=" mb-2 text-blue-800 ">By*</label>
+                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
                     </div>
                     <div class="mb-5">
-                        <label for="repeat-text" class=" mb-2 text-blue-950 ">text</label>
-                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                        <label for="repeat-text" class=" mb-2 text-blue-800 ">Postnummer*</label>
+                        <input type="text" id="repeat-text" class="shadow-sm bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
                     </div>
                 </div>
 
                  <div class="grid grid-cols-[1fr_1fr] gap-d-xs">
                     <div class="mb-5">
-                        <label for="countries" class=" mb-2 text-gray-900 ">Select your country</label>
-                        <select id="countries" class="bg-blue-50 border  text-gray-900 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 ">
+                        <label for="countries" class=" mb-2 text-blue-800 ">Land*</label>
+                        <select id="countries" class="bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 ">
 
                             <option>Danmark</option>
                         </select>
                     </div>
                     <div class="mb-5">
-                        <label for="text" class=" mb-2 text-blue-950 ">Your text</label>
-                        <input type="text" id="text" class="shadow-sm bg-blue-50 border text-blue-950 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <label for="text" class=" mb-2 text-blue-800 ">Telefonummer*</label>
+                        <input type="number" id="text" class="shadow-sm bg-blue-50 border text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
                     </div>
                 </div>
             </form>
 
-            <h3 class="mb-d-xs pt-d-m">Levering</h3>
+            <h3 class="mb-d-xs pt-d-m font-bold	">Levering</h3>
             <fieldset>
             <legend class="sr-only">Countries</legend>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4  focus:ring-2 focus:ring-blue-300  " checked>
-                <label for="country-option-1" class="   text-gray-900 ">
+                <label for="country-option-1" class="   text-blue-800 ">
                Postnord
                 </label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4  focus:ring-2 focus:ring-blue-300  ">
-                <label for="country-option-2" class="  text-gray-900 ">
+                <label for="country-option-2" class="  text-blue-800 ">
                 GLS
                 </label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4  focus:ring-2 focus:ring-blue-300">
-                <label for="country-option-3" class="  text-gray-900 ">
+                <label for="country-option-3" class="  text-blue-800 ">
                 DAO
                 </label>
             </div>
 
             </fieldset>
 
-            <h3 class="mb-d-xs pt-d-m">Betaling</h3>
-            <form class="">
+            <h3 class="mb-d-xs pt-d-m font-bold	">Betaling</h3>
+            <form class="pb-d-m">
                 <div class="grid lg:grid-cols-[3fr_2fr_1fr] gap-d-xs">
                     <div class="">
-              <label for="card-number-input" class=" text-gray-900 "> Card number* </label>
-              <input type="text" id="card-number-input" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
+              <label for="card-number-input" class=" text-blue-800 "> Kredit eller debit kort nummer** </label>
+              <input type="text" id="card-number-input" class=" w-full rounded-lg border border-blue-300 bg-blue-50 p-2.5 pe-10 text-sm text-blue-800 focus:border-primary-500 focus:ring-primary-500" placeholder="xxxx-xxxx-xxxx-xxxx" required />
             </div>
 
             <div>
-              <label for="card-expiration-input" class=" text-gray-900 ">Card expiration* </label>
+              <label for="card-expiration-input" class=" text-blue-800 ">MM/ÅÅ* </label>
               <div class="relative">
-                <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
-                  
-                </div>
-                <input datepicker-format="mm/yy" id="card-expiration-input" type="text" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 " placeholder="12/23" required />
+                <input datepicker-format="mm/yy" id="card-expiration-input" type="text" class=" w-full rounded-lg border border-blue-300 bg-blue-50 p-2.5 ps-9 text-sm text-blue-800 focus:border-blue-500 focus:ring-blue-500 " placeholder="01/25" required />
               </div>
             </div>
             <div>
-              <label for="cvv-input" class=" flex items-center gap-1 text-gray-900 ">
+              <label for="cvv-input" class=" flex items-center gap-1 text-blue-800 ">
                 CVV*
-                <div id="cvv-desc" role="tooltip" class="tooltip invisible absolute z-10  rounded-lg bg-gray-900 px-3 py-2 text-white opacity-0 shadow-sm transition-opacity duration-300 ">
-                  The last 3 digits on back of card
-                </div>
               </label>
-              <input type="number" id="cvv-input" max="999" aria-describedby="helper-text-explanation" class=" w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500" placeholder="•••" required />
+              <input type="number" id="cvv-input" max="999" aria-describedby="helper-text-explanation" class=" w-full rounded-lg border border-blue-300 bg-blue-50 p-2.5 text-sm text-blue-800 focus:border-primary-500 focus:ring-primary-500" placeholder="•••" required />
             </div>
           </div>
             </form>
 
-            <h3 class="mb-d-xs pt-d-m">Bekræft ordre</h3>
+            <h3 class="mb-d-xs pt-d-xs font-bold	">Bekræft ordre</h3>
             <fieldset>
             <legend class="sr-only">Checkbox variants</legend>
 
             <div class="flex items-center mb-4">
                 <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 " >
-                <label for="checkbox-1" class=" text-gray-900 ">Jeg accepterer <a href="#" class="text-blue-600 hover:underline ">handelsbetingelserne*</a>.</label>
+                <label for="checkbox-1" class=" text-blue-800 ">Jeg accepterer <a href="#" class="text-blue-600 hover:underline ">handelsbetingelserne*</a>.</label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 ">
-                <label for="checkbox-2" class=" text-gray-900 ">Tilmeld dig vores nyhedsbrev</label>
+                <label for="checkbox-2" class=" text-blue-800 ">Tilmeld dig vores nyhedsbrev</label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 ">
-                <label for="checkbox-3" class=" text-gray-900 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
+                <label for="checkbox-3" class=" text-blue-800 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
             </div>
             </fieldset>
              
@@ -159,4 +153,27 @@ import { Image } from 'astro:assets';
 
 
     <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+
+
+    </div>
 </MainLayout>
+
+<style>
+    .gradient {
+	background: linear-gradient(-45deg, #f0f9ff, #fce7eb, #dff2ff, #fbf0b2, #f0f9ff, #fce7eb, #dff2ff, #fbf0b2);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
