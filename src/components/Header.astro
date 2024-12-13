@@ -10,10 +10,10 @@ import Button from './Button.astro';
     <!-- Logo og burger ikon for mobil -->
     <div class="w-full flex flex-row items-center justify-between lg:hidden">
         <Link href="/">
-            <Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="lg:hidden"></Image>
+            <Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="hover:opacity-90 hover:scale-105 transition-all duration-300 lg:hidden"></Image>
         </Link>
         <button id="menu-toggle" class="ml-m-5xl block lg:hidden focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgb(6 47 75 / 1)">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
@@ -22,21 +22,23 @@ import Button from './Button.astro';
     <!-- Desktop links -->
     <div>
         <ul class="hidden flex-row items-center lg:flex lg:gap-d-s">
-            <li><Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="hidden lg:inline"></Image></Link></li>
-            <li><Link href="#processen" variant="primary" size="large">Processen</Link></li>
-            <li><Link href="#faq"  variant="primary" size="large">FAQ</Link></li>
-            <li><Link href="/about" variant="primary" size="large">Om os</Link></li>
+            <li class="md:w-1/2"><Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="hidden lg:inline hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></Link></li>
+            <li class="md:w-fit"><Link href="#processen" variant="primary" size="large">Processen</Link></li>
+            <li class="md:w-fit"><Link href="#faq"  variant="primary" size="large">FAQ</Link></li>
+            <li class="md:w-full"><Link href="/about" variant="primary" size="large">Om os</Link></li>
         </ul>
     </div>
 
     <!-- Purr Box Button og Cart for desktop -->
     <div class="hidden lg:flex flex-row items-center gap-d-s">
-        <Button variant="primary" size="desktop">Purr Box</Button>
-        <div class="flex flex-row items-center">
-            <Image src={catlogin} alt="Kattehovede ikon ved login" loading="eager"></Image>
-            <p><Link href="/" variant="primary" size="large">Login</Link></p>
+        <Button variant="primary" size="desktop"><span class="text-nowrap">Purr Box</span></Button>
+        <div class="flex items-center group">
+        <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="transition-transform duration-300"></Image>
+        <Link href="/" variant="primary" size="standard" class="group">
+            Login
+        </Link>
         </div>
-        <Image src={cart} alt="Indkøbsvogn" loading="eager"></Image>
+        <a href="/formular"><Image src={cart} alt="Indkøbsvogn" loading="eager" class="hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></a>
     </div>
 
     <!-- Mobile Menu (hidden by default) -->
@@ -54,6 +56,8 @@ import Button from './Button.astro';
         <Image src={cart} alt="Indkøbsvogn" loading="eager" class="mt-4"></Image>
     </div>
 </div>
+
+
 
 <script>
     document.getElementById('menu-toggle').onclick = () => {

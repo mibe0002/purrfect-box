@@ -169,4 +169,10 @@
       transform: scale3d(1, 1, 1);
     }
   }
+
+  /* hover login */
+  /* Tailwind CSS to make the icon rotate on hover */
+  .group:hover #cat-login-icon {
+    transform: rotate(14deg);
+  }
 }
