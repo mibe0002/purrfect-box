@@ -8,72 +8,115 @@ import pin from "../assets/images/pin.svg";
 import yt from "../assets/images/yt.svg";
 import twitter from "../assets/images/twitter.svg";
 import fb from "../assets/images/fb.svg";
+import mp from "../assets/images/mobilepay.svg";
+import dk from "../assets/images/dankort.svg";
+import v from "../assets/images/visa.svg";
+import mc from "../assets/images/mastercard.svg";
+import em from "../assets/images/e-merket.svg";
 
 import Button from './Button.astro';
+import Link from './Link.astro';
 ---
-<div class="px-m-sm py-m-ml text-blue-950">
-    <div>
-        <h1 class="font-bold pb-m-sm">Purrfect Box</h1>
+<div class="w-screen h-fit relative px-m-sm py-m-ml text-blue-950 md:px-d-3xl md:pt-d-m md:pb-d-lg md:flex md:gap-d-m md:items-start md:justify-between">
+    <div class="md:order-2 md:w-fit">
+        <h3 class="font-bold pb-m-sm md:pb-d-m">Purrfect Box</h3>
 
         <ul class="pb-m-s">
-            <li>Processen</li>
-            <li>FAQ</li>
-            <li>Om os</li>
-            <li>Purr Boxes</li>
+            <li class="pb-m-xs md:pb-d-s md:hidden"><Link href="#processen" variant="secondary" size="smallm">Processen</Link></li>
+            <li class="pb-m-xs md:pb-d-s hidden md:block"><Link href="#processen" variant="secondary" size="smalld">Processen</Link></li>
+            <li class="pb-m-xs md:pb-d-s md:hidden"><Link href="#processen" variant="secondary" size="smallm">FAQ</Link></li>
+            <li class="pb-m-xs md:pb-d-s hidden md:block"><Link href="#processen" variant="secondary" size="smalld">FAQ</Link></li>
+            <li class="pb-m-xs md:pb-d-s md:hidden"><Link href="#processen" variant="secondary" size="smallm">Om os</Link></li>
+            <li class="pb-m-xs md:pb-d-s hidden md:block"><Link href="#processen" variant="secondary" size="smalld">Om os</Link></li>
+            <li class="pb-m-xs md:pb-d-s md:hidden"><Link href="#processen" variant="secondary" size="smallm">Purr Boxes</Link></li>
+            <li class="pb-m-xs md:pb-d-s hidden md:block"><Link href="#processen" variant="secondary" size="smalld">Purr Boxes</Link></li>
         </ul>
     </div>
 
-    <div class="pb-m-ml">
-        <h1 class="font-bold pb-m-sm">10% fra din første ordre</h1>
+    <div class="pb-m-ml md:order-1 md:w-fit">
+        <h3 class="font-bold pb-m-sm md:pb-d-m">10% fra din første ordre</h3>
 
         <div>
-        <p class="pb-m-xs">Tilmeld dig og få luskede forhåndsvisninger, hints og særlige rabatter!</p>
+        <p class="pb-m-xs md:pb-d-xs">Tilmeld dig og få luskede forhåndsvisninger,<br>hints og særlige rabatter!</p>
 
-        <form action="/subscribe" method="post" data-netlify="true" class="pb-m-m">
-            <div class="flex gap-m-xs">
+        <form action="/subscribe" method="post" data-netlify="true" class="pb-m-m md:pb-d-lg">
+            <div class="flex gap-m-xs md:gap-d-xxs md:w-fit">
                 <label for="email" class="pb-m-xs"></label>
                 <input id="email" name="email" placeholder="Email-adresse" type="email" autocomplete="email" required
-                class="block w-full rounded-default shadow-drop10 bg-blue-50 border text-blue-800 text-sm focus:ring-blue-500 focus:border-blue-500 p-2.5 placeholder-blue-800">
+                class="block w-full md:w-[267px] rounded-default shadow-drop10 bg-blue-50 border text-blue-800 text-sm focus:ring-blue-500 focus:border-blue-500 p-2.5 placeholder-blue-800">
 
-                <Button><input type="submit" value="Send"></Button>
+
+                <span class="hidden md:block"><Button variant="primary" size="desktop"><input type="submit" value="Send"></Button></span>
+                <span class="md:hidden flex"><Button variant="primary" size="mobile"><input type="submit" value="Send"></Button></span>
             </div>
         </form>
         
-        <Image src={trustpilot} alt="Trustpilot" loading="lazy" class="w-60 active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
+        <Image src={trustpilot} alt="Trustpilot" loading="lazy" class="w-60 md:w-64 md:hover:-rotate-12 md:hover:scale-105 active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
         </div>
     </div>
 
-    <div>
-        <h1 class="font-bold pb-m-sm">Følg os</h1>
+    <div class="md:order-3 md:w-fit">
+        <h3 class="font-bold pb-m-sm md:pb-d-m">Følg os</h3>
 
-        <div class="flex gap-m-s pb-m-s">
-            <Image src={ig} alt="Instagram" loading="lazy" class="active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
-            <Image src={linkedin} alt="LinkedIn" loading="lazy" class="active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
-            <Image src={pin} alt="Pinterest" loading="lazy" class="active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
-            <Image src={yt} alt="Youtube" loading="lazy" class="active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
-            <Image src={twitter} alt="Twitter" loading="lazy" class="active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
-            <Image src={fb} alt="Facebook" loading="lazy" class="active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
+        <div class="flex gap-m-s md:gap-d-xs pb-m-s md:pb-d-xs">
+            <Image src={ig} alt="Instagram" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={linkedin} alt="LinkedIn" loading="lazy" class=" svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={pin} alt="Pinterest" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={yt} alt="Youtube" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={twitter} alt="Twitter" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={fb} alt="Facebook" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
         </div>
 
         <a href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="lazy"
-        class="w-1/4 active:-rotate-12 active:scale-105 transition-all duration-300 pb-m-sm"></Image></a>
+        class="w-1/4 active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300 pb-m-sm md:pb-d-s"></Image></a>
        
         <div class="pb-m-m">
-            <p class="pb-m-xxs">Møllevej 47, Frederiksberg 3540</p>
-            <p class="text-yellow-600 pb-m-xxs">kundeservice@purrfect.dk</p>
-            <p class="text-yellow-600 pb-m-xxs">+(45) 75-82-16-00</p>
-            <p class="pb-m-xxs">CVR-nr. 27 58 26 18</p>
+            <address class="not-italic">
+                <a href="https://maps.app.goo.gl/HdCcRux3NQTSAben7" target="_blank">
+                    <p class="pb-m-xxs md:pb-d-xxs"><Link href="#processen" variant="secondary" size="smallm">Møllevej 47, Frederiksberg 3540</Link></p>
+                </a>
+                <p class="text-yellow-600 pb-m-xxs md:pb-d-xxs hover:text-pink-600"><a href="mailto:kundeservice@purrfect.dk">kundeservice@purrfect.dk</a></p>
+                <p class="text-yellow-600 pb-m-xxs md:pb-d-xxs  hover:text-pink-600"><a href="tel:+4733378901">+(45) 75 82 16 00</a></p>
+                <p class="pb-m-xxs md:pb-d-xxs">CVR-nr. 27 58 26 18</p>
+            </address>
+        </div>
+    </div>
+
+    <div class="md:absolute md:pt-d-ml md:pb-d-xs md:bottom-0 md:left-1/2 md:transform md:-translate-x-1/2">
+        <div class="flex justify-center gap-m-s md:m-d-xs pb-m-lg md:pb-d-ml">
+            <Image src={mp} alt="Mobilepay" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 md:hover:mask transition-all duration-300"></Image>
+            <Image src={dk} alt="Dankort" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={v} alt="VISA" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={mc} alt="MasterCard" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image src={em} alt="E-mærket" loading="lazy" class="svg-filter active:-rotate-12 active:scale-105 md:hover:-rotate-12 md:hover:scale-105 transition-all duration-300"></Image>
         </div>
 
-        <div>
-            <p class="pb-m-s text-center">©2024 Purrfect Box ApS.<br>
+        <div class="md:flex md:gap-d-xs">
+            <p class="pb-m-s md:pb-0 text-center">©2024 Purrfect Box ApS.<br class="md:hidden">
                 All Rights Reserved.</p>
-            
-            <div class="flex gap-m-s justify-center">
-                <p>Vilkår og betingelser</p>
-                <p>Privatlivspolitik</p>
+                
+            <div class="flex gap-m-s md:gap-d-xs justify-center">
+                <p class="md:hidden"><Link href="#processen" variant="secondary" size="smallm">Vilkår og betingelser</Link></p>
+                <p class="hidden md:block"><Link href="#processen" variant="secondary" size="smalld">Processen</Link></p>
+                <p class="md:hidden"><Link href="#processen" variant="secondary" size="smallm">Privatlivspolitik</Link></p>
+                <p class="hidden md:block"><Link href="#processen" variant="secondary" size="smalld">Privatlivspolitik</Link></p>
             </div>
         </div>
     </div>
 </div>
   
+<!-- <script>
+  const mpIcon = document.getElementById('mp-icon');
+  
+  mpIcon.addEventListener('mouseover', () => {
+    // Check if the SVG is loaded and manipulate it
+    mpIcon.style.filter = 'invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%)';
+    // filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%); pink hover
+
+  });
+  
+  mpIcon.addEventListener('mouseout', () => {
+    // Reset the filter when the mouse leaves
+    mpIcon.style.filter = 'none';
+  });
+</script> -->

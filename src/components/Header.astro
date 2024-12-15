@@ -34,26 +34,28 @@ import Button from './Button.astro';
         <a href="/productlist">
         <Button variant="primary" size="desktop"><span class="text-nowrap">Purr Box</span></Button>
         </a>
-        <div class="flex items-center group">
+        <div class="flex items-center group gap-m-s">
         <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="transition-transform duration-300"></Image>
         <Link href="/" variant="primary" size="standard" class="group">
             Login
         </Link>
         </div>
-        <a href="/formular"><Image src={cart} alt="Indkøbsvogn" loading="eager" class="hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></a>
+        <a href="/formular"><Image src={cart} alt="Indkøbsvogn" loading="eager" class="svg-filter hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></a>
     </div>
 
     <!-- Mobile Menu (hidden by default) -->
     <div id="mobile-menu" class="hidden lg:hidden flex-col gap-m-s w-full absolute top-full left-0 bg-blue-200 drop-shadow p-m-sm">
         <div class="flex items-center justify-between">
-            <Button variant="primary" size="mobile">Purr Box</Button>
+            <a href="/productlist">
+                <Button variant="primary" size="mobile">Purr Box</Button>
+            </a>
 
             <div class="flex gap-m-s justify-between items-center">
                 <div class="flex items-center t-4">
                     <Image src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="scale-75"></Image>
                     <p><Link href="/" variant="primary" size="standard">Login</Link></p>
                 </div>
-                <Image src={cart} alt="Indkøbsvogn" loading="eager" class="scale-75 active:-rotate-12 active:scale-105 transition-all duration-300"></Image>
+                <a href="/formular"><Image src={cart} alt="Indkøbsvogn" loading="eager" class="scale-75 active:-rotate-12 active:scale-105 transition-all duration-300"></Image></a>
             </div>
         </div>
 

@@ -175,4 +175,14 @@
   .group:hover #cat-login-icon {
     transform: rotate(14deg);
   }
+
+  /* hover color pink */
+  .svg-filter {
+    filter: none; /* standard farve */
+    transition: filter 0.1s ease;
+  }
+
+  .svg-filter:hover {
+    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%);
+  }
 }
