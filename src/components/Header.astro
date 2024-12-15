@@ -7,41 +7,46 @@ import Link from './Link.astro';
 import Button from './Button.astro';
 ---
 <div class="w-screen h-auto py-m-s lg:py-d-s px-m-sm lg:px-d-3xl flex flex-row items-center justify-between">
-    <!-- Logo og burger ikon for mobil -->
-    <div class="w-full flex flex-row items-center justify-between lg:hidden">
-        <Link href="/">
-            <Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="active:-rotate-12 active:scale-105 transition-all duration-300 lg:hidden"></Image>
-        </Link>
-        <button id="menu-toggle" class="ml-m-5xl block lg:hidden focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgb(6 47 75 / 1)">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-    </div>
-
-    <!-- Desktop links -->
-    <div>
-        <ul class="hidden flex-row items-center lg:flex lg:gap-d-s">
-            <li><Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="hidden lg:inline hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></Link></li>
-            <li class="text-wrap"><Link href="#processen" variant="primary" size="large">Processen</Link></li>
-            <li class="text-wrap"><Link href="#faq"  variant="primary" size="large">FAQ</Link></li>
-            <li class="text-nowrap"><Link href="/about" variant="primary" size="large">Om os</Link></li>
-        </ul>
-    </div>
-
-    <!-- Purr Box Button og Cart for desktop -->
-    <div class="hidden lg:flex flex-row items-center gap-d-s">
-        <a href="/productlist">
-        <Button variant="primary" size="desktop"><span class="text-nowrap">Purr Box</span></Button>
-        </a>
-        <div class="flex items-center group gap-m-s">
-        <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="transition-transform duration-300"></Image>
-        <Link href="/" variant="primary" size="standard" class="group">
-            Login
-        </Link>
+    <nav  class="w-full flex items-center justify-between">
+        <!-- Logo og burger ikon for mobil -->
+        <div class="w-full flex items-center justify-between lg:hidden">
+            <Link href="/">
+                <Image src={logo} alt="Purrfect Box's Logo" loading="eager" class="transition-all duration-300 active:-rotate-12 active:scale-105"></Image>
+            </Link>
+            <button id="menu-toggle" class="ml-m-5xl block lg:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"  fill="none" viewBox="0 0 24 24" stroke="rgb(6 47 75 / 1)">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
-        <a href="/formular"><Image src={cart} alt="Indkøbsvogn" loading="eager" class="svg-filter hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></a>
-    </div>
+
+        <!-- Desktop links -->
+        <div class="hidden lg:flex items-center gap-d-lg">
+            <Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager"
+                class="hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></Link>
+            <ul class="items-center flex gap-d-lg">
+                <li><Link href="#processen" variant="primary" size="large">Processen</Link></li>
+                <li><Link href="#faq"  variant="primary" size="large">FAQ</Link></li>
+                <li class="text-nowrap"><Link href="/about" variant="primary" size="large">Om os</Link></li>
+            </ul>
+        </div>
+
+        <!-- Purr Box Button og Cart for desktop -->
+        <div class="hidden lg:flex flex-row items-center gap-d-s">
+            <a href="/productlist">
+                <Button variant="primary" size="desktop"><span class="text-nowrap">Purr Box</span></Button>
+            </a>
+            <div class="flex items-center group gap-m-s">
+                <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="transition-transform duration-300"></Image>
+                <Link href="/" variant="primary" size="standard" class="group">
+                    Login
+                </Link>
+            </div>
+            <a href="/formular">
+                <Image src={cart} alt="Indkøbsvogn" loading="eager" class="svg-filter hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image>
+            </a>
+        </div>
+    </nav>
 
     <!-- Mobile Menu (hidden by default) -->
     <div id="mobile-menu" class="hidden lg:hidden flex-col gap-m-s w-full absolute top-full left-0 bg-blue-200 drop-shadow p-m-sm">
@@ -49,7 +54,6 @@ import Button from './Button.astro';
             <a href="/productlist">
                 <Button variant="primary" size="mobile">Purr Box</Button>
             </a>
-
             <div class="flex gap-m-s justify-between items-center">
                 <div class="flex items-center t-4">
                     <Image src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="scale-75"></Image>
@@ -59,11 +63,13 @@ import Button from './Button.astro';
             </div>
         </div>
 
-        <ul class="flex flex-col gap-m-sm items-start pt-m-s">
-            <li><Link href="#processen" variant="primary" size="standard">Processen</Link></li>
-            <li><Link href="#faq" variant="primary" size="standard">FAQ</Link></li>
-            <li><Link href="/about" variant="primary" size="standard">Om os</Link></li>
-        </ul>
+        <nav>
+            <ul class="flex flex-col gap-m-sm items-start pt-m-s">
+                <li><Link href="#processen" variant="primary" size="standard">Processen</Link></li>
+                <li><Link href="#faq" variant="primary" size="standard">FAQ</Link></li>
+                <li><Link href="/about" variant="primary" size="standard">Om os</Link></li>
+            </ul>
+        </nav>
     </div>
 </div>
 

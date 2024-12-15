@@ -1,4 +1,15 @@
 ---
-import Header from "../components/Header.astro";
+import { Image } from 'astro:assets';
+import headerimg from "../assets/images/produkter_header.svg"
+
+import MainLayout from "../layouts/MainLayout.astro"
 ---
-<Header></Header>
+
+<MainLayout title="Purrfect Boxes">
+    <section class="w-screen h-auto">
+        <Image src={headerimg} alt="Header billede" class="w-full h-auto object-cover object-center"></Image>
+    </section>
+
+
+
+</MainLayout>
