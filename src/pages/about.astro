@@ -4,6 +4,12 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import kat1 from "../assets/images/omos_foto.png";
+import miv from "../assets/images/omos_01.png";
+import laura from "../assets/images/omos_02.png";
+import sofie from "../assets/images/omos_03.png";
+import iris from "../assets/images/omos_04.png";
+import bobo from "../assets/images/omos_05.png";
+import bingle from "../assets/images/omos_06.svg";
 ---
 <MainLayout title="Purrfect Box">
        <Image class="" src={kat1} alt="Billede der viser en kat"/>
@@ -25,4 +31,46 @@ import kat1 from "../assets/images/omos_foto.png";
             </div>
        </section>
 
+       <section class="">
+        <h3 class="font-bold">Vores værdier</h3>
+       </section>
+
+       <div class="gradient">
+       <section class="lg:mx-d-3xl">
+          <h3 class="font-bold">Mød teamet</h3>
+          <div class="grid grid-cols-[1fr_1fr] gap-d-3xl  overflow-hidden mb-d-3xl">
+           <Image src={miv} class="" alt="Miv"/>
+           <Image src={laura} class="w-full" alt="Laura"/>
+           </div>
+            <div class="grid grid-cols-[1fr_1fr] gap-d-3xl overflow-hidden mb-d-3xl">
+           <Image src={sofie} class="" alt="Sofie"/>
+           <Image src={iris} class="" alt="Iris"/>
+           </div>
+            <div class="grid grid-cols-[1fr_1fr] gap-d-3xl overflow-hidden">
+           <Image src={bobo} class="" alt="Bobo"/>
+           <Image src={bingle} class="w-full" alt="Bingle"/>
+           </div>
+       </section>
+       </div>
+
 </MainLayout>
+
+<style>
+    .gradient {
+	background: linear-gradient(-45deg, #f0f9ff, #fef2f5, #dff2ff, #fdfae9, #f0f9ff, #fef2f5, #dff2ff, #fdfae9);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
