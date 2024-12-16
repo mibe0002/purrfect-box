@@ -9,7 +9,7 @@ import kat1 from "../assets/images/omos_foto.png";
 <MainLayout title="Purrfect Box">
        <Image class="" src={kat1} alt="Billede der viser en kat"/>
 
-       <section class="lg:mx-d-3xl">
+       <section class="lg:mx-d-3xl entrance">
             <h2 class="font-bold lg:my-d-m">Om os</h2>
             <div class="grid lg:grid-cols-[1fr_1fr] gap-d-5xl">
                 <div class="">
@@ -124,4 +124,8 @@ import kat1 from "../assets/images/omos_foto.png";
 	inView( ".fotoinview2" , () =>{
 	animate( ".fotoinview2", { x: [2000, 0 ] }, { duration: 3 })
 	})
+
+    inView( ".entrance" , () =>{
+    animate( ".entrance", { opacity: [ 0, 1] }, { duration: 1 })
+    })
 	</script>
