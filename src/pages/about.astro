@@ -5,6 +5,9 @@ import Link from '../components/Link.astro';
 import Card from "../components/CardOmOs.astro";
 import { Image } from 'astro:assets';
 import kat1 from "../assets/images/omos_foto.png";
+import billede1 from "../assets/images/logo.svg";
+import billede2 from "../assets/images/omos_verdi.svg";
+import billede3 from "../assets/images/omos_verdi2.svg";
 ---
 <MainLayout title="Purrfect Box">
        <Image class="" src={kat1} alt="Billede der viser en kat"/>
@@ -28,6 +31,35 @@ import kat1 from "../assets/images/omos_foto.png";
 
        <section class="">
         <h3 class="font-bold mx-d-3xl">Vores værdier</h3>
+        <div class="grid lg:grid-cols-3">
+  <div class="bg-yellow-50">
+    <div class="flex flex-col items-center py-d-lg px-d-m">
+      <Image class="scale-125" src={billede1} alt="Billede der viser en mørk kat der kigger ud i en brun papkasse"/>
+      <h3 class="font-bold py-d-s">Vi tænker ud af boksen</h3>
+      <p>
+        Vi værdsætter kreativitet, nytænkning, og skaber innovative løsninger ved altid at tænke uden for boksen.
+      </p>
+    </div>
+  </div>
+  <div class="bg-yellow-100">
+    <div class="flex flex-col items-center py-d-lg px-d-m">
+      <Image class="" src={billede2} alt="Billede af et kattelegetøj og en sæk af kattemad"/>
+      <h3 class="font-bold py-d-s">Vi leger med mulighederne</h3>
+      <p>
+       Vi omfavner mulighederne med nysgerrighed og leg, hvor vi eksperimenterer for at finde de bedste løsninger.
+      </p>
+    </div>
+  </div>
+  <div class="bg-yellow-200">
+    <div class="flex flex-col items-center py-d-lg px-d-m">
+      <Image class="" src={billede3} alt="Billede af en blå lastbil" />
+      <h3 class="font-bold py-d-s">Vi holder af de små fyre</h3>
+      <p>
+        Vi elsker alle slags katte – store, små, unge og gamle. Hver eneste kat har sin egen charme, der minder os om glæden ved det særlige i hverdagen.
+      </p>
+    </div>
+  </div>
+</div>
        </section>
 
        <div class="gradient">
@@ -128,4 +160,5 @@ import kat1 from "../assets/images/omos_foto.png";
     inView( ".entrance" , () =>{
     animate( ".entrance", { opacity: [ 0, 1] }, { duration: 1 })
     })
+    
 	</script>
