@@ -10,7 +10,7 @@ import billede2 from "../assets/images/omos_verdi.svg";
 import billede3 from "../assets/images/omos_verdi2.svg";
 ---
 <MainLayout title="Purrfect Box">
-       <Image class="" src={kat1} alt="Billede der viser en kat"/>
+       <Image class="" src={kat1} alt="Billede der viser en kat" loading="lazy"/>
 
        <section class="lg:mx-d-3xl mb-d-m entrance">
             <h2 class="font-bold lg:my-d-m">Om os</h2>
@@ -21,7 +21,7 @@ import billede3 from "../assets/images/omos_verdi2.svg";
                     <p>Vi brænder for at gøre hverdagen nemmere for katteejere og sikre, at din kat altid har adgang til de bedste produkter. Med en kombination af kvalitet, omtanke og kærlighed arbejder vi hver dag for at skabe en løsning, der både glæder katte og deres ejere.</p>
                 </div>
 
-                <div class="">
+                <div class="" id="stagger">
                     <h3 class="font-bold pb-d-xs">Purrfect Box</h3>
                     <p class="pb-d-xxs">Vores mission er at dele vores passion med dig for at opdage sjove nye katteprodukter og tilføje berigelse til din killings legetid. Vi tror på, at katte fortjener det bedste – både når det kommer til kvalitet og sjov – og vi arbejder hårdt for at bringe nye, spændende produkter til dig og din kat.</p>
                     <p>Vi er lidt ligesom en Purrfect Box i sig selv: sød, unik og godt sat sammen. Med en kombination af kreativitet og omtanke stræber vi efter at gøre hver levering til en glædelig oplevelse for både dig og din kat.</p>
@@ -32,34 +32,34 @@ import billede3 from "../assets/images/omos_verdi2.svg";
        <section class="">
         <h3 class="font-bold mx-d-3xl mb-d-m">Vores værdier</h3>
         <div class="grid lg:grid-cols-3">
-            <div class="bg-yellow-50">
+            <div class="bg-yellow-50 staggeranimation">
                 <div class="flex flex-col items-center py-d-lg px-d-m">
-                <Image class="scale-125" src={billede1} alt="Billede der viser en mørk kat der kigger ud i en brun papkasse"/>
+                <Image class="scale-125 pt-d-s" src={billede1} alt="Billede der viser en mørk kat der kigger ud i en brun papkasse" loading="lazy"/>
                 <h3 class="font-bold py-d-s">Vi tænker ud af boksen</h3>
                 <p>
                     Vi værdsætter kreativitet, nytænkning, og skaber innovative løsninger ved altid at tænke uden for boksen.
                 </p>
                 </div>
             </div>
-            <div class="bg-yellow-100">
+            <div class="bg-yellow-100 staggeranimation">
                 <div class="flex flex-col items-center py-d-lg px-d-m">
-                <Image class="" src={billede2} alt="Billede af et kattelegetøj og en sæk af kattemad"/>
-                <h3 class="font-bold py-d-s">Vi leger med mulighederne</h3>
+                <Image class="" src={billede2} alt="Billede af et kattelegetøj og en sæk af kattemad" loading="lazy"/>
+                <h3 class="font-bold py-d-s text-center">Vi leger med mulighederne</h3>
                 <p>
                 Vi omfavner mulighederne med nysgerrighed og leg, hvor vi eksperimenterer for at finde de bedste løsninger.
                 </p>
                 </div>
             </div>
-            <div class="bg-yellow-200">
+            <div class="bg-yellow-200 staggeranimation">
                 <div class="flex flex-col items-center py-d-lg px-d-m">
-                <Image class="" src={billede3} alt="Billede af en blå lastbil" />
+                <Image class="" src={billede3} alt="Billede af en blå lastbil" loading="lazy"/>
                 <h3 class="font-bold py-d-s">Vi holder af de små fyre</h3>
                 <p>
                     Vi elsker alle slags katte – store, små, unge og gamle. Hver eneste kat har sin egen charme, der minder os om glæden ved det særlige i hverdagen.
                 </p>
                 </div>
             </div>
-            </div>
+        </div>
        </section>
 
        <div class="gradient">
@@ -160,5 +160,16 @@ import billede3 from "../assets/images/omos_verdi2.svg";
     inView( ".entrance" , () =>{
     animate( ".entrance", { opacity: [ 0, 1] }, { duration: 1 })
     })
+
+    /* Stagger animation */
+	inView( "#stagger" , () =>{
+		animate(
+		".staggeranimation",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(1, { start: 2 })
+		}
+		)
+	})
     
 	</script>
