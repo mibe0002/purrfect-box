@@ -1,0 +1,36 @@
+---
+import Button from "../components/Button.astro";
+
+const {
+  cardimage = "",
+  cardimagealt = "",
+
+  titel = "",
+  navn = "",
+  pris = "",
+  beskrivelse = "",
+} = Astro.props;
+---
+<article class="bg-blue-200 rounded-default">
+  <img src={cardimage} alt={cardimagealt} class="rounded-t-default" />
+  <div class="px-m-ml py-m-sm">
+    <h2 class="pb-m-sm">{titel}</h2>
+    <h4 class="pb-m-s">{navn}</h4>
+    <h3 class="pb-m-s text-blue-800">{pris}</h3>
+    <p class="w-[360px]">{beskrivelse}</p>
+    <div class="pt-m-sm flex justify-center gap-m-sm">
+      <span class="md:hidden">
+        <Button variant="primary" size="mobile">Køb nu</Button>
+      </span>
+      <span class="hidden md:block">
+        <Button variant="primary" size="desktop">Køb nu</Button>
+      </span>
+      <span class="md:hidden">
+        <Button variant="secondary" size="mobile">Se mere</Button>
+      </span>
+      <span class="hidden md:block">
+        <Button variant="secondary" size="desktop">Se mere</Button>
+      </span>
+    </div>
+  </div>
+</article>

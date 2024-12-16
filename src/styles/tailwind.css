@@ -21,7 +21,6 @@
   /* generelle styles */
   h1 {
     @apply text-m-h1;
-    @apply font-bold;
   }
 
   h3 {
@@ -42,6 +41,7 @@
   h3,
   h4 {
     @apply font-dynapuff;
+    @apply font-bold;
   }
 
   h1,
@@ -54,7 +54,6 @@
   h2 {
     @apply text-blue-800;
     @apply text-m-h2;
-    @apply font-bold;
   }
 
   header,
@@ -185,5 +184,21 @@
 
   .svg-filter:hover {
     filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%);
+  }
+
+  /* heart click animation */
+  @keyframes fly-up {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  }
+
+  .fly-up-animation {
+    animation: fly-up 1.5s ease forwards;
   }
 }
