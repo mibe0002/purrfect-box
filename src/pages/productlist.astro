@@ -15,62 +15,67 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Purrfect Boxes">
-        <section class="px-m-sm md:px-d-3xl w-full h-auto bg-[url('../img/produkter_header.svg')] md:bg-center bg-right bg-no-repeat bg-cover flex flex-col justify-center items-center">
-            <span class="pt-m-3xl md:pt-d-3xl w-auto"></span>
-            <div class="w-full md:w-[1068px] h-full">
+        <section class="px-m-sm md:px-d-3xl w-full md:pt-d-xl h-auto bg-[url('../img/produkter_header.svg')] md:bg-center bg-right bg-no-repeat bg-cover flex flex-col justify-center items-center">
+            <span class="pt-m-3xl md:pt-d-3xl w-auto md:hidden"></span>
+            <div class="w-full md:w-[1068px] h-full md:h-[425px]">
                 <h1 class="pb-m-m md:pb-d-m">Purrfect Boxes</h1>
                 <h2 class="pb-m-sm md:pb-d-sm">Overblik over vores Purr Boxes</h2>
                 <p class="w-full md:w-[615px] h-auto">Tag et kig og find den rette boks til dig og din kat. Vi har sammen med vores fællesskab tilpasset disse bokse,
                 så der er noget til enhver smag. Undersøg mere om hver enkelt boks, eller bestil din egen nu i dag!</p>
             </div>
-            <span class="pb-m-3xl md:pb-d-3xl w-auto"></span>
+            <span class="pb-m-3xl md:pb-d-3xl w-auto md:hidden"></span>
             <span class="py-m-m md:hidden"></span>
         </section>
 
-        <section class="px-m-sm pt-m-5xl pb-m-m md:py-d-m md:px-d-3xl flex flex-col items-center gap-m-m">
-            <div>
-            <div class="relative">
-                <!-- SVG der trigges ved klik -->
-                <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="lazy" class="animate-pulse w-40 absolute -top-24 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+        <section class="px-m-sm md:px-d-3xl pt-m-5xl pb-m-m md:py-d-m flex flex-col items-center">
+            <div class="md:flex md:flex-row md:items-end md:justify-center gap-m-m md:gap-d-m">
+                <div class="pb-m-m">
+                    <div class="relative">
+                        <!-- SVG der trigges ved klik -->
+                        <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="lazy" class="animate-pulse w-40 md:w-1/2 absolute -top-28 md:-top-36 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
-                <!-- Skjult hjerte der flyver op ved klik -->
-                <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-28 w-12 h-12 text-pink-500 left-[125px] transform -translate-x-[125px]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
-            </div>
-           
-            <CardProduct 
-                cardimage="../img/basicbox2.jpg"
-                cardimagealt="Et billede af vores Basic Box med beige baggrund"
-                navn="Basic Box"
-                pris="119 DKK/MD"
-                beskrivelse="En enkel løsning med alle de nødvendige produkter til din kat hver måned."
-                class="md:h-[544px]"
-            >
-            </CardProduct>
-            </div>
+                        <!-- Skjult hjerte der flyver op ved klik -->
+                        <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36  md:-top-36 w-12 h-12 text-pink-500 left-[125px] md:left-[200px] transform -translate-x-[125px] md:-translate-x-[200px]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="w-[500px] h-auto">
+                        <CardProduct 
+                            cardimage="../img/basicbox2.jpg"
+                            cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                            navn="Basic Box"
+                            pris="119 DKK/MD"
+                            beskrivelse="En enkel løsning med alle de nødvendige produkter til din kat hver måned."
+                        >
+                        </CardProduct>
+                    </div>
+                </div>
 
-            <CardProduct 
-                cardimage="../img/premium2.jpg"
-                cardimagealt="Et billede af vores Premium Box med orange baggrund"
-                navn="Premium Box"
-                pris="149 DKK/MD"
-                beskrivelse="En opgradering, der holder din kat mæt og underholdt med legetøj og snacks."
-                class="md:h-[635px]"
-            >
-            </CardProduct>
+                <div class="pb-m-m">
+                    <CardProduct 
+                        cardimage="../img/premium2.jpg"
+                        cardimagealt="Et billede af vores Premium Box med orange baggrund"
+                        navn="Premium Box"
+                        pris="149 DKK/MD"
+                        beskrivelse="En opgradering, der holder din kat mæt og underholdt med legetøj og snacks."
+                        class="md:h-full"
+                    >
+                    </CardProduct>
+                </div>
 
-            <div class="relative">
-                <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
-                <CardProduct 
-                    cardimage="../img/deluxe2.jpg"
-                    cardimagealt="Et billede af vores Deluxe Box med pink baggrund"
-                    navn="Deluxe Box"
-                    pris="199 DKK/MD"
-                    beskrivelse="En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks."
-                    class="md:h-[635px]"
-                >
-                </CardProduct>
+                <div class="relative pb-m-m">
+                    <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
+                    <CardProduct 
+                        cardimage="../img/deluxe2.jpg"
+                        cardimagealt="Et billede af vores Deluxe Box med pink baggrund"
+                        navn="Deluxe Box"
+                        pris="199 DKK/MD"
+                        beskrivelse="En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks."
+                        class="md:h-full"
+                    >
+                    </CardProduct>
+                </div>
             </div>
 
             <CardProduct
@@ -101,8 +106,8 @@ import Button from '../components/Button.astro';
                             </span>
                         </div>
                         <div class="absolute bottom-0 right-0">
-                            <Image id="fly-icon" src={cqs} alt="Spørgsmålstegn ikon" loading="lazy" class="hidden absolute -top-14 left-[30px] transform -translate-x-[30px] fly-up-animation"></Image>
-                            <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="animate-pulse w-40 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+                            <Image id="fly-icon" src={cqs} alt="Spørgsmålstegn ikon" loading="lazy" class="hidden absolute -top-14 left-[10px] transform -translate-x-[10px] fly-up-animation"></Image>
+                            <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="animate-pulse w-20 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
                         </div>
                     </div>
                     
