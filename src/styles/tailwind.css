@@ -21,10 +21,7 @@
   /* generelle styles */
   h1 {
     @apply text-m-h1;
-  }
-
-  h2 {
-    @apply text-m-h2;
+    @apply font-bold;
   }
 
   h3 {
@@ -37,6 +34,7 @@
 
   body {
     @apply text-m-body;
+    @apply font-regular;
   }
 
   h1,
@@ -55,6 +53,8 @@
 
   h2 {
     @apply text-blue-800;
+    @apply text-m-h2;
+    @apply font-bold;
   }
 
   header,
@@ -87,6 +87,7 @@
 
     body {
       @apply text-d-body;
+      @apply font-regular;
     }
   }
 }
