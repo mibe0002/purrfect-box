@@ -17,6 +17,7 @@
     "alpinejs": "^3.14.1",
     "animate.css": "^4.1.1",
     "astro": "^5.0.5",
+    "flowbite": "^2.5.2",
     "motion": "^10.18.0"
   },
   "devDependencies": {

@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import CardForside from "../components/CardForside.astro";
 import HowTo from "../components/HowTo.astro";
 import TrustpilotCard from "../components/TrustpilotCard.astro";
+import Accordion from "../components/Accordion.astro";
 import { Image } from "astro:assets";
 import herobillede from "../assets/images/forside_hero.jpg";
 import displaybox from "../assets/images/promo2.jpg";
@@ -320,12 +321,45 @@ import trustpilot from "../assets/images/trustpilot.svg";
       />
     </div>
   </article>
-  <article>
-    <div class="bg-[url('../img/forside_nyhedsbrev.svg')] py-d-sm">
+  <article class="py-d-sm">
+    <div class="bg-[url('../img/forside_nyhedsbrev.svg')] pt-d-sm pb-d-s">
       <h2 class="font-bold text-center">
         Ik' mis de særlige tilbud og nyheder
       </h2>
+      <form
+        action="/subscribe"
+        method="post"
+        data-netlify="true"
+        class="flex flex-col items-center pt-d-s"
+      >
+        <div class="flex gap-m-xs md:gap-d-xxs md:w-fit">
+          <label for="email" class="pb-m-xs"></label>
+          <input
+            id="email"
+            name="email"
+            placeholder="Email-adresse"
+            type="email"
+            autocomplete="email"
+            required
+            class="block w-full md:w-[267px] rounded-knapper shadow-drop10 bg-blue-50 border text-blue-800 text-sm focus:ring-blue-500 focus:border-blue-500 p-2.5 placeholder-blue-800"
+          />
+
+          <span class="hidden md:block"
+            ><Button variant="primary" size="desktop"
+              ><input type="submit" value="Send" /></Button
+            ></span
+          >
+          <span class="md:hidden flex"
+            ><Button variant="primary" size="mobile"
+              ><input type="submit" value="Send" /></Button
+            ></span
+          >
+        </div>
+      </form>
     </div>
+  </article>
+  <article>
+    <Accordion />
   </article>
   <style>
     @keyframes scroll {
