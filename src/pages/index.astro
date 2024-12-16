@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import CardForside from "../components/CardForside.astro";
+import HowTo from "../components/HowTo.astro";
+import TrustpilotCard from "../components/TrustpilotCard.astro";
 import { Image } from "astro:assets";
 import herobillede from "../assets/images/forside_hero.jpg";
 import displaybox from "../assets/images/promo2.jpg";
@@ -14,6 +16,7 @@ import feringa from "../assets/images/brand_feringa.svg";
 import hills2 from "../assets/images/brand_hills2.svg";
 import concept from "../assets/images/brand_concept.svg";
 import kat1 from "../assets/images/forside_kat.svg";
+import trustpilot from "../assets/images/trustpilot.svg";
 ---
 
 <MainLayout title="Purrfect Box">
@@ -243,24 +246,133 @@ import kat1 from "../assets/images/forside_kat.svg";
       />
     </div>
   </article>
-  <article class="pt-d-lg"></article>
+  <article class="py-d-lg">
+    <h2 class="font-bold text-center pt-d-lg pb-d-sm">
+      Hvordan fungerer Purrfect Box?
+    </h2>
+    <div>
+      <HowTo />
+    </div>
+  </article>
+  <article class="lg:mx-d-5xl py-d-lg">
+    <div class="lg:grid grid-cols-2">
+      <div class="pr-d-m">
+        <h2 class="font-bold">Hvem står bag Purrfect Box?</h2>
+        <h3 class="font-bold py-d-s">Af katteejere, for katteejere</h3>
+        <p class="pb-d-s">
+          Vi er passionerede katteejere, der forstår de små og store
+          udfordringer i hverdagen. Vores mission er at gøre livet lettere for
+          både dig og din kat ved at tilbyde en enkel, bekvem og pålidelig
+          løsning. Med fokus på kvalitet og kærlighed til katte er vi her for at
+          sikre, at din kat altid har det bedste.
+        </p>
+        <div class="pb-d-xs flex flex-row gap-1">
+          <Button variant="primary" size="desktop">Læs mere om os</Button>
+        </div>
+      </div>
+      <div class="">
+        <Image
+          class="rounded-default py-d-s"
+          src={displaybox}
+          alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+        />
+      </div>
+    </div>
+  </article>
+  <article class="lg:mx-d-5xl py-d-lg">
+    <h2 class="font-bold pb-d-m">Hvad siger vores brugere?</h2>
+    <div class="bg-blue-200 rounded-default flex flex-col items-center">
+      <Image
+        class="rounded-default py-d-sm w-64"
+        src={trustpilot}
+        alt="TrustPilot logo med grøn stjerne og under står der 4.8 med 5 stjerner"
+      />
+    </div>
+    <div
+      class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] pt-d-s trustpilotcards"
+    >
+      <TrustpilotCard
+        navn="William D. Birch"
+        dato="20. jun. 2024"
+        titel="Fantastisk løsning for travle katteejere!"
+        review="Jeg elsker dette abonnement! Jeg skal aldrig mere bekymre mig om at løbe tør for foder eller kattegrus."
+      />
+
+      <TrustpilotCard
+        navn="Dicte Jørgensen"
+        dato="26. jun. 2024"
+        titel="Gør hverdagen så meget nemmere"
+        review="Jeg var skeptisk i starten, men abonnementet har virkelig gjort livet lettere. At få alt leveret til døren sparer mig tid og besvær."
+      />
+
+      <TrustpilotCard
+        navn="Kamilla Hansen"
+        dato="28. jun. 2024"
+        titel="God service!"
+        review="Alt fungerer fint, og leveringen er superhurtig. Dog ville jeg ønske, at der var flere mærker at vælge imellem, især til tørfoder. Jeg håber det bliver muligt"
+      />
+
+      <TrustpilotCard
+        navn="Signe Christensen"
+        dato="04. juli. 2024"
+        titel="Min kat elsker det!"
+        review="Jeg kan tydeligt mærke, at min kat Felix er mere tilfreds med det foder, vi får nu. Kattegruset er også langt bedre end det, jeg plejede at købe."
+      />
+    </div>
+  </article>
+  <article>
+    <div class="bg-[url('../img/forside_nyhedsbrev.svg')] py-d-sm">
+      <h2 class="font-bold text-center">
+        Ik' mis de særlige tilbud og nyheder
+      </h2>
+    </div>
+  </article>
+  <style>
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .brands {
+      display: flex;
+      width: max-content; /* Tilpasser bredden til indholdet */
+    }
+
+    .animate-scroll {
+      animation: scroll 20s linear infinite;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .trustpilotcards {
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        padding-left: 36px;
+        padding-right: 36px;
+        gap: 20px;
+        scroll-padding: 10px;
+        /* Hides scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+      }
+
+      .trustpilotcards::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+      }
+      .trustpilotcards .card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      /* Hvis af en eller anden årsag, at scrollbar ikke hides, så justeres farven på scrollbar*/
+      .trustpilotcards {
+        scrollbar-color: #214f5f transparent;
+      }
+    }
+  </style>
 </MainLayout>
-<style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .brands {
-    display: flex;
-    width: max-content; /* Tilpasser bredden til indholdet */
-  }
-
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
-  }
-</style>

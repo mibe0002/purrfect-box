@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import katbox from "../assets/images/forside_howto.svg";
+import produkter from "../assets/images/forside_howto2.svg";
+import truck from "../assets/images/forside_howto3.svg";
+---
+
+<div class="grid grid-cols-3">
+  <div class="bg-yellow-50">
+    <div class="flex flex-col items-center py-d-lg px-d-m">
+      <Image
+        class=""
+        src={katbox}
+        alt="Billede der viser en mørk kat der kigger ud i en brun papkasse"
+      />
+      <h3 class="font-bold py-d-s">Vælg din Purr Box</h3>
+      <p>
+        Gennemse vores udvalg af bokse og vælg den, der passer bedst til din kat
+        – fra de helt essentielle produkter til en skræddersyet løsning.
+      </p>
+    </div>
+  </div>
+  <div class="bg-yellow-100">
+    <div class="flex flex-col items-center py-d-lg px-d-m">
+      <Image
+        class=""
+        src={produkter}
+        alt="Billede af et kattelegetøj og en sæk af kattemad"
+      />
+      <h3 class="font-bold py-d-s">Tilpas din boks</h3>
+      <p>
+        Enten overrasker vi dig eller du kan vælge din egen foder, snacks og
+        legetøj. Har din kat allergier eller specifik alder? Tilpas din boks med
+        relevante valg.
+      </p>
+    </div>
+  </div>
+  <div class="bg-yellow-200">
+    <div class="flex flex-col items-center py-d-lg px-d-m">
+      <Image class="" src={truck} alt="Billede af en blå lastbil" />
+      <h3 class="font-bold py-d-s">Få den leveret nemt!</h3>
+      <p>
+        Vi pakker din boks og sender den direkte hjem til dig hver måned – ingen
+        stress, kun glade katte!
+      </p>
+    </div>
+  </div>
+</div>

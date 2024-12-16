@@ -1,24 +1,35 @@
 ---
 import { Image } from "astro:assets";
 import fivestars from "../assets/images/fivestars.svg";
+import pb from "../assets/images/profilbillede.svg";
 
-const { url="#", cardimage="", cardimagealt="", 
-
-navn="", dato="", titel="", review="" } = Astro.props;
+const { navn = "", dato = "", titel = "", review = "" } = Astro.props;
 ---
-<article class="bg-blaze-orange-100 py-s px-sm min-w-64 max-w-64 rounded-medium">
-    <div class="grid grid-cols-[1fr_4fr] gap-xxs">
-        <img src={cardimage} alt={cardimagealt} class="rounded-default">
-        <div class="">
-            <h2 class="text-xs font-semibold">{navn}</h2>
-            <p class="text-[10px]">{dato}</p>
-        </div>
+
+<article
+  class="bg-blue-200 pt-d-s pb-d-xxs px-d-xs min-w-64 max-w-64 rounded-default"
+>
+  <div class="grid grid-cols-[1fr_4fr] gap-d-xxs">
+    <Image
+      src={pb}
+      alt="Anonymt profilbillede af en menneske silhuet"
+      class=""
+      loading="lazy"
+    />
+    <div class="">
+      <p class="font-bold">{navn}</p>
+      <p class="text-d-body-sm">{dato}</p>
     </div>
+  </div>
 
-    <div class="pt-xxs"></div>
-<Image src={fivestars} alt="trustpilot" class="" loading="lazy"/>
-<p class="font-semibold py-xxs">{titel}</p>
-<p>{review}</p>
-<a href={url} class="font-semibold text-xs">Læs mere</a>
-
+  <div class="pt-xxs"></div>
+  <Image
+    src={fivestars}
+    alt="Lys stjerne med grøn baggrund fra TrustPilot"
+    class="pt-d-xxs"
+    loading="lazy"
+  />
+  <p class="font-bold py-d-xxs">{titel}</p>
+  <p>{review}</p>
+  <p class="font-bold pt-d-xxs">Læs mere</p>
 </article>
