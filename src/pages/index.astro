@@ -1,12 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import MyCustomImage from "../components/MyCustomImage.astro";
 import Button from "../components/Button.astro";
 import CardForside from "../components/CardForside.astro";
 import HowTo from "../components/HowTo.astro";
 import TrustpilotCard from "../components/TrustpilotCard.astro";
 import Accordion from "../components/Accordion.astro";
 import { Image } from "astro:assets";
-import herobillede from "../assets/images/forside_hero.jpg";
+import desktopImage from "../assets/images/forside_hero.jpg";
+import mobileImage from "../assets/images/mobil_img.png";
 import displaybox from "../assets/images/promo2.jpg";
 import pote from "../assets/images/paw.svg";
 import royal from "../assets/images/brand_royal.svg";
@@ -21,29 +23,42 @@ import trustpilot from "../assets/images/trustpilot.svg";
 ---
 
 <MainLayout title="Purrfect Box">
-  <article>
+  <section>
     <div class="">
-      <Image
-        class=""
-        src={herobillede}
-        alt="Billede der viser en orange kat ved siden af en Purrfect Box"
-      />
+      <div class="w-full">
+        <MyCustomImage
+          mobileImgUrl={mobileImage}
+          desktopImgUrl={desktopImage}
+          alt="Billede af en orange kat med PurrBox"
+        />
+      </div>
       <h1
-        class="font-bold flex absolute inset-0 bottom-60 items-center justify-center"
+        class="font-bold flex absolute items-center justify-center inset-0 bottom-96 lg:bottom-60"
       >
         Purrfect Box
       </h1>
-      <div class="absolute inset-0 bottom-20 flex items-center justify-center">
-        <Button variant="primary" size="desktop">Køb din PurrBox nu</Button>
+      <div
+        class="absolute inset-0 bottom-60 flex items-center justify-center lg:bottom-20"
+      >
+        <span class="hidden md:block"
+          ><Button variant="primary" size="desktop"
+            ><input type="submit" value="Bestil PurrBox abonnement" /></Button
+          ></span
+        >
+        <span class="md:hidden flex"
+          ><Button variant="primary" size="mobile"
+            ><input type="submit" value="Bestil PurrBox abonnement" /></Button
+          ></span
+        >
       </div>
     </div>
-  </article>
-  <article class="lg:mx-d-5xl">
-    <h2 class="font-bold pt-d-m lg:pb-d-s">
+  </section>
+  <section class="mx-m-sm lg:mx-d-5xl">
+    <h2 class="font-bold pt-d-m leading-10 lg:pb-d-s">
       Alt din kat har brug for - leveret direkte til døren
     </h2>
     <div class="lg:grid grid-cols-2">
-      <div class="pr-d-m">
+      <div class="lg:pr-d-ml">
         <h3 class="font-bold py-d-xs lg:py-d-s">Hvorfor PurrBox?</h3>
         <p class="pb-d-s">
           Vores abonnement til katteejere gør det nemt at tage sig af din kat.
@@ -106,20 +121,20 @@ import trustpilot from "../assets/images/trustpilot.svg";
           </p>
         </div>
       </div>
-      <div class="">
+      <div class="py-d-s">
         <Image
-          class="rounded-default py-d-s"
+          class="rounded-default"
           src={displaybox}
           alt="Billede der viser en promovering af PurrBox på en grå baggrund"
         />
       </div>
     </div>
-  </article>
-  <article>
-    <div class="mt-d-lg">
-      <div class="relative flex flex-row-reverse">
+  </section>
+  <section>
+    <div class="relative mt-d-lg">
+      <div class="z-100 flex flex-row-reverse">
         <Image
-          class=""
+          class="absolute z-100"
           src={kat1}
           alt="En blå kat der sidder ovenpå banneret med brands og stirrer på brugeren"
         />
@@ -203,12 +218,12 @@ import trustpilot from "../assets/images/trustpilot.svg";
         </div>
       </div>
     </div>
-  </article>
-  <article class="mx-d-ml">
-    <h2 class="font-bold pt-d-lg pb-d-sm">
+  </section>
+  <section class="mx-m-sm lg:mx-d-ml">
+    <h2 class="font-bold pt-d-lg pb-d-sm leading-10">
       Hvilken Purr Box skal din kat have?
     </h2>
-    <div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr] gap-d-sm px-3xl">
+    <div class="flex items-center flex-col lg:flex-row flex-wrap gap-d-sm">
       <CardForside
         cardimage="../img/basicbox2.jpg"
         cardimagealt="Et billede af vores Basic Box med beige baggrund"
@@ -246,19 +261,19 @@ import trustpilot from "../assets/images/trustpilot.svg";
         punkt3="Opsig når som helst"
       />
     </div>
-  </article>
-  <article id="processen" class="py-d-lg">
+  </section>
+  <section id="processen" class="py-d-lg">
     <h2 class="font-bold text-center pt-d-lg pb-d-sm">
       Hvordan fungerer Purrfect Box?
     </h2>
     <div>
       <HowTo />
     </div>
-  </article>
-  <article class="lg:mx-d-5xl py-d-lg">
+  </section>
+  <section class="mx-m-sm lg:mx-d-5xl py-d-lg">
     <div class="lg:grid grid-cols-2">
-      <div class="pr-d-m">
-        <h2 class="font-bold">Hvem står bag Purrfect Box?</h2>
+      <div class="lg:pr-d-lg">
+        <h2 class="font-bold leading-10">Hvem står bag Purrfect Box?</h2>
         <h3 class="font-bold py-d-s">Af katteejere, for katteejere</h3>
         <p class="pb-d-s">
           Vi er passionerede katteejere, der forstår de små og store
@@ -268,19 +283,28 @@ import trustpilot from "../assets/images/trustpilot.svg";
           sikre, at din kat altid har det bedste.
         </p>
         <div class="pb-d-xs flex flex-row gap-1">
-          <Button variant="primary" size="desktop">Læs mere om os</Button>
+          <span class="hidden md:block"
+            ><Button variant="primary" size="desktop"
+              ><input type="submit" value="Læs mere" /></Button
+            ></span
+          >
+          <span class="md:hidden flex"
+            ><Button variant="primary" size="mobile"
+              ><input type="submit" value="Læs mere" /></Button
+            ></span
+          >
         </div>
       </div>
-      <div class="">
+      <div class="py-d-s">
         <Image
-          class="rounded-default py-d-s"
+          class="rounded-default"
           src={displaybox}
           alt="Billede der viser en promovering af PurrBox på en grå baggrund"
         />
       </div>
     </div>
-  </article>
-  <article class="lg:mx-d-5xl py-d-lg">
+  </section>
+  <section class="mx-m-sm lg:mx-d-5xl py-d-lg">
     <h2 class="font-bold pb-d-m">Hvad siger vores brugere?</h2>
     <div class="bg-blue-200 rounded-default flex flex-col items-center">
       <Image
@@ -320,10 +344,10 @@ import trustpilot from "../assets/images/trustpilot.svg";
         review="Jeg kan tydeligt mærke, at min kat Felix er mere tilfreds med det foder, vi får nu. Kattegruset er også langt bedre end det, jeg plejede at købe."
       />
     </div>
-  </article>
-  <article class="py-d-sm">
+  </section>
+  <section class="py-d-sm">
     <div class="bg-[url('../img/forside_nyhedsbrev.svg')] pt-d-sm pb-d-s">
-      <h2 class="font-bold text-center">
+      <h2 class="font-bold text-center mx-m-sm leading-10 lg:mx-0">
         Ik' mis de særlige tilbud og nyheder
       </h2>
       <form
@@ -357,8 +381,8 @@ import trustpilot from "../assets/images/trustpilot.svg";
         </div>
       </form>
     </div>
-  </article>
-  <article class="lg:mx-d-5xl">
+  </section>
+  <section id="faq" class="mx-m-sm lg:mx-d-5xl">
     <h2 class="font-bold pb-d-sm">FAQ</h2>
     <div class="pb-d-sm lg:grid grid-cols-2">
       <Accordion
@@ -386,9 +410,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
         indhold="Ja, vores abonnement er helt fleksibelt! Du kan ændre abonnement, justere leveringsfrekvensen, eller opsige det når som helst – uden binding."
       />
     </div>
-    <article id="faq">
-      <Accordion />
-    </article>
+    <section></section>
     <style>
       @keyframes scroll {
         0% {
@@ -437,5 +459,5 @@ import trustpilot from "../assets/images/trustpilot.svg";
         }
       }
     </style>
-  </article>
+  </section>
 </MainLayout>

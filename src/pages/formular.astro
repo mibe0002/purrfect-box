@@ -9,8 +9,8 @@ import basicbox from "../assets/images/formular_box.jpg";
 ---
 <MainLayout title="Purrfect Box">
 	
-<div class="gradient pt-d-xs">
-    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl entrance">
+<div class="gradient pb-[300px] pt-d-xs">
+    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl entrance ">
         <div class="bg-blue-200 rounded-default">
             
             <div class="bg-blue-50 rounded-default mx-d-s mt-d-xs shadow-drop10">
@@ -55,7 +55,8 @@ import basicbox from "../assets/images/formular_box.jpg";
             <Image class="" src={kat1} class="ml-d-s mt-m-xxs" alt="Billede der viser en kat" loading="lazy"/>
         </div>
 
-        <div class="bg-blue-200 px-d-m rounded-default">
+        <div class="bg-blue-200 px-d-m rounded-default relative">
+            <h4>Har du allerede en bruger? <a href="#" class="text-yellow-600 hover:underline ">Log ind i stedet for!</a></h4>
             <h3 class="mb-d-xs pt-d-m font-bold">Dine informationer</h3>
             <form class="">
             <div class="mb-5">
@@ -64,11 +65,11 @@ import basicbox from "../assets/images/formular_box.jpg";
             </div>
             <div class="mb-5">
                 <label for="password" class=" mb-2 text-blue-800 ">Dit password*</label>
-                <input type="password" id="password" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                <input type="password" id="password" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " placeholder="••••••••" required />
             </div>
             <div class="mb-5">
                 <label for="repeat-password" class=" mb-2 text-blue-800 ">Gentag password*</label>
-                <input type="password" id="repeat-password" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                <input type="password" id="repeat-password" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " placeholder="••••••••" required />
             </div>
             </form>
 
@@ -77,26 +78,26 @@ import basicbox from "../assets/images/formular_box.jpg";
                 <div class="grid lg:grid-cols-[1fr_1fr] gap-d-xs">
                     <div class="mb-5">
                         <label for="text" class=" mb-2 text-blue-800 ">Fornavn*</label>
-                        <input type="text" id="text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <input type="text" id="text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Anna" required />
                     </div>
                     <div class="mb-5">
                         <label for="text" class=" mb-2 text-blue-800 ">Efternavn*</label>
-                        <input type="text" id="text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <input type="text" id="text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Meowsen" required />
                     </div>
                 </div>
 
                 <div class="grid lg:grid-cols-[4fr_2fr_1fr] gap-d-xs">
                     <div class="mb-5">
                         <label for="repeat-text" class=" mb-2 text-blue-800 ">Adresse*</label>
-                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Whiskerton 33" required />
                     </div>
                     <div class="mb-5">
                         <label for="repeat-text" class=" mb-2 text-blue-800 ">By*</label>
-                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " placeholder="Miauville" required />
                     </div>
                     <div class="mb-5">
                         <label for="repeat-text" class=" mb-2 text-blue-800 ">Postnummer*</label>
-                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " required />
+                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 " placeholder="9999" required />
                     </div>
                 </div>
 
@@ -110,7 +111,7 @@ import basicbox from "../assets/images/formular_box.jpg";
                     </div>
                     <div class="mb-5">
                         <label for="text" class=" mb-2 text-blue-800 ">Telefonummer*</label>
-                        <input type="number" id="text" class="shadow-drop10 bg-blue-50 border text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" required />
+                        <input type="number" id="text" class="shadow-drop10 bg-blue-50 border text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="88 88 88 88" required />
                     </div>
                 </div>
             </form>
@@ -146,7 +147,7 @@ import basicbox from "../assets/images/formular_box.jpg";
             <form class="pb-d-m">
                 <div class="grid lg:grid-cols-[3fr_2fr_1fr] gap-d-xs">
                     <div class="">
-              <label for="card-number-input" class=" text-blue-800 "> Kredit eller debit kort nummer** </label>
+              <label for="card-number-input" class=" text-blue-800 "> Kredit eller debit kort nummer* </label>
               <input type="text" id="card-number-input" class=" w-full rounded-lg border border-blue-300 bg-blue-50 p-2.5 pe-10 text-sm text-blue-800 focus:border-primary-500 focus:ring-primary-500" placeholder="xxxx-xxxx-xxxx-xxxx" required />
             </div>
 
@@ -190,15 +191,13 @@ import basicbox from "../assets/images/formular_box.jpg";
             <div class="flex justify-center py-d-m">
              <Button>Godkend og betal</Button>
              </div>
+
+
+                 <Image class="" src={kat2} class="absolute right-0 bottom-[-300px]" alt="Billede der viser en kat" loading="lazy"/>
         </div>
 
        
     </section>
-
-    <Image class="" src={kat2} class="" alt="Billede der viser en kat" loading="lazy"/>
-
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-
 
     </div>
 </MainLayout>

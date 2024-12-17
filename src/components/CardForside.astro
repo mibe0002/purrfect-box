@@ -24,9 +24,27 @@ const {
         <li>{punkt2}</li>
         <li>{punkt3}</li>
       </ul>
-      <div class="">
-        <Button variant="primary" size="desktop">Køb nu</Button>
-        <Button variant="secondary" size="desktop">Se mere</Button>
+      <div class="flex flex-row gap-d-xxs">
+        <span class="hidden md:block"
+          ><Button variant="primary" size="desktop"
+            ><input type="submit" value="Køb nu" /></Button
+          ></span
+        >
+        <span class="md:hidden flex"
+          ><Button variant="primary" size="mobile"
+            ><input type="submit" value="Køb nu" /></Button
+          ></span
+        >
+        <span class="hidden md:block"
+          ><Button variant="secondary" size="desktop"
+            ><input type="submit" value="Se mere" /></Button
+          ></span
+        >
+        <span class="md:hidden flex"
+          ><Button variant="secondary" size="mobile"
+            ><input type="submit" value="Se mere" /></Button
+          ></span
+        >
       </div>
     </div>
   </div>
