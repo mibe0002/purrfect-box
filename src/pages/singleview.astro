@@ -1,8 +1,67 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+import Link from "../components/Link.astro"
 
+import { Image } from 'astro:assets';
+import custom from "../assets/images/custom2.jpg";
+import can from "../assets/images/can.svg";
 ---
 
 <MainLayout>
-    
+    <section class="px-d-3xl">
+        <nav class="pb-d-m">
+            <ul class="flex gap-d-xxs">
+                <Link></Link>
+                <li class="hidden md:block"><Link href="/" variant="secondary" size="large">PurrfectBox ></Link></li>
+                <li class="md:hidden"><Link href="/" variant="secondary" size="standard">PurrfectBox ></Link></li>
+
+                <li class="hidden md:block"><Link href="/productlist" variant="secondary" size="large">PurrfectBox ></Link></li>
+                <li class="md:hidden"><Link href="/productlist" variant="secondary" size="standard">PurrfectBox ></Link></li>
+
+                <li class="hidden md:block underline underline-offset-8 decoration-pink-500"><a href="#">Custom Box</a></li>
+                <li class="md:hidden underline underline-offset-8 decoration-pink-500"><a href="#">Custom Box</a></li>
+            </ul>
+        </nav>
+
+        <div class="grid grid-cols-2">
+            <div class="">
+                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default"></Image>
+            </div>
+            <div class="flex flex-col justify-stretch items-start">
+                <h2>Custom Box</h2>
+                <p>Denne Purrfect Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment.
+                    Vælg 14 valgfrie produkter af kvalitetsmærker.</p>
+                <div>
+                    <ul class="grid grid-cols-2 grid-rows-3">
+                        <li class="flex gap-d-s items-center">
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <p>X Vådfoder</p>
+                        </li>
+                        <li class="flex gap-d-s items-center">
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <p>X Vådfoder</p>
+                        </li>
+                        <li class="flex gap-d-s items-center">
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <p>X Vådfoder</p>
+                        </li>
+                        <li class="flex gap-d-s items-center">
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <p>X Vådfoder</p>
+                        </li>
+                        <li class="flex gap-d-s items-center">
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <p>X Vådfoder</p>
+                        </li>
+                        <li class="flex gap-d-s items-center">
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <p>X Vådfoder</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </MainLayout>
