@@ -25,8 +25,8 @@ import Button from './Button.astro';
             <Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager"
                 class="hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></Link>
             <ul class="items-center flex gap-d-lg">
-                <li><Link href="#processen" variant="primary" size="large">Processen</Link></li>
-                <li><Link href="#faq"  variant="primary" size="large">FAQ</Link></li>
+                <li><Link href="/#processen" variant="primary" size="large">Processen</Link></li>
+                <li><Link href="/#faq"  variant="primary" size="large">FAQ</Link></li>
                 <li class="text-nowrap"><Link href="/about" variant="primary" size="large">Om os</Link></li>
             </ul>
         </div>
@@ -38,7 +38,7 @@ import Button from './Button.astro';
             </a>
             <div class="flex items-center group gap-m-s">
                 <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="transition-transform duration-300"></Image>
-                <Link href="/" variant="primary" size="standard" class="group">
+                <Link href="/#" variant="primary" size="standard" class="group">
                     Login
                 </Link>
             </div>
@@ -57,7 +57,7 @@ import Button from './Button.astro';
             <div class="flex gap-m-s justify-between items-center">
                 <div class="flex items-center t-4">
                     <Image src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="scale-75"></Image>
-                    <p><Link href="/" variant="primary" size="standard">Login</Link></p>
+                    <p><Link href="/#" variant="primary" size="standard">Login</Link></p>
                 </div>
                 <a href="/formular"><Image src={cart} alt="Indkøbsvogn" loading="eager" class="scale-75 active:-rotate-12 active:scale-105 transition-all duration-300"></Image></a>
             </div>
@@ -65,8 +65,8 @@ import Button from './Button.astro';
 
         <nav>
             <ul class="flex flex-col gap-m-sm items-start pt-m-s">
-                <li><Link href="#processen" variant="primary" size="standard">Processen</Link></li>
-                <li><Link href="#faq" variant="primary" size="standard">FAQ</Link></li>
+                <li><Link href="/#processen" variant="primary" size="standard">Processen</Link></li>
+                <li><Link href="/#faq" variant="primary" size="standard">FAQ</Link></li>
                 <li><Link href="/about" variant="primary" size="standard">Om os</Link></li>
             </ul>
         </nav>

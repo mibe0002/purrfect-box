@@ -247,7 +247,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
       />
     </div>
   </article>
-  <article class="py-d-lg">
+  <article id="processen" class="py-d-lg">
     <h2 class="font-bold text-center pt-d-lg pb-d-sm">
       Hvordan fungerer Purrfect Box?
     </h2>
@@ -386,53 +386,56 @@ import trustpilot from "../assets/images/trustpilot.svg";
         indhold="Ja, vores abonnement er helt fleksibelt! Du kan ændre abonnement, justere leveringsfrekvensen, eller opsige det når som helst – uden binding."
       />
     </div>
-  </article>
-  <style>
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
+    <article id="faq">
+      <Accordion />
+    </article>
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
       }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
 
-    .brands {
-      display: flex;
-      width: max-content; /* Tilpasser bredden til indholdet */
-    }
-
-    .animate-scroll {
-      animation: scroll 20s linear infinite;
-    }
-
-    @media only screen and (max-width: 768px) {
-      .trustpilotcards {
+      .brands {
         display: flex;
-        overflow: auto;
-        scroll-snap-type: x mandatory;
-        padding-left: 36px;
-        padding-right: 36px;
-        gap: 20px;
-        scroll-padding: 10px;
-        /* Hides scrollbar */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE and Edge */
+        width: max-content; /* Tilpasser bredden til indholdet */
       }
 
-      .trustpilotcards::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, and Opera */
-      }
-      .trustpilotcards .card {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
+      .animate-scroll {
+        animation: scroll 20s linear infinite;
       }
 
-      /* Hvis af en eller anden årsag, at scrollbar ikke hides, så justeres farven på scrollbar*/
-      .trustpilotcards {
-        scrollbar-color: #214f5f transparent;
+      @media only screen and (max-width: 768px) {
+        .trustpilotcards {
+          display: flex;
+          overflow: auto;
+          scroll-snap-type: x mandatory;
+          padding-left: 36px;
+          padding-right: 36px;
+          gap: 20px;
+          scroll-padding: 10px;
+          /* Hides scrollbar */
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .trustpilotcards::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, and Opera */
+        }
+        .trustpilotcards .card {
+          flex: 0 0 100%;
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+        }
+
+        /* Hvis af en eller anden årsag, at scrollbar ikke hides, så justeres farven på scrollbar*/
+        .trustpilotcards {
+          scrollbar-color: #214f5f transparent;
+        }
       }
-    }
-  </style>
+    </style>
+  </article>
 </MainLayout>

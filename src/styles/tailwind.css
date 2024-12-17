@@ -23,10 +23,6 @@
     @apply text-m-h1;
   }
 
-  h2 {
-    @apply text-m-h2;
-  }
-
   h3 {
     @apply text-m-h3;
   }
@@ -37,6 +33,7 @@
 
   body {
     @apply text-m-body;
+    @apply font-regular;
   }
 
   h1,
@@ -44,6 +41,7 @@
   h3,
   h4 {
     @apply font-dynapuff;
+    @apply font-bold;
   }
 
   h1,
@@ -55,6 +53,7 @@
 
   h2 {
     @apply text-blue-800;
+    @apply text-m-h2;
   }
 
   header,
@@ -87,6 +86,7 @@
 
     body {
       @apply text-d-body;
+      @apply font-regular;
     }
   }
 }
@@ -210,5 +210,21 @@
 
   .item.active .content {
     @apply p-d-s h-36; /* Viser indholdet, når aktiv */
+  }
+
+  /* heart click animation */
+  @keyframes fly-up {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  }
+
+  .fly-up-animation {
+    animation: fly-up 1.5s ease forwards;
   }
 }

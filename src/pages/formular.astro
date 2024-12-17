@@ -4,14 +4,55 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import kat1 from "../assets/images/forms_kat.svg";
+import kat2 from "../assets/images/forms_kat2.svg";
+import basicbox from "../assets/images/basicbox2.jpg";
 ---
 <MainLayout title="Purrfect Box">
 	
-<div class="gradient">
-    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl">
+<div class="gradient pt-d-xs">
+    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl entrance">
         <div class="bg-blue-200 rounded-default">
-            <h2 class="font-bold">Basic box</h2>
-            <Image class="" src={kat1} alt="Billede der viser en kat"/>
+            
+            <div class="bg-blue-50 rounded-default mx-d-s mt-d-xs shadow-drop10">
+                <Image class="" src={basicbox} class="rounded-t-default w-full" alt="Billede der viser en kat" loading="lazy"/>
+                <div class="py-d-xxs">
+                    <div class="px-d-s">
+                    <h4 class="font-bold pb-d-xxs">Basic Box</h4>
+                    <h3 class="font-bold pb-d-xxs text-blue-800">119 DKK/MD</h3>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5 mx-d-s mt-d-xxs">
+                        <label for="repeat-text" class=" mb-2 text-blue-800 ">Har du en kampagne kode?</label>
+                        <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Rabatkode" />
+            </div>
+
+            <div class="bg-blue-50 rounded-default mx-d-s mt-d-xs p-d-xs shadow-drop10">
+                <div class="flex flex-row justify-between">
+                <p>Subtotal</p>
+                <p>119,00 DKK</p>
+                </div>
+                <div class="flex flex-row justify-between">
+                <p>Levering</p>
+                <p>29,00 DKK</p>
+                </div>
+                <div class="flex flex-row justify-between">
+                <p class="font-bold">I alt (ekskl. moms)</p>
+                <p class="font-bold">148,00 DKK</p>
+                </div>
+                <div class="flex flex-row justify-between">
+                <p>Inkluderet moms</p>
+                <p>6,00 DKK</p>
+                </div>
+                <div class="flex flex-row justify-between">
+                <p class="font-bold text-blue-800">Total (inkl. moms)</p>
+                <p class="font-bold text-blue-800">155,00 DKK</p>
+                </div>
+            </div>
+            
+            <Image class="" src={kat1} class="ml-d-s mt-m-xxs" alt="Billede der viser en kat" loading="lazy"/>
         </div>
 
         <div class="bg-blue-200 px-d-m rounded-default">
@@ -129,8 +170,13 @@ import kat1 from "../assets/images/forms_kat.svg";
             <legend class="sr-only">Checkbox variants</legend>
 
             <div class="flex items-center mb-4">
-                <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 " >
+                <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500" required >
                 <label for="checkbox-1" class="ml-d-xxs text-blue-800 ">Jeg accepterer <a href="#" class="text-blue-600 hover:underline ">handelsbetingelserne*</a>.</label>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 " required>
+                <label for="checkbox-3" class="ml-d-xxs text-blue-800 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
             </div>
 
             <div class="flex items-center mb-4">
@@ -138,10 +184,7 @@ import kat1 from "../assets/images/forms_kat.svg";
                 <label for="checkbox-2" class="ml-d-xxs text-blue-800 ">Tilmeld dig vores nyhedsbrev</label>
             </div>
 
-            <div class="flex items-center mb-4">
-                <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 ">
-                <label for="checkbox-3" class="ml-d-xxs text-blue-800 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
-            </div>
+            
             </fieldset>
              
             <div class="flex justify-center py-d-m">
@@ -152,6 +195,7 @@ import kat1 from "../assets/images/forms_kat.svg";
        
     </section>
 
+    <Image class="" src={kat2} class="" alt="Billede der viser en kat" loading="lazy"/>
 
     <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 
@@ -178,3 +222,14 @@ import kat1 from "../assets/images/forms_kat.svg";
 	}
 }
 </style>
+
+
+	<script>
+	/* Import af Motion One biblioteket */
+	import { animate, stagger, inView, scroll, timeline } from "motion";
+
+    inView( ".entrance" , () =>{
+    animate( ".entrance", { opacity: [ 0, 1] }, { duration: 1 })
+    })
+    
+	</script>

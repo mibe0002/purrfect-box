@@ -1,32 +1,146 @@
 ---
 import { Image } from 'astro:assets';
-// import headerimg from "../assets/images/produkter_header.svg"
+import cot from "../assets/images/produkter_kat.svg";
+import banner from "../assets/images/bannermfp.svg";
+import basic from "../assets/images/basicbox2.jpg";
+import premium from "../assets/images/premium2.jpg";
+import deluxe from "../assets/images/deluxe2.jpg";
+import custom from "../assets/images/custom2.jpg";
+import cq from "../assets/images/produkter_kat2.svg";
+import cqs from "../assets/images/produkter_kat2spg.svg";
 
-import MainLayout from "../layouts/MainLayout.astro"
+import MainLayout from "../layouts/MainLayout.astro";
+import CardProduct from "../components/CardProduct.astro";
+import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Purrfect Boxes">
-    <section class="w-screen h-auto bg-[url('../img/produkter_header.svg')]">
-        <!-- <Image src={headerimg} alt="Header billede" class="w-full h-auto object-cover object-center"></Image> -->
-        <!-- <div class="bg-[url('../img/produkter_header.svg')]"></div> -->
-        <h1>PRODUKTE</h1>
-        <h2>PRODUKTER OVER </h2>
-        <p>EONFIPENIF</p>
+        <section class="px-m-sm md:px-d-3xl w-full md:pt-d-xl h-auto bg-[url('../img/produkter_header.svg')] md:bg-center bg-right bg-no-repeat bg-cover flex flex-col justify-center items-center">
+            <span class="pt-m-3xl md:pt-d-3xl w-auto md:hidden"></span>
+            <div class="w-full md:w-[1068px] h-full md:h-[425px]">
+                <h1 class="pb-m-m md:pb-d-m">Purrfect Boxes</h1>
+                <h2 class="pb-m-sm md:pb-d-sm">Overblik over vores Purr Boxes</h2>
+                <p class="w-full md:w-[615px] h-auto">Tag et kig og find den rette boks til dig og din kat. Vi har sammen med vores fællesskab tilpasset disse bokse,
+                så der er noget til enhver smag. Undersøg mere om hver enkelt boks, eller bestil din egen nu i dag!</p>
+            </div>
+            <span class="pb-m-3xl md:pb-d-3xl w-auto md:hidden"></span>
+            <span class="py-m-m md:hidden"></span>
+        </section>
 
-         <h1>PRODUKTE</h1>
-        <h2>PRODUKTER OVER </h2>
-        <p>EONFIPENIF</p>
+        <section class="px-m-sm md:px-d-3xl pt-m-5xl pb-m-m md:py-d-m flex flex-col items-center">
+            <div class="md:flex md:flex-row md:items-end md:justify-center gap-m-m md:gap-d-m">
+                <div class="pb-m-m">
+                    <div class="relative">
+                        <!-- SVG der trigges ved klik -->
+                        <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="lazy" class="animate-pulse w-40 md:w-1/2 absolute -top-28 md:-top-36 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
-         <h1>PRODUKTE</h1>
-        <h2>PRODUKTER OVER </h2>
-        <p>EONFIPENIF</p>
+                        <!-- Skjult hjerte der flyver op ved klik -->
+                        <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36  md:-top-36 w-12 h-12 text-pink-500 left-[125px] md:left-[200px] transform -translate-x-[125px] md:-translate-x-[200px]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="w-[500px] h-auto">
+                        <CardProduct 
+                            cardimage="../img/basicbox2.jpg"
+                            cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                            navn="Basic Box"
+                            pris="119 DKK/MD"
+                            beskrivelse="En enkel løsning med alle de nødvendige produkter til din kat hver måned."
+                        >
+                        </CardProduct>
+                    </div>
+                </div>
 
+                <div class="pb-m-m">
+                    <CardProduct 
+                        cardimage="../img/premium2.jpg"
+                        cardimagealt="Et billede af vores Premium Box med orange baggrund"
+                        navn="Premium Box"
+                        pris="149 DKK/MD"
+                        beskrivelse="En opgradering, der holder din kat mæt og underholdt med legetøj og snacks."
+                        class="md:h-full"
+                    >
+                    </CardProduct>
+                </div>
 
-         <h1>PRODUKTE</h1>
-        <h2>PRODUKTER OVER </h2>
-        <p>EONFIPENIF</p>
-    </section>
+                <div class="relative pb-m-m">
+                    <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
+                    <CardProduct 
+                        cardimage="../img/deluxe2.jpg"
+                        cardimagealt="Et billede af vores Deluxe Box med pink baggrund"
+                        navn="Deluxe Box"
+                        pris="199 DKK/MD"
+                        beskrivelse="En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks."
+                        class="md:h-full"
+                    >
+                    </CardProduct>
+                </div>
+            </div>
 
+            <CardProduct
+                cardimage="../img/custom2.jpg"
+                cardimagealt="Et billede af vores Custom Box med gul baggrund"
+                titel="Vil du lave din egen Purr Box?"
+                navn="Custom Box"
+                pris="299 DKK/MD"
+                beskrivelse="Denne Purr Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment. Du kan vælge dine egne brands og op til 14 produkter!"
+                class="md:h-[635px]"
+            >
+            </CardProduct>
+        </section>
 
-
+        <section class="px-m-sm pb-m-ml md:pb-d-ml md:px-d-3xl">
+            <article class="pt-m-sm bg-yellow-200 rounded-default">
+                <div class="pt-m-sm">
+                    <div class="relative">
+                        <div class="px-m-ml flex flex-col items-center pb-m-sm">
+                            <h2 class="text-center pb-m-sm">Hvilken abonnements-plan er dit perfekte match?</h2>
+                            <p class="w-[360px] pb-m-sm">Ved du ikke hvilket abonnement du skal vælge? Vi har udviklet en quiz der skal hjælpe dig på vej til finde den perfekte Purr Box til dig og din kat.</p>
+                            <h2 class="pb-m-sm">Tag vores quiz nu!</h2>
+                            <span class="md:hidden">
+                                <Button variant="primary" size="mobile">Start her</Button>
+                            </span>
+                            <span class="hidden md:block">
+                                <Button variant="primary" size="desktop">Start her</Button>
+                            </span>
+                        </div>
+                        <div class="absolute bottom-0 right-0">
+                            <Image id="fly-icon" src={cqs} alt="Spørgsmålstegn ikon" loading="lazy" class="hidden absolute -top-14 left-[10px] transform -translate-x-[10px] fly-up-animation"></Image>
+                            <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="animate-pulse w-20 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 grid-rows-2">
+                        <Image src={basic} alt="Basic Box" loading="lazy"></Image>
+                        <Image src={premium} alt="Premium Box" loading="lazy" class="md:rounded-tr-default"></Image>
+                        <Image src={deluxe} alt="Deluxe Box" loading="lazy" class="rounded-bl-default md:rounded-none"></Image>
+                        <Image src={custom} alt="Custom Box" loading="lazy" class="rounded-br-default"></Image>
+                    </div>
+                </div>
+            </article>
+        </section>
 </MainLayout>
+
+<script>
+  // Funktion for klik-event på både ikon og eget svg-fil
+  const handleClick = (iconId, heartId) => {
+    const icon = document.getElementById(iconId);
+    const heart = document.getElementById(heartId);
+    
+    icon.addEventListener('click', () => {
+      heart.classList.remove('hidden');
+      heart.classList.add('fly-up-animation');
+      
+      // Timeout til at nulstille efter animationen
+      setTimeout(() => {
+        heart.classList.remove('fly-up-animation');
+        heart.classList.add('hidden');
+      }, 1000); // Samme varighed som animationen
+    });
+  };
+
+  // Kald funktionen for begge elementer
+  handleClick('klik_mig', 'heart-icon');
+  handleClick('icon', 'fly-icon');
+</script>
