@@ -28,7 +28,7 @@ import Button from '../components/Button.astro';
         </section>
 
         <section class="px-m-sm md:px-d-3xl pt-m-5xl pb-m-m md:py-d-m flex flex-col items-center">
-            <div class="md:flex md:flex-row md:items-end md:justify-center gap-m-m md:gap-d-m">
+            <div class="md:px-d-3xl md:flex md:flex-row md:items-end md:justify-center gap-m-m">
                 <div class="pb-m-m">
                     <div class="relative">
                         <!-- SVG der trigges ved klik -->
@@ -72,21 +72,12 @@ import Button from '../components/Button.astro';
                 </div>
 
                 <div class="pb-m-m">
-                    <CardProduct 
-                       
-                       
-                        pris="149 DKK/MD"
-                        beskrivelse="En opgradering, der holder din kat mæt og underholdt med legetøj og snacks."
-                        heightClass="h-80"
-                    >
-                    </CardProduct>
-
-                    <article class="bg-blue-200 rounded-default h-[600px]">
+                    <article class="bg-blue-200 rounded-default h-[700px]">
                         <Image id="klik_mig" src={premium} alt="Et billede af vores Premium Box med orange baggrund" loading="lazy" class="rounded-t-default"></Image>
                         <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
                             <h4 class="pb-m-s md:pb-d-s">Premium Box</h4>
-                            <h3 class="pb-m-s md:pb-d-s text-blue-800">119 DKK/MD</h3>
-                            <p class="w-[360px]">En enkel løsning med alle de nødvendige produkter til din kat hver måned.</p>
+                            <h3 class="pb-m-s md:pb-d-s text-blue-800">149 DKK/MD</h3>
+                            <p class="w-[360px] pb-[99px]">En opgradering, der holder din kat mæt og underholdt med legetøj og snacks.</p>
                             <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
                             <span class="md:hidden">
                                 <a href="/formular">
@@ -115,28 +106,51 @@ import Button from '../components/Button.astro';
 
                 <div class="relative pb-m-m">
                     <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
-                    <CardProduct 
-                        cardimage="../img/deluxe2.jpg"
-                        cardimagealt="Et billede af vores Deluxe Box med pink baggrund"
-                        navn="Deluxe Box"
-                        pris="199 DKK/MD"
-                        beskrivelse="En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks."
-                        heightClass="h-96" 
-                    >
-                    </CardProduct>
+                    <article class="bg-blue-200 rounded-default h-[800px]">
+                        <Image id="klik_mig" src={deluxe} alt="Et billede af vores Deluxe Box med pink baggrund" loading="lazy" class="rounded-t-default"></Image>
+                        <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
+                            <div class="">
+                                <h4 class="pb-m-s md:pb-d-s">Deluxe Box</h4>
+                                <h3 class="pb-m-s md:pb-d-s text-blue-800">199 DKK/MD</h3>
+                                <p class="w-[360px] pb-[170px]">En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks.</p>
+                            </div>
+                            <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
+                                <span class="md:hidden">
+                                    <a href="/formular">
+                                    <Button variant="primary" size="mobile">Køb nu</Button>
+                                    </a>
+                                </span>
+                                <span class="hidden md:block">
+                                    <a href="/formular">
+                                    <Button variant="primary" size="desktop">Køb nu</Button>
+                                    </a>
+                                </span>
+                                <span class="md:hidden">
+                                    <a href="/singleview">
+                                    <Button variant="secondary" size="mobile">Se mere</Button>
+                                    </a>
+                                </span>
+                                <span class="hidden md:block">
+                                    <a href="/singleview">
+                                    <Button variant="secondary" size="desktop">Se mere</Button>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
 
-            <CardProduct
-                cardimage="../img/custom2.jpg"
-                cardimagealt="Et billede af vores Custom Box med gul baggrund"
-                titel="Vil du lave din egen Purr Box?"
-                navn="Custom Box"
-                pris="299 DKK/MD"
-                beskrivelse="Denne Purr Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment. Du kan vælge dine egne brands og op til 14 produkter!"
-                class="md:h-[635px]"
-            >
-            </CardProduct>
+                <CardProduct
+                    cardimage="../img/custom2.jpg"
+                    cardimagealt="Et billede af vores Custom Box med gul baggrund"
+                    titel="Vil du lave din egen Purr Box?"
+                    navn="Custom Box"
+                    pris="299 DKK/MD"
+                    beskrivelse="Denne Purr Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment. Du kan vælge dine egne brands og op til 14 produkter!"
+                    class="md:h-[635px]"
+                >
+                </CardProduct>
         </section>
 
         <section class="px-m-sm pb-m-ml md:pb-d-ml md:px-d-3xl">

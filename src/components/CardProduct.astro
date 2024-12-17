@@ -9,13 +9,14 @@ const {
   navn = "",
   pris = "",
   beskrivelse = "",
-  heightClass = "",
 } = Astro.props;
 ---
-<article class="bg-blue-200 rounded-default ${heightClass}">
-  <img src={cardimage} alt={cardimagealt} class="rounded-t-default" />
+<article class="bg-blue-200 rounded-default md:flex md:w-full md:justify-around md:items-center">
+  <div class="w-full">
+  <img src={cardimage} alt={cardimagealt} class="rounded-t-default md:w-full md:rounded-l-default md:rounded-tr-none" />
+  </div>
   <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-    <h2 class="pb-m-sm md:pb-d-sm">{titel}</h2>
+    <h3 class="pb-m-sm md:pb-d-sm">{titel}</h3>
     <h4 class="pb-m-s md:pb-d-s">{navn}</h4>
     <h3 class="pb-m-s md:pb-d-s text-blue-800">{pris}</h3>
     <p class="w-[360px]">{beskrivelse}</p>
