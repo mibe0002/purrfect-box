@@ -4,19 +4,23 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import Card from "../components/CardOmOs.astro";
 import Accordion from "../components/Accordion.astro";
+import MyCustomImage from "../components/MyCustomImage.astro";
 import { Image } from 'astro:assets';
 import kat1 from "../assets/images/omos_foto.png";
 import billede1 from "../assets/images/logo.svg";
 import billede2 from "../assets/images/omos_verdi.svg";
 import billede3 from "../assets/images/omos_verdi2.svg";
 import yarn from "../assets/images/yarn2.svg";
+import yarn2 from "../assets/images/yarn3.svg";
+import desktopImage from "../assets/images/yarn2.svg";
+import mobileImage from "../assets/images/yarn3.svg";
 ---
 <MainLayout title="Purrfect Box">
        <Image class="" src={kat1} alt="Billede der viser en kat" loading="lazy"/>
 
-       <section class="lg:mx-d-3xl mb-d-m entrance">
+       <section class="mx-m-sm lg:mx-d-3xl mb-d-m entrance">
             <h2 class="font-bold lg:my-d-m">Om os</h2>
-            <div class="grid lg:grid-cols-[1fr_1fr] gap-d-5xl">
+            <div class="grid lg:grid-cols-[1fr_1fr] gap-m-ml lg:gap-d-5xl">
                 <div class="">
                     <h3 class="font-bold pb-d-xs">Teamet</h3>
                     <p class="pb-d-xxs">Purrfect Box er et glad og ydmygt katteabonnementsboksfirma, der finder bopæl i Danmark. Purrfect Box drives af rigtige mennesker, som virkelig elsker katte, og som bekymrer sig om deres kunder. </p>
@@ -32,7 +36,7 @@ import yarn from "../assets/images/yarn2.svg";
        </section>
 
        <section class="">
-        <h3 class="font-bold mx-d-3xl mb-d-m">Vores værdier</h3>
+        <h3 class="font-bold mx-m-sm lg:mx-d-3xl mb-m-sm lg:mb-d-m">Vores værdier</h3>
         <div class="grid lg:grid-cols-3">
             <div class="bg-yellow-50 staggeranimation">
                 <div class="flex flex-col items-center py-d-lg px-d-m">
@@ -65,7 +69,7 @@ import yarn from "../assets/images/yarn2.svg";
        </section>
 
        <div class="gradient relative -z-20 pb-d-5xl">
-            <section class="lg:mx-d-3xl pt-d-m mb-d-m overflow-hidden">
+            <section class="mx-m-sm lg:mx-d-3xl pt-d-m mb-d-m overflow-hidden">
                 <h2 class="font-bold mb-d-m">Mød teamet</h2>
 
                 <div class="grid lg:grid-cols-[1fr_1fr] gap-d-3xl  overflow-hidden mb-d-3xl lg:mx-d-3xl fotoinview">
@@ -121,8 +125,8 @@ import yarn from "../assets/images/yarn2.svg";
 
             </section>
 
-            <section class="mx-d-3xl mb-d-lg">
-                <h2 class="font-bold pb-d-sm">FAQ</h2>
+            <section class="lg:mx-d-3xl mb-d-lg">
+                <h2 class="font-bold mx-m-sm pb-d-sm">FAQ</h2>
                 <div class="pb-d-sm lg:grid grid-cols-2">
                 <Accordion
                     titel="Hvordan fungerer abonnementet?"
@@ -149,10 +153,15 @@ import yarn from "../assets/images/yarn2.svg";
                     indhold="Ja, vores abonnement er helt fleksibelt! Du kan ændre abonnement, justere leveringsfrekvensen, eller opsige det når som helst – uden binding."
                 />
                 </div>
+
+                
             </section>
 
-            <div class="flex justify-center">
-             <Image class="h-full absolute top-0 -z-10" src={yarn} alt="Billede der viser en kat" loading="lazy"/>
+            <div class="absolute bottom-0 -z-10 lg:invisible">
+                    <Image class="h-full " src={yarn2} alt="Billede der viser en kat" loading="lazy"/>
+                </div>
+            <div class="flex justify-end overflow-hidden">
+                 <Image class="h-full absolute top-0 -z-10 invisible lg:visible" src={yarn} alt="Billede der viser en kat" loading="lazy"/>
              </div>
        </div>
 
