@@ -39,17 +39,36 @@ import Button from '../components/Button.astro';
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                     </div>
-                    
-                    <div class="w-[500px] h-auto">
-                        <CardProduct 
-                            cardimage="../img/basicbox2.jpg"
-                            cardimagealt="Et billede af vores Basic Box med beige baggrund"
-                            navn="Basic Box"
-                            pris="119 DKK/MD"
-                            beskrivelse="En enkel løsning med alle de nødvendige produkter til din kat hver måned."
-                        >
-                        </CardProduct>
-                    </div>
+                        <article class="bg-blue-200 rounded-default h-[600px]">
+                        <Image id="klik_mig" src={basic} alt="Et billede af vores Basic Box med beige baggrund" loading="lazy" class="rounded-t-default"></Image>
+                        <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
+                            <h4 class="pb-m-s md:pb-d-s">Basic Box</h4>
+                            <h3 class="pb-m-s md:pb-d-s text-blue-800">119 DKK/MD</h3>
+                            <p class="w-[360px]">En enkel løsning med alle de nødvendige produkter til din kat hver måned.</p>
+                            <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
+                            <span class="md:hidden">
+                                <a href="/formular">
+                                <Button variant="primary" size="mobile">Køb nu</Button>
+                                </a>
+                            </span>
+                            <span class="hidden md:block">
+                                <a href="/formular">
+                                <Button variant="primary" size="desktop">Køb nu</Button>
+                                </a>
+                            </span>
+                            <span class="md:hidden">
+                                <a href="/singleview">
+                                <Button variant="secondary" size="mobile">Se mere</Button>
+                                </a>
+                            </span>
+                            <span class="hidden md:block">
+                                <a href="/singleview">
+                                <Button variant="secondary" size="desktop">Se mere</Button>
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="pb-m-m">
@@ -59,9 +78,40 @@ import Button from '../components/Button.astro';
                         navn="Premium Box"
                         pris="149 DKK/MD"
                         beskrivelse="En opgradering, der holder din kat mæt og underholdt med legetøj og snacks."
-                        class="md:h-full"
+                        heightClass="h-80"
                     >
                     </CardProduct>
+
+                    <article class="bg-blue-200 rounded-default h-[600px]">
+                        <Image id="klik_mig" src={basic} alt="Et billede af vores Basic Box med beige baggrund" loading="lazy" class="rounded-t-default"></Image>
+                        <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
+                            <h4 class="pb-m-s md:pb-d-s">Basic Box</h4>
+                            <h3 class="pb-m-s md:pb-d-s text-blue-800">119 DKK/MD</h3>
+                            <p class="w-[360px]">En enkel løsning med alle de nødvendige produkter til din kat hver måned.</p>
+                            <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
+                            <span class="md:hidden">
+                                <a href="/formular">
+                                <Button variant="primary" size="mobile">Køb nu</Button>
+                                </a>
+                            </span>
+                            <span class="hidden md:block">
+                                <a href="/formular">
+                                <Button variant="primary" size="desktop">Køb nu</Button>
+                                </a>
+                            </span>
+                            <span class="md:hidden">
+                                <a href="/singleview">
+                                <Button variant="secondary" size="mobile">Se mere</Button>
+                                </a>
+                            </span>
+                            <span class="hidden md:block">
+                                <a href="/singleview">
+                                <Button variant="secondary" size="desktop">Se mere</Button>
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="relative pb-m-m">
@@ -72,7 +122,7 @@ import Button from '../components/Button.astro';
                         navn="Deluxe Box"
                         pris="199 DKK/MD"
                         beskrivelse="En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks."
-                        class="md:h-full"
+                        heightClass="h-96" 
                     >
                     </CardProduct>
                 </div>
