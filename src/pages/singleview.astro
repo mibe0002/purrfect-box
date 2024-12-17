@@ -1,67 +1,268 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import Link from "../components/Link.astro"
+import Button from "../components/Button.astro";
+import CardForside from "../components/CardForside.astro";
+import HowTo from "../components/HowTo.astro";
+import TrustpilotCard from "../components/TrustpilotCard.astro";
 
 import { Image } from 'astro:assets';
 import custom from "../assets/images/custom2.jpg";
 import can from "../assets/images/can.svg";
+import bag from "../assets/images/bag.svg";
+import fish from "../assets/images/fish.svg";
+import mouse from "../assets/images/mouse.svg";
+import shovel from "../assets/images/shovel.svg";
+import paw from "../assets/images/paw.svg";
+import cat1 from "../assets/images/singleview_kat.svg";
+import cc1 from "../assets/images/carousel1.jpg";
+import cc2 from "../assets/images/carousel2.jpg";
+import cc3 from "../assets/images/carousel3.jpg";
+import cc4 from "../assets/images/carousel4.jpg";
 ---
 
 <MainLayout>
-    <section class="px-d-3xl">
+    <section class="px-d-3xl py-d-m">
         <nav class="pb-d-m">
             <ul class="flex gap-d-xxs">
                 <Link></Link>
                 <li class="hidden md:block"><Link href="/" variant="secondary" size="large">PurrfectBox ></Link></li>
                 <li class="md:hidden"><Link href="/" variant="secondary" size="standard">PurrfectBox ></Link></li>
 
-                <li class="hidden md:block"><Link href="/productlist" variant="secondary" size="large">PurrfectBox ></Link></li>
-                <li class="md:hidden"><Link href="/productlist" variant="secondary" size="standard">PurrfectBox ></Link></li>
+                <li class="hidden md:block"><Link href="/productlist" variant="secondary" size="large">PurrBox ></Link></li>
+                <li class="md:hidden"><Link href="/productlist" variant="secondary" size="standard">PurrBox ></Link></li>
 
                 <li class="hidden md:block underline underline-offset-8 decoration-pink-500"><a href="#">Custom Box</a></li>
                 <li class="md:hidden underline underline-offset-8 decoration-pink-500"><a href="#">Custom Box</a></li>
             </ul>
         </nav>
 
-        <div class="grid grid-cols-2">
-            <div class="">
+        <div class="grid grid-cols-3 justify-items-center gap-d-s">
+            <div class="col-span-2">
                 <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default"></Image>
             </div>
-            <div class="flex flex-col justify-stretch items-start">
+            <div class="col-auto px-d-m gap-d-s flex flex-col justify-between min-w-[500px] h-auto">
                 <h2>Custom Box</h2>
-                <p>Denne Purrfect Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment.
+                <p class="max-w-[430px]">Denne Purrfect Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment.
                     Vælg 14 valgfrie produkter af kvalitetsmærker.</p>
-                <div>
-                    <ul class="grid grid-cols-2 grid-rows-3">
+                <ul class="grid grid-cols-2 grid-rows-3 gap-x-d-s w-full h-auto">
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
+                            <Image src={can} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
                             <p>X Vådfoder</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
-                            <p>X Vådfoder</p>
+                            <Image src={bag} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <p>X Tørfoder</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
-                            <p>X Vådfoder</p>
+                            <Image src={fish} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <p>X Snacks</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
-                            <p>X Vådfoder</p>
+                            <Image src={mouse} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <p class="text-nowrap">X Stk. legetøj</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
-                            <p>X Vådfoder</p>
+                            <Image src={shovel} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <p>X Kattegrus</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy"></Image>
-                            <p>X Vådfoder</p>
+                            <Image src={paw} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <p>X Pleje</p>
                         </li>
-                    </ul>
+                </ul>
+
+                <div class="flex flex-col justify-start items-end pb-d-s">
+                    <h2 class="pb-d-s">299 DKK</h2>
+                    <p>Faktureres månedligt. Opsig når som helst.</p>
+                </div>
+                
+                <span class="md:hidden flex justify-end">
+                    <Button variant="primary" size="mobile">Start her</Button>
+                </span>
+                <span class="hidden md:flex justify-end">
+                    <Button variant="primary" size="desktop">Start her</Button>
+                </span>
+
+                 <div class="relative">
+                        <!-- SVG der trigges ved klik -->
+                        <Image id="klik_mig" src={cat1} alt="Pink Bingle" loading="lazy" class="animate-pulse absolute left-d-xxs bottom-4 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+
+                        <!-- Skjult hjerte der flyver op ved klik -->
+                        <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36  md:-top-36 w-12 h-12 text-pink-500 left-[125px] md:left-[40px] transform -translate-x-[125px] md:-translate-x-[40px]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="px-d-3xl pb-d-m">
+        <h3 class="pb-d-m">Ikke sikker? Tjek vores andre Purrfect Boxes ud!</h3>
 
+        <div class="flex justify-around items-center gap-d-s">
+            <CardForside
+                cardimage="../img/basicbox2.jpg"
+                cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                navn="Basic Box"
+                pris="119 DKK/MD"
+                punkt1="5 produkter i denne boks"
+                punkt2="Vælg dine egne brands"
+                punkt3="Opsig når som helst"
+            >    
+            </CardForside>
+
+             <CardForside
+                cardimage="../img/premium2.jpg"
+                cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                navn="Premium Box"
+                pris="149 DKK/MD"
+                punkt1="7 produkter i denne boks"
+                punkt2="Vælg dine egne brands"
+                punkt3="Opsig når som helst"
+            >    
+            </CardForside>
+
+             <CardForside
+                cardimage="../img/deluxe2.jpg"
+                cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                navn="Deluxe Box"
+                pris="199 DKK/MD"
+                punkt1="9 produkter i denne boks"
+                punkt2="Vælg dine egne brands"
+                punkt3="Opsig når som helst"
+            >    
+            </CardForside>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="pb-d-m text-center">Hvordan køber jeg en Purrfect Box?</h2>
+        <HowTo></HowTo>
+    </section>
+
+    <section class="pt-d-m text-center h-screen w-auto">
+        <h2 class="pb-d-m">Hvad meowner andre katte?</h2>
+        <div class="mx-auto pt-d-m pb-d-xl">
+
+            <div class="mx-auto pt-4 pb-8">
+    <div class="overflow-hidden relative carousel-wrapper">
+        <!-- Carousel Wrapper -->
+        <div class="flex space-x-4 overflow-x-scroll no-scrollbar">
+            <!-- Slides -->
+            <div class="flex flex-nowrap">
+                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                    <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                </div>
+
+                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                   <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                </div>
+
+                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                </div>
+
+
+
+
+                  <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                    <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                </div>
+
+                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                   <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                </div>
+
+                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Knappen (pilene) -->
+        <button class="prev absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full">
+            ←
+        </button>
+        <button class="next absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full">
+            →
+        </button>
+    </div>
+</div>
+
+
+
+    </section>
+
+
+    
 </MainLayout>
+
+<style>
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+</style>
+
+<script>
+  // Funktion for klik-event på både ikon og eget svg-fil
+  const handleClick = (iconId, heartId) => {
+    const icon = document.getElementById(iconId);
+    const heart = document.getElementById(heartId);
+    
+    icon.addEventListener('click', () => {
+      heart.classList.remove('hidden');
+      heart.classList.add('fly-up-animation');
+      
+      // Timeout til at nulstille efter animationen
+      setTimeout(() => {
+        heart.classList.remove('fly-up-animation');
+        heart.classList.add('hidden');
+      }, 1000); // Samme varighed som animationen
+    });
+  };
+
+  // Kald funktionen for begge elementer
+  handleClick('klik_mig', 'heart-icon');
+  handleClick('icon', 'fly-icon');
+
+
+
+
+
+
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const carousel = document.querySelector('.carousel-wrapper');
+
+// Type-cast til HTMLElement
+const slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLElement>;
+
+let currentSlide = 0;
+
+const slideWidth = slides[0].offsetWidth; // Hent bredden af én slide
+
+// Håndter venstre pil (tilbage)
+prevButton.addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        carousel.scrollLeft -= slideWidth;
+    }
+});
+
+// Håndter højre pil (frem)
+nextButton.addEventListener('click', () => {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        carousel.scrollLeft += slideWidth;
+    }
+});
+
+
+</script>
+
