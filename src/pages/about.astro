@@ -3,11 +3,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import Card from "../components/CardOmOs.astro";
+import Accordion from "../components/Accordion.astro";
 import { Image } from 'astro:assets';
 import kat1 from "../assets/images/omos_foto.png";
 import billede1 from "../assets/images/logo.svg";
 import billede2 from "../assets/images/omos_verdi.svg";
 import billede3 from "../assets/images/omos_verdi2.svg";
+import yarn from "../assets/images/yarn2.svg";
 ---
 <MainLayout title="Purrfect Box">
        <Image class="" src={kat1} alt="Billede der viser en kat" loading="lazy"/>
@@ -62,7 +64,7 @@ import billede3 from "../assets/images/omos_verdi2.svg";
         </div>
        </section>
 
-       <div class="gradient">
+       <div class="gradient relative -z-20">
             <section class="lg:mx-d-3xl pt-d-m overflow-hidden">
                 <h2 class="font-bold mb-d-m">Mød teamet</h2>
 
@@ -118,6 +120,38 @@ import billede3 from "../assets/images/omos_verdi2.svg";
                 </div>
 
             </section>
+
+            <section class="mx-d-3xl">
+                <h2 class="font-bold pb-d-sm">FAQ</h2>
+                <div class="pb-d-sm lg:grid grid-cols-2">
+                <Accordion
+                    titel="Hvordan fungerer abonnementet?"
+                    indhold="Vores abonnement er enkelt: Du vælger, hvad din kat har brug for, og vi leverer det direkte til din dør hver måned. Du kan altid tilpasse det til din kats behov."
+                />
+                <Accordion
+                    titel="Hvilke produkter er inkluderet i abonnementet?"
+                    indhold="Vores abonnement indeholder essentielle ting som tørfoder, vådfoder, kattegrus og andre praktiske produkter. Du kan selv vælge og tilpasse indholdet."
+                />
+                <Accordion
+                    titel="Hvad sker der, hvis min kat ikke kan lide foderet?"
+                    indhold="Vi forstår, at alle katte er forskellige. Kontakt os, så finder vi en løsning og tilbyder alternativer, der passer bedre til din kat."
+                />
+                <Accordion
+                    titel="Hvilke områder leverer I til?"
+                    indhold="Vi leverer i hele landet. Hvis du har særlige ønsker eller bor på en ø, så kontakt os – vi finder en løsning."
+                />
+                <Accordion
+                    titel="Hvordan betaler jeg for abonnementet?"
+                    indhold="Betalingen sker automatisk hver måned via det kort, du tilmelder. Du modtager en kvittering på mail efter hver betaling."
+                />
+                <Accordion
+                    titel="Kan jeg ændre eller opsige mit abonnement?"
+                    indhold="Ja, vores abonnement er helt fleksibelt! Du kan ændre abonnement, justere leveringsfrekvensen, eller opsige det når som helst – uden binding."
+                />
+                </div>
+            </section>
+
+             <Image class="absolute top-0 -z-10" src={yarn} alt="Billede der viser en kat" loading="lazy"/>
        </div>
 
 </MainLayout>
