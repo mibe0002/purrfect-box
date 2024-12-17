@@ -6,7 +6,7 @@ import cart from "../assets/images/cart.svg";
 import Link from './Link.astro';
 import Button from './Button.astro';
 ---
-<div class="w-full h-auto py-m-s lg:py-d-s px-m-sm lg:px-d-3xl flex flex-row items-center justify-between">
+<div class="w-full h-auto py-m-s lg:py-d-xxs px-m-sm lg:px-d-3xl flex flex-row items-center justify-between">
     <nav  class="w-full flex items-center justify-between">
         <!-- Logo og burger ikon for mobil -->
         <div class="w-full flex items-center justify-between lg:hidden">
@@ -37,13 +37,13 @@ import Button from './Button.astro';
                 <Button variant="primary" size="desktop"><span class="text-nowrap">Purr Box</span></Button>
             </a>
             <div class="flex items-center group gap-m-s">
-                <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="transition-transform duration-300"></Image>
+                <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="md:w-10 h-auto transition-transform duration-300"></Image>
                 <Link href="/#" variant="primary" size="standard" class="group">
                     Login
                 </Link>
             </div>
             <a href="/formular">
-                <Image src={cart} alt="Indkøbsvogn" loading="eager" class="svg-filter hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image>
+                <Image src={cart} alt="Indkøbsvogn" loading="eager" class="md:w-10 h-auto svg-filter hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image>
             </a>
         </div>
     </nav>
