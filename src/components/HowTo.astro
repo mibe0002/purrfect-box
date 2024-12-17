@@ -5,8 +5,8 @@ import produkter from "../assets/images/forside_howto2.svg";
 import truck from "../assets/images/forside_howto3.svg";
 ---
 
-<div class="lg:grid grid-cols-3">
-  <div class="bg-yellow-50">
+<div id="stagger" class="lg:grid grid-cols-3">
+  <div class="bg-yellow-50 staggeranimation">
     <div class="flex flex-col items-center py-d-lg px-d-m">
       <Image
         class=""
@@ -20,7 +20,7 @@ import truck from "../assets/images/forside_howto3.svg";
       </p>
     </div>
   </div>
-  <div class="bg-yellow-100">
+  <div class="bg-yellow-100 staggeranimation">
     <div class="flex flex-col items-center py-d-lg px-d-m">
       <Image
         class="w-36"
@@ -35,7 +35,7 @@ import truck from "../assets/images/forside_howto3.svg";
       </p>
     </div>
   </div>
-  <div class="bg-yellow-200">
+  <div class="bg-yellow-200 staggeranimation">
     <div class="flex flex-col items-center py-d-lg px-d-m">
       <Image class="" src={truck} alt="Billede af en blå lastbil" />
       <h3 class="font-bold py-d-s">Få den leveret nemt!</h3>
@@ -46,3 +46,19 @@ import truck from "../assets/images/forside_howto3.svg";
     </div>
   </div>
 </div>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, stagger, inView } from "motion";
+
+  /* Stagger animation */
+  inView("#stagger", () => {
+    animate(
+      ".staggeranimation",
+      { opacity: [0, 1] },
+      {
+        delay: stagger(0.3, { start: 0.5 }), // Reduceret forsinkelse mellem elementer og starttidspunkt
+      }
+    );
+  });
+</script>
