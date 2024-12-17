@@ -183,6 +183,32 @@
   }
 
   .svg-filter:hover {
-    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%);
+    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg)
+      brightness(94%) contrast(89%);
+  }
+
+  .item .activeIcon {
+    @apply hidden; /* Skjuler aktiv-ikonet som standard */
+  }
+
+  .item.active .activeIcon {
+    @apply block; /* Viser aktiv-ikonet, når elementet har klassen .active */
+  }
+
+  .item .inactiveIcon {
+    @apply block; /* Viser inaktiv-ikonet som standard */
+  }
+
+  .item.active .inactiveIcon {
+    @apply hidden; /* Skjuler inaktiv-ikonet, når elementet har klassen .active */
+  }
+
+  /* Content visning og skjulning */
+  .item:not(.active) .content {
+    @apply h-0 overflow-hidden py-0; /* Skjuler indholdet, når ikke aktiv */
+  }
+
+  .item.active .content {
+    @apply p-d-s h-36; /* Viser indholdet, når aktiv */
   }
 }

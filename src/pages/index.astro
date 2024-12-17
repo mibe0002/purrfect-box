@@ -39,12 +39,12 @@ import trustpilot from "../assets/images/trustpilot.svg";
     </div>
   </article>
   <article class="lg:mx-d-5xl">
-    <h2 class="font-bold pt-d-m pb-d-s">
+    <h2 class="font-bold pt-d-m lg:pb-d-s">
       Alt din kat har brug for - leveret direkte til døren
     </h2>
     <div class="lg:grid grid-cols-2">
       <div class="pr-d-m">
-        <h3 class="font-bold py-d-s">Hvorfor PurrBox?</h3>
+        <h3 class="font-bold py-d-xs lg:py-d-s">Hvorfor PurrBox?</h3>
         <p class="pb-d-s">
           Vores abonnement til katteejere gør det nemt at tage sig af din kat.
           Hver måned får du de vigtigste produkter som tørfoder, vådfoder,
@@ -208,7 +208,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
     <h2 class="font-bold pt-d-lg pb-d-sm">
       Hvilken Purr Box skal din kat have?
     </h2>
-    <div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr] gap-sm px-3xl">
+    <div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr] gap-d-sm px-3xl">
       <CardForside
         cardimage="../img/basicbox2.jpg"
         cardimagealt="Et billede af vores Basic Box med beige baggrund"
@@ -358,8 +358,34 @@ import trustpilot from "../assets/images/trustpilot.svg";
       </form>
     </div>
   </article>
-  <article>
-    <Accordion />
+  <article class="lg:mx-d-5xl">
+    <h2 class="font-bold pb-d-sm">FAQ</h2>
+    <div class="pb-d-sm lg:grid grid-cols-2">
+      <Accordion
+        titel="Hvordan fungerer abonnementet?"
+        indhold="Vores abonnement er enkelt: Du vælger, hvad din kat har brug for, og vi leverer det direkte til din dør hver måned. Du kan altid tilpasse det til din kats behov."
+      />
+      <Accordion
+        titel="Hvilke produkter er inkluderet i abonnementet?"
+        indhold="Vores abonnement indeholder essentielle ting som tørfoder, vådfoder, kattegrus og andre praktiske produkter. Du kan selv vælge og tilpasse indholdet."
+      />
+      <Accordion
+        titel="Hvad sker der, hvis min kat ikke kan lide foderet?"
+        indhold="Vi forstår, at alle katte er forskellige. Kontakt os, så finder vi en løsning og tilbyder alternativer, der passer bedre til din kat."
+      />
+      <Accordion
+        titel="Hvilke områder leverer I til?"
+        indhold="Vi leverer i hele landet. Hvis du har særlige ønsker eller bor på en ø, så kontakt os – vi finder en løsning."
+      />
+      <Accordion
+        titel="Hvordan betaler jeg for abonnementet?"
+        indhold="Betalingen sker automatisk hver måned via det kort, du tilmelder. Du modtager en kvittering på mail efter hver betaling."
+      />
+      <Accordion
+        titel="Kan jeg ændre eller opsige mit abonnement?"
+        indhold="Ja, vores abonnement er helt fleksibelt! Du kan ændre abonnement, justere leveringsfrekvensen, eller opsige det når som helst – uden binding."
+      />
+    </div>
   </article>
   <style>
     @keyframes scroll {
