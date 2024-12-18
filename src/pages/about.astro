@@ -12,11 +12,26 @@ import billede2 from "../assets/images/omos_verdi.svg";
 import billede3 from "../assets/images/omos_verdi2.svg";
 import yarn from "../assets/images/yarn4.svg";
 import yarn2 from "../assets/images/yarn3.svg";
-import desktopImage from "../assets/images/yarn2.svg";
-import mobileImage from "../assets/images/yarn3.svg";
+import mus from "../assets/images/omos_vidstedu.svg";
+import desktopImage from "../assets/images/omos_desktophero.png";
+import mobileImage from "../assets/images/omos_mobilehero.png";
 ---
 <MainLayout title="Purrfect Box">
-       <Image class="" src={kat1} alt="Billede der viser en kat" loading="lazy"/>
+
+    <div class="">
+        <MyCustomImage
+          mobileImgUrl={mobileImage}
+          desktopImgUrl={desktopImage}
+          alt="Billede af en orange kat med PurrBox"
+        />
+      </div>
+
+       <!-- <div class="">
+                 <Image class="w-screen invisible lg:visible" src={desktopImage} alt="Billede der viser en kat" loading="lazy"/>
+             </div>
+             <div class="lg:invisible">
+                    <Image class="h-full " src={mobileImage} alt="Billede der viser en kat" loading="lazy"/>
+                </div> -->
 
        <section class="mx-m-sm lg:mx-d-3xl mb-d-m entrance">
             <h2 class="font-bold lg:my-d-m">Om os</h2>
@@ -122,12 +137,11 @@ import mobileImage from "../assets/images/yarn3.svg";
 
             </section>
 
-
             <section class="">
-                <h2 class="mx-d-3xl">Historien om Purrfect Box</h2>
-                <article class="bg-blue-200 mx-80">
+                <h2 class="mx-m-sm lg:mx-d-3xl">Historien om Purrfect Box</h2>
+                <article class="bg-blue-200 mx-m-sm lg:mx-80 rounded-default">
                     <h3>Ideen bag Purrfect Box</h3>
-                    <div class="grid grid-cols-2 m-d-m">
+                    <div class="grid lg:grid-cols-2 lg:m-d-m">
                         <div class="">
                         <p>Hvordan kom vi på ideen til det mest praktiske abonnement for katteejere der gerne vil have en nem hverdag.</p>
                         <p>Vi er selv katteejere og det skete desværre for ofte at vi pludselig stod med en næsten tom pose kattemad eller vi skulle slæbe flere tons kattegrus op til femte sal. </p>
@@ -138,12 +152,23 @@ import mobileImage from "../assets/images/yarn3.svg";
                         </div>
                     </div>
                 </article>
-                <article class="grid grid-cols-[1fr_1fr] gap-d-xs mx-80">
-                    <div class="bg-blue-200">
+                <article class="grid lg:grid-cols-[1fr_1fr] lg:gap-d-xs mx-m-sm lg:mx-80 lg:m-d-m">
+                    <div class="bg-blue-200 rounded-default">
+                        <h3>Vidste du...?</h3>
+                        <p>At næringsindholdet af et kattemåltid (af våd- eller tørfoder) svarer til 5 mus.</p>
+                        <Image class="" src={mus} alt="Billede der viser en kat" loading="lazy"/>
+                    </div>
+                    <div class="bg-blue-200 rounded-default">
+                        <h3>Hvor er vi i dag?</h3>
+                        <p>I dag er Purrfect Box en realitet, der gør livet nemmere for katteejere over hele landet. Vi leverer kvalitetsprodukter til katte og skaber glæde med hver levering, mens vi fortsætter med at udvikle os for at give både katte og ejere den bedste oplevelse.</p>
+                    </div>
+                </article>
+                <article class="grid lg:grid-cols-[1fr_1fr] lg:gap-d-xs mx-m-sm lg:mx-80">
+                    <div class="bg-blue-200 rounded-default">
                         <h3>Fra idé til virkelighed</h3>
                         <p>Da idéen var på plads, gik vi i gang med at finde de bedste produkter og skabe en fleksibel abonnementsservice. Vi testede utallige produkter, og vores egne katte blev de første smagsdommere. Målet var klart: At gøre hverdagen lettere for katteejere og skabe glæde hos kattene.</p>
                     </div>
-                    <div class="bg-blue-200">
+                    <div class="bg-blue-200 rounded-default">
                         <h3>Hvor er vi i dag?</h3>
                         <p>I dag er Purrfect Box en realitet, der gør livet nemmere for katteejere over hele landet. Vi leverer kvalitetsprodukter til katte og skaber glæde med hver levering, mens vi fortsætter med at udvikle os for at give både katte og ejere den bedste oplevelse.</p>
                     </div>
