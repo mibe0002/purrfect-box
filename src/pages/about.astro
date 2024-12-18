@@ -13,6 +13,8 @@ import billede3 from "../assets/images/omos_verdi2.svg";
 import yarn from "../assets/images/yarn4.svg";
 import yarn2 from "../assets/images/yarn3.svg";
 import mus from "../assets/images/omos_vidstedu.svg";
+import lightbulb from "../assets/images/lightbulb.svg";
+import housegraph from "../assets/images/housegraph1.svg";
 import desktopImage from "../assets/images/omos_desktophero.png";
 import mobileImage from "../assets/images/omos_mobilehero.png";
 ---
@@ -84,7 +86,7 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
        </section>
 
        <div class="gradient relative -z-20 pb-d-5xl">
-            <section class="mx-m-sm lg:mx-d-3xl pt-d-m mb-d-m overflow-hidden">
+            <section class="mx-m-sm lg:mx-d-3xl pt-d-5xl mb-d-m overflow-hidden">
                 <h2 class="font-bold mb-d-m">Mød teamet</h2>
 
                 <div class="grid lg:grid-cols-[1fr_1fr_1fr] gap-d-m  overflow-hidden mb-d-3xl lg:mx-d-3xl fotoinview">
@@ -138,45 +140,58 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
             </section>
 
             <section class="">
-                <h2 class="mx-m-sm lg:mx-d-3xl">Historien om Purrfect Box</h2>
-                <article class="bg-blue-200 mx-m-sm lg:mx-80 rounded-default">
-                    <h3>Ideen bag Purrfect Box</h3>
-                    <div class="grid lg:grid-cols-2 lg:m-d-m">
+                <h2 class="mx-m-sm mb-d-m lg:mx-d-3xl">Historien om Purrfect Box</h2>
+                <article class="bg-blue-200 lg:p-d-sm lg:mx-80 rounded-default">
+                    <div class="flex justify-center lg:pb-d-xs">
+                    <Image class="" src={lightbulb} alt="Billede der viser en kat" loading="lazy"/>
+                    </div>
+                    <h3 class="lg:pb-d-xs text-center">Ideen bag Purrfect Box</h3>
+                    <div class="grid lg:grid-cols-2 gap-d-sm">
                         <div class="">
-                        <p>Hvordan kom vi på ideen til det mest praktiske abonnement for katteejere der gerne vil have en nem hverdag.</p>
-                        <p>Vi er selv katteejere og det skete desværre for ofte at vi pludselig stod med en næsten tom pose kattemad eller vi skulle slæbe flere tons kattegrus op til femte sal. </p>
+                        <p class="lg:pb-d-xxs">Hvordan kom vi på ideen til det mest praktiske abonnement for katteejere der gerne vil have en nem hverdag.</p>
+                        <p>Vi er selv katteejere og det skete desværre for ofte at vi pludselig stod med en næsten tom pose kattemad eller vi skulle slæbe flere tons kattegrus op til femte sal.</p>
                         </div>
                         <div class="">
-                            <p>Her tænkte vi, at der måtte være et bedre alternativ til dette. Vi ledte på internettet efter et abonnement der kunne gøre vores hverdag nemmere. </p>
+                            <p class="lg:pb-d-xxs">Her tænkte vi, at der måtte være et bedre alternativ til dette. Vi ledte på internettet efter et abonnement der kunne gøre vores hverdag nemmere.</p>
                             <p>Desværre fandtes dette ikke i Danmark og det var hvordan vi så blev inspireret til denne fantastiske løsning til travle eller glemsomme katteejere i Danmark.</p>
                         </div>
                     </div>
                 </article>
+
                 <article class="grid lg:grid-cols-[1fr_1fr] lg:gap-d-xs mx-m-sm lg:mx-80 lg:m-d-m">
-                    <div class="bg-blue-200 rounded-default">
-                        <h3>Vidste du...?</h3>
+                    <div class="bg-blue-200 rounded-default lg:p-d-sm">
+                        <h3 class="lg:pb-d-xs">Vidste du...?</h3>
                         <p>At næringsindholdet af et kattemåltid (af våd- eller tørfoder) svarer til 5 mus.</p>
+                        <div class="flex justify-center">
                         <Image class="" src={mus} alt="Billede der viser en kat" loading="lazy"/>
+                        </div>
                     </div>
-                    <div class="bg-blue-200 rounded-default">
-                        <h3>Hvor er vi i dag?</h3>
-                        <p>I dag er Purrfect Box en realitet, der gør livet nemmere for katteejere over hele landet. Vi leverer kvalitetsprodukter til katte og skaber glæde med hver levering, mens vi fortsætter med at udvikle os for at give både katte og ejere den bedste oplevelse.</p>
+                    <div class="bg-blue-200 rounded-default lg:p-d-sm">
+                        <h3 class="lg:pb-d-xs">Katte i Danmark</h3>
+                        <p class="lg:pb-d-xxs">Ifølge Danmarks Statistik og Det Danske Katteregister holder omtrent 367.000 familier katte rundt om i Danmark, hvilket svarer til 16 pct. af de danske familier.</p>
+                        <div class="flex justify-center">
+                        <Image class="w-5/12" src={housegraph} alt="Billede der viser en kat" loading="lazy"/>
+                        </div>
                     </div>
                 </article>
-                <article class="grid lg:grid-cols-[1fr_1fr] lg:gap-d-xs mx-m-sm lg:mx-80">
-                    <div class="bg-blue-200 rounded-default">
-                        <h3>Fra idé til virkelighed</h3>
-                        <p>Da idéen var på plads, gik vi i gang med at finde de bedste produkter og skabe en fleksibel abonnementsservice. Vi testede utallige produkter, og vores egne katte blev de første smagsdommere. Målet var klart: At gøre hverdagen lettere for katteejere og skabe glæde hos kattene.</p>
-                    </div>
-                    <div class="bg-blue-200 rounded-default">
-                        <h3>Hvor er vi i dag?</h3>
-                        <p>I dag er Purrfect Box en realitet, der gør livet nemmere for katteejere over hele landet. Vi leverer kvalitetsprodukter til katte og skaber glæde med hver levering, mens vi fortsætter med at udvikle os for at give både katte og ejere den bedste oplevelse.</p>
+
+                <article class="bg-blue-200 lg:p-d-sm lg:mx-80 rounded-default">
+                    <h3 class="lg:pb-d-xs text-center">Hvor er vi i dag?</h3>
+                    <div class="grid lg:grid-cols-2 gap-d-sm">
+                        <div class="">
+                        <p class="lg:pb-d-xxs">I dag er Purrfect Box mere end bare en idé - vi er blevet en pålidelig partner for katteejere i hele Danmark.</p>
+                        <p>Vi har hjulpet hundredevis af katteejere med at få en nemmere hverdag ved at levere kvalitetsprodukter direkte til døren, og vi ser frem til at forbedre løsningerne yderligere.</p>
+                        </div>
+                        <div class="">
+                            <p class="lg:pb-d-xxs">Vi ser frem til at vokse endnu mere, udvide vores sortiment og fortsat tilbyde produkter, der gør en forskel for både kattene og deres ejere.</p>
+                            <p>Vores passion for katte og deres velvære driver os til at fortsætte med at udvikle nye, kreative løsninger for at gøre hverdagen endnu bedre.</p>
+                        </div>
                     </div>
                 </article>
             </section>
 
             <section class="lg:mx-d-3xl mb-d-lg">
-                <h2 class="font-bold mx-m-sm pb-d-sm">FAQ</h2>
+                <h2 class="font-bold mx-m-sm pb-d-sm pt-d-5xl">FAQ</h2>
                 <div class="pb-d-sm lg:grid grid-cols-2">
                 <Accordion
                     titel="Hvordan fungerer abonnementet?"
@@ -256,15 +271,15 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
     animate( ".entrance", { opacity: [ 0, 1] }, { duration: 1 })
     })
 
-    /* Stagger animation */
-	inView( "#stagger" , () =>{
-		animate(
-		".staggeranimation",
-		{ opacity: [0, 1] },
-		{ 
-			delay: stagger(1, { start: 2 })
-		}
-		)
-	})
+        /* Stagger animation */
+    inView("#stagger", () => {
+        animate(
+        ".staggeranimation",
+        { opacity: [0, 1] },
+        {
+            delay: stagger(0.3, { start: 0.5 }), // Reduceret forsinkelse mellem elementer og starttidspunkt
+        }
+        );
+    });
     
 	</script>
