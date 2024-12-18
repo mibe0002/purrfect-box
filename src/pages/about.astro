@@ -10,7 +10,7 @@ import kat1 from "../assets/images/omos_foto.png";
 import billede1 from "../assets/images/logo.svg";
 import billede2 from "../assets/images/omos_verdi.svg";
 import billede3 from "../assets/images/omos_verdi2.svg";
-import yarn from "../assets/images/yarn2.svg";
+import yarn from "../assets/images/yarn4.svg";
 import yarn2 from "../assets/images/yarn3.svg";
 import desktopImage from "../assets/images/yarn2.svg";
 import mobileImage from "../assets/images/yarn3.svg";
@@ -72,7 +72,7 @@ import mobileImage from "../assets/images/yarn3.svg";
             <section class="mx-m-sm lg:mx-d-3xl pt-d-m mb-d-m overflow-hidden">
                 <h2 class="font-bold mb-d-m">Mød teamet</h2>
 
-                <div class="grid lg:grid-cols-[1fr_1fr] gap-d-3xl  overflow-hidden mb-d-3xl lg:mx-d-3xl fotoinview">
+                <div class="grid lg:grid-cols-[1fr_1fr_1fr] gap-d-m  overflow-hidden mb-d-3xl lg:mx-d-3xl fotoinview">
                 <Card
                         cardimage="../images/omos_01.png"
                         cardimagealt="Miv"
@@ -87,9 +87,6 @@ import mobileImage from "../assets/images/yarn3.svg";
                         titel="Co-Founder & Chief Technology Officer"
                         tekst="Laura elsker krimidokumentarer, mad, bøger og at rejse. Hun er desværre uden kat, så hun må nøjes med hendes bamser..">
                     </Card>
-                </div>
-
-                    <div class="grid lg:grid-cols-[1fr_1fr] gap-d-3xl overflow-hidden mb-d-3xl lg:mx-d-3xl fotoinview2">
                     <Card
                         cardimage="../images/omos_03.png"
                         cardimagealt="Sofie"
@@ -97,6 +94,9 @@ import mobileImage from "../assets/images/yarn3.svg";
                         titel="Co-Founder & Chief Content Manager"
                         tekst="Bortset fra at fungere som Purrfect Box's kontorchef, er Sofie en kattemor til kontor englen Iris.">
                     </Card>
+                </div>
+
+                    <div class="grid lg:grid-cols-[1fr_1fr_1fr] gap-d-m overflow-hidden mb-d-3xl lg:mx-d-3xl fotoinview2">
                     <Card
                         cardimage="../images/omos_04.png"
                         cardimagealt="Iris"
@@ -104,10 +104,7 @@ import mobileImage from "../assets/images/yarn3.svg";
                         titel="Co-Chief Feline Officer"
                         tekst="Iris elsker at bruge sin dag på at spise plastik, sove hvor det passer hende og lege med alt andet end hendes legetøj.">
                     </Card>
-                </div>
-
-                    <div class="grid lg:grid-cols-[1fr_1fr] gap-d-3xl overflow-hidden lg:mx-d-3xl fotoinview">
-                    <Card
+                     <Card
                         cardimage="../images/omos_05.png"
                         cardimagealt="Bobo"
                         navn="Bobo"
@@ -123,6 +120,34 @@ import mobileImage from "../assets/images/yarn3.svg";
                     </Card>
                 </div>
 
+            </section>
+
+
+            <section class="">
+                <h2 class="mx-d-3xl">Historien om Purrfect Box</h2>
+                <article class="bg-blue-200 mx-80">
+                    <h3>Ideen bag Purrfect Box</h3>
+                    <div class="grid grid-cols-2 m-d-m">
+                        <div class="">
+                        <p>Hvordan kom vi på ideen til det mest praktiske abonnement for katteejere der gerne vil have en nem hverdag.</p>
+                        <p>Vi er selv katteejere og det skete desværre for ofte at vi pludselig stod med en næsten tom pose kattemad eller vi skulle slæbe flere tons kattegrus op til femte sal. </p>
+                        </div>
+                        <div class="">
+                            <p>Her tænkte vi, at der måtte være et bedre alternativ til dette. Vi ledte på internettet efter et abonnement der kunne gøre vores hverdag nemmere. </p>
+                            <p>Desværre fandtes dette ikke i Danmark og det var hvordan vi så blev inspireret til denne fantastiske løsning til travle eller glemsomme katteejere i Danmark.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="grid grid-cols-[1fr_1fr] gap-d-xs mx-80">
+                    <div class="bg-blue-200">
+                        <h3>Fra idé til virkelighed</h3>
+                        <p>Da idéen var på plads, gik vi i gang med at finde de bedste produkter og skabe en fleksibel abonnementsservice. Vi testede utallige produkter, og vores egne katte blev de første smagsdommere. Målet var klart: At gøre hverdagen lettere for katteejere og skabe glæde hos kattene.</p>
+                    </div>
+                    <div class="bg-blue-200">
+                        <h3>Hvor er vi i dag?</h3>
+                        <p>I dag er Purrfect Box en realitet, der gør livet nemmere for katteejere over hele landet. Vi leverer kvalitetsprodukter til katte og skaber glæde med hver levering, mens vi fortsætter med at udvikle os for at give både katte og ejere den bedste oplevelse.</p>
+                    </div>
+                </article>
             </section>
 
             <section class="lg:mx-d-3xl mb-d-lg">
@@ -160,7 +185,7 @@ import mobileImage from "../assets/images/yarn3.svg";
             <div class="absolute bottom-0 -z-10 lg:invisible">
                     <Image class="h-full " src={yarn2} alt="Billede der viser en kat" loading="lazy"/>
                 </div>
-            <div class="flex justify-end overflow-hidden">
+            <div class="flex justify-center overflow-hidden">
                  <Image class="h-full absolute top-0 -z-10 invisible lg:visible" src={yarn} alt="Billede der viser en kat" loading="lazy"/>
              </div>
        </div>
