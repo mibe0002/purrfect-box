@@ -7,7 +7,7 @@ const { url="#", cardimage="", cardimagealt="",
 navn="", titel="", tekst="" } = Astro.props;
 ---
 <article class="bg-blue-200 py-s px-sm min-w-80 rounded-default">
-    <img src={cardimage} alt={cardimagealt} class="rounded-t-default w-full">
+    <img src={cardimage} alt={cardimagealt} class="rounded-t-default w-full" loading="lazy">
     <div class="p-d-m">
     <h3 class="font-bold text-center mb-d-xs">{navn}</h3>
     <p class="font-bold">{titel}</p>
