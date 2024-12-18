@@ -18,7 +18,7 @@ import Button from '../components/Button.astro';
         <section class="px-m-sm md:px-d-3xl w-full md:pt-d-xl h-auto bg-[url('../img/produkter_header.svg')] md:bg-center bg-right bg-no-repeat bg-cover flex flex-col justify-center items-center">
             <span class="pt-m-3xl md:pt-d-3xl w-auto md:hidden"></span>
             <div class="w-full md:w-[1068px] h-full md:h-[425px]">
-                <h1 class="pb-m-m md:pb-d-m cursor cursor-handcursor">Purrfect Boxes</h1>
+                <h1 class="pb-m-m md:pb-d-m">Purrfect Boxes</h1>
                 <h2 class="pb-m-sm md:pb-d-sm">Overblik over vores Purr Boxes</h2>
                 <p class="w-full md:w-[615px] h-auto">Tag et kig og find den rette boks til dig og din kat. Vi har sammen med vores fællesskab tilpasset disse bokse,
                 så der er noget til enhver smag. Undersøg mere om hver enkelt boks, eller bestil din egen nu i dag!</p>
@@ -42,7 +42,7 @@ import Button from '../components/Button.astro';
                         <article class="bg-blue-200 rounded-default h-[600px]">
                         <Image id="klik_mig" src={basic} alt="Et billede af vores Basic Box med beige baggrund" loading="lazy" class="rounded-t-default"></Image>
                         <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-                            <h4 class="pb-m-s md:pb-d-s">Basic Box</h4>
+                            <h4 class="pb-m-xs md:pb-d-xs">Basic Box</h4>
                             <h3 class="pb-m-s md:pb-d-s text-blue-800">119 DKK/MD</h3>
                             <p class="w-[360px]">En enkel løsning med alle de nødvendige produkter til din kat hver måned.</p>
                             <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
@@ -75,7 +75,7 @@ import Button from '../components/Button.astro';
                     <article class="bg-blue-200 rounded-default h-[700px]">
                         <Image id="klik_mig" src={premium} alt="Et billede af vores Premium Box med orange baggrund" loading="lazy" class="rounded-t-default"></Image>
                         <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-                            <h4 class="pb-m-s md:pb-d-s">Premium Box</h4>
+                            <h4 class="pb-m-xs md:pb-d-xs">Premium Box</h4>
                             <h3 class="pb-m-s md:pb-d-s text-blue-800">149 DKK/MD</h3>
                             <p class="w-[360px] pb-[99px]">En opgradering, der holder din kat mæt og underholdt med legetøj og snacks.</p>
                             <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
@@ -110,7 +110,7 @@ import Button from '../components/Button.astro';
                         <Image id="klik_mig" src={deluxe} alt="Et billede af vores Deluxe Box med pink baggrund" loading="lazy" class="rounded-t-default"></Image>
                         <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
                             <div class="">
-                                <h4 class="pb-m-s md:pb-d-s">Deluxe Box</h4>
+                                <h4 class="pb-m-xs md:pb-d-xs">Deluxe Box</h4>
                                 <h3 class="pb-m-s md:pb-d-s text-blue-800">199 DKK/MD</h3>
                                 <p class="w-[360px] pb-[170px]">En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks.</p>
                             </div>
@@ -158,9 +158,9 @@ import Button from '../components/Button.astro';
                 <div class="pt-m-sm md:grid md:grid-cols-2 md:content-start">
                     <div class="relative">
                         <div class="px-m-ml flex flex-col justify-stretch">
-                            <h2 class="text-center pb-m-sm">Hvilken abonnements-plan er dit perfekte match?</h2>
+                            <h3 class="text-center pb-m-s md:pb-d-s">Hvilken abonnements-plan er dit perfekte match?</h3>
                             <p class="w-[360px] pb-m-sm">Ved du ikke hvilket abonnement du skal vælge? Vi har udviklet en quiz der skal hjælpe dig på vej til finde den perfekte Purr Box til dig og din kat.</p>
-                            <h2 class="pb-m-sm">Tag vores quiz nu!</h2>
+                            <h3 class="pb-m-s md:pb-d-s">Tag vores quiz nu!</h3>
                             <span class="md:hidden">
                                 <Button variant="primary" size="mobile">Start her</Button>
                             </span>

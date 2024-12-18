@@ -79,12 +79,10 @@
 
     h2 {
       @apply text-d-h2;
-      @apply leading-10;
     }
 
     h3 {
       @apply text-d-h3;
-      @apply leading-[30px];
     }
 
     h4 {
