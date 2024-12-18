@@ -9,40 +9,40 @@ import basicbox from "../assets/images/basicbox2.jpg";
 ---
 <MainLayout title="Purrfect Box">
 	
-<div class="gradient pb-[300px] pt-d-xs">
-    <section class="grid lg:grid-cols-[1fr_2fr] gap-d-m mx-m-sm lg:mx-d-3xl entrance ">
+<div class="gradient pb-[300px] pt-m-xs lg:pt-d-xs">
+    <section class="grid lg:grid-cols-[1fr_2fr] gap-m-m lg:gap-d-m mx-m-sm lg:mx-d-3xl entrance ">
         <div class="bg-blue-200 rounded-default">
             
-            <div class="bg-blue-50 rounded-default mx-d-s mt-d-xs shadow-drop10">
-                <Image class="" src={basicbox} class="rounded-t-default w-full" alt="Billede der viser en kat" loading="lazy"/>
-                <div class="py-d-xxs">
-                    <div class="px-d-s">
-                    <h4 class="font-bold pb-d-xxs">Basic Box</h4>
-                    <h3 class="font-bold pb-d-xxs text-blue-800">119 DKK/MD</h3>
+            <div class="bg-blue-50 rounded-default mx-m-s lg:mx-d-s mt-m-xs lg:mt-d-xs shadow-drop10">
+                <Image class="" src={basicbox} class="rounded-t-default w-full" alt="Billede der viser en af vores bokse" loading="lazy"/>
+                <div class="py-m-xxs lg:py-d-xxs">
+                    <div class="px-m-s lg:px-d-s">
+                    <h4 class="font-bold pb-m-xxs lg:pb-d-xxs">Basic Box</h4>
+                    <h3 class="font-bold pb-m-xxs lg:pb-d-xxs text-blue-800">119 DKK/MD</h3>
                     
                     </div>
                 </div>
             </div>
 
-            <div class="mb-5 mx-d-s mt-d-xxs">
+            <div class="mb-5 mx-m-s lg:mx-d-s mt-m-xxs lg:mt-d-xxs">
                         <label for="repeat-text" class=" mb-2 text-blue-800 ">Har du en kampagne kode?</label>
                         <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Rabatkode" />
             </div>
 
-            <div class="bg-blue-50 rounded-default mx-d-s mt-d-xs p-d-xs shadow-drop10">
-                <div class="flex flex-row justify-between">
+            <div class="bg-blue-50 rounded-default mx-m-s lg:mx-d-s mt-m-xs lg:mt-d-xs p-m-xs lg:p-d-xs shadow-drop10">
+                <div class="flex flex-row justify-between pb-m-xxs lg:pb-d-xxs">
                 <p>Subtotal</p>
                 <p>119,00 DKK</p>
                 </div>
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between pb-m-xxs lg:pb-d-xxs">
                 <p>Levering</p>
                 <p>29,00 DKK</p>
                 </div>
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between pb-m-xxs lg:pb-d-xxs">
                 <p class="font-bold">I alt (ekskl. moms)</p>
                 <p class="font-bold">148,00 DKK</p>
                 </div>
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between pb-m-xxs lg:pb-d-xxs">
                 <p>Inkluderet moms</p>
                 <p>6,00 DKK</p>
                 </div>
@@ -52,12 +52,12 @@ import basicbox from "../assets/images/basicbox2.jpg";
                 </div>
             </div>
             
-            <Image class="" src={kat1} class="ml-d-s my-m-xs" alt="Billede der viser en kat" loading="lazy"/>
+            <Image class="" src={kat1} class="ml-m-s lg:ml-d-s my-m-xs" alt="Billede der viser en kat" loading="lazy"/>
         </div>
 
-        <div class="bg-blue-200 px-d-m rounded-default relative">
-            <h4 class="mt-d-xs">Har du allerede en bruger? <a href="#" class="text-yellow-600 hover:underline ">Log ind i stedet for!</a></h4>
-            <h3 class="mb-d-xs pt-d-sm font-bold">Dine informationer</h3>
+        <div class="bg-blue-200 px-m-m  lg:px-d-m rounded-default relative">
+            <h4 class="mt-m-xs lg:mt-d-xs">Har du allerede en bruger? <a href="#" class="text-yellow-600 hover:underline ">Log ind i stedet for!</a></h4>
+            <h3 class="mt-m-xs lg:mb-d-xs pt-m-sm lg:pt-d-sm font-bold">Dine informationer</h3>
             <form class="">
             <div class="mb-5">
                 <label for="email" class=" mb-2 text-blue-800 ">Din email*</label>
@@ -73,9 +73,9 @@ import basicbox from "../assets/images/basicbox2.jpg";
             </div>
             </form>
 
-            <h3 class="mb-d-xs pt-d-m font-bold	">Fakturaadresse</h3>
+            <h3 class="mb-m-xs lg:mb-d-xs pt-m-m lg:pt-d-m font-bold">Fakturaadresse</h3>
             <form class="" data-netlify="true">
-                <div class="grid lg:grid-cols-[1fr_1fr] gap-d-xs">
+                <div class="grid lg:grid-cols-[1fr_1fr] lg:gap-d-xs">
                     <div class="mb-5">
                         <label for="text" class=" mb-2 text-blue-800 ">Fornavn*</label>
                         <input type="text" id="text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Anna" required />
@@ -86,7 +86,7 @@ import basicbox from "../assets/images/basicbox2.jpg";
                     </div>
                 </div>
 
-                <div class="grid lg:grid-cols-[4fr_2fr_1fr] gap-d-xs">
+                <div class="grid lg:grid-cols-[4fr_2fr_1fr] lg:gap-d-xs">
                     <div class="mb-5">
                         <label for="repeat-text" class=" mb-2 text-blue-800 ">Adresse*</label>
                         <input type="text" id="repeat-text" class="shadow-drop10 bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5" placeholder="Whiskerton 33" required />
@@ -101,7 +101,7 @@ import basicbox from "../assets/images/basicbox2.jpg";
                     </div>
                 </div>
 
-                 <div class="grid grid-cols-[1fr_1fr] gap-d-xs">
+                 <div class="grid grid-cols-[1fr_1fr] gap-m-xs lg:gap-d-xs">
                     <div class="mb-5">
                         <label for="countries" class=" mb-2 text-blue-800 ">Land*</label>
                         <select id="countries" class="bg-blue-50 border  text-blue-800 text-sm rounded-default focus:ring-blue-500 focus:border-blue-500  w-full p-2.5 ">
@@ -116,36 +116,36 @@ import basicbox from "../assets/images/basicbox2.jpg";
                 </div>
             </form>
 
-            <h3 class="mb-d-xs pt-d-m font-bold	">Levering</h3>
+            <h3 class="mb-m-xs lg:mb-d-xs pt-m-m lg:pt-d-m font-bold">Levering</h3>
             <fieldset>
             <legend class="sr-only">Countries</legend>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4  focus:ring-2 focus:ring-blue-300  " checked>
-                <label for="country-option-1" class="ml-d-xxs   text-blue-800 ">
+                <label for="country-option-1" class="ml-m-xxs lg:ml-d-xxs   text-blue-800 ">
                Postnord
                 </label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4  focus:ring-2 focus:ring-blue-300  ">
-                <label for="country-option-2" class="ml-d-xxs  text-blue-800 ">
+                <label for="country-option-2" class="ml-m-xxs lg:ml-d-xxs  text-blue-800 ">
                 GLS
                 </label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4  focus:ring-2 focus:ring-blue-300">
-                <label for="country-option-3" class="ml-d-xxs  text-blue-800 ">
+                <label for="country-option-3" class="ml-m-xxs lg:ml-d-xxs  text-blue-800 ">
                 DAO
                 </label>
             </div>
 
             </fieldset>
 
-            <h3 class="mb-d-xs pt-d-m font-bold	">Betaling</h3>
-            <form class="pb-d-m" data-netlify="true">
-                <div class="grid lg:grid-cols-[3fr_2fr_1fr] gap-d-xs">
+            <h3 class="mb-m-xs lg:mb-d-xs pt-m-m lg:pt-d-m font-bold">Betaling</h3>
+            <form class="pb-m-m lg:pb-d-m" data-netlify="true">
+                <div class="grid lg:grid-cols-[3fr_2fr_1fr] lg:gap-d-xs">
                     <div class="">
               <label for="card-number-input" class=" text-blue-800 "> Kredit eller debit kort nummer* </label>
               <input type="text" id="card-number-input" class=" w-full rounded-lg border border-blue-300 bg-blue-50 p-2.5 pe-10 text-sm text-blue-800 focus:border-primary-500 focus:ring-primary-500" placeholder="xxxx-xxxx-xxxx-xxxx" required />
@@ -166,29 +166,29 @@ import basicbox from "../assets/images/basicbox2.jpg";
           </div>
             </form>
 
-            <h3 class="mb-d-xs pt-d-xs font-bold	">Bekræft ordre</h3>
+            <h3 class="mb-m-xs lg:mb-d-xs pt-m-xs lg:pt-d-xs font-bold">Bekræft ordre</h3>
             <fieldset>
             <legend class="sr-only">Checkbox variants</legend>
 
             <div class="flex items-center mb-4">
                 <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500" required >
-                <label for="checkbox-1" class="ml-d-xxs text-blue-800 ">Jeg accepterer <a href="#" class="text-blue-600 hover:underline ">handelsbetingelserne*</a>.</label>
+                <label for="checkbox-1" class="ml-m-xxs lg:ml-d-xxs text-blue-800 ">Jeg accepterer <a href="#" class="text-yellow-600 hover:underline ">handelsbetingelserne*</a>.</label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="checkbox-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 " required>
-                <label for="checkbox-3" class="ml-d-xxs text-blue-800 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
+                <label for="checkbox-3" class="ml-m-xxs lg:ml-d-xxs text-blue-800 ">Jeg bekræfter, at jeg er over 18 år gammel*</label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-blue-50  rounded focus:ring-blue-500 ">
-                <label for="checkbox-2" class="ml-d-xxs text-blue-800 ">Tilmeld dig vores nyhedsbrev</label>
+                <label for="checkbox-2" class="ml-m-xxs lg:ml-d-xxs text-blue-800 ">Tilmeld dig vores nyhedsbrev</label>
             </div>
 
             
             </fieldset>
              
-            <div class="flex justify-center py-d-m">
+            <div class="flex justify-center py-m-m lg:py-d-m">
              <Button>Godkend og betal</Button>
              </div>
 
