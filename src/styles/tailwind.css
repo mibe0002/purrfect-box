@@ -97,7 +97,9 @@
 
   a,
   button,
-  svg {
+  svg,
+  #klik_mig,
+  #icon {
     @apply cursor-handcursor;
   }
 }

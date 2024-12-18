@@ -10,7 +10,7 @@ import cq from "../assets/images/produkter_kat2.svg";
 import cqs from "../assets/images/produkter_kat2spg.svg";
 
 import desktopImage from "../assets/images/produkter_header.svg";
-import mobileImage from "../assets/images/produkter_header_mobil.svg;
+import mobileImage from "../assets/images/produkter_header_mobil.svg";
 import MyCustomImage from "../components/MyCustomImage.astro";
 
 import MainLayout from "../layouts/MainLayout.astro";
@@ -19,145 +19,172 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Purrfect Boxes">
-        <section class="relative flex flex-col justify-center items-center">
-            <!-- bg-[url('../img/produkter_header.svg')] md:bg-center bg-no-repeat bg-cover  -->
-            <div class="w-full h-auto relative">
-            <MyCustomImage
-                mobileImgUrl={mobileImage}
-                desktopImgUrl={desktopImage}
-                alt="Billede af en orange kat med PurrBox"
-            />
-                <div class="absolute inset-0 flex flex-col justify-center items-center w-full px-m-3xl md:px-d-3xl py-m-lg md:py-d-lg">
+        <section>
+            <div class="relative">
+                <MyCustomImage
+                    mobileImgUrl={mobileImage}
+                    desktopImgUrl={desktopImage}
+                    alt="Hero billede med en Blå Bingle i højre hjørne, i baggrunden er katte hovede ikonet gentaget som et mønster."
+                />
+                <div class="absolute inset-0 md:flex md:flex-col md:justify-center md:items-center md:w-[1068px] px-m-sm md:px-d-3xl py-m-lg md:py-d-lg">
                     <div class="text-left">
-                    <h1 class="pb-m-m md:pb-d-m">Purrfect Boxes</h1>
-                    <h2 class="pb-m-sm md:pb-d-sm">Overblik over vores Purr Boxes</h2>
-                    <p class="w-full md:w-[615px] h-auto">Tag et kig og find den rette boks til dig og din kat. Vi har sammen med vores fællesskab tilpasset disse bokse,
-                    så der er noget til enhver smag. Undersøg mere om hver enkelt boks, eller bestil din egen nu i dag!</p>
+                        <h1 class="pb-m-m md:pb-d-m">Purrfect Boxes</h1>
+                        <h2 class="pb-m-sm md:pb-d-sm">Overblik over vores Purr Boxes</h2>
+                        <p class="w-[353px] md:w-[615px] h-auto">Tag et kig og find den rette boks til dig og din kat. Vi har sammen med vores fællesskab tilpasset disse bokse,
+                        så der er noget til enhver smag. Undersøg mere om hver enkelt boks, eller bestil din egen nu i dag!</p>
                     </div>
                 </div>
             </div>
-
-            <!-- <span class="pt-m-3xl md:pt-d-3xl w-auto md:hidden"></span> -->
-           
-            <!-- <span class="pb-m-3xl md:pb-d-3xl w-auto md:hidden"></span>
-            <span class="py-m-m md:hidden"></span> -->
         </section>
 
-        <section class="px-m-sm md:px-d-3xl pt-m-5xl pb-m-m md:py-d-m flex flex-col items-center">
-            <div class="md:px-d-3xl md:flex md:flex-row md:items-end md:justify-center gap-m-m">
-                <div class="pb-m-m">
-                    <div class="relative">
+        <section class="px-m-sm md:px-d-3xl md:py-d-lg py-m-lg">
+        <div class="flex flex-col md:flex-row md:justify-center md:items-end gap-m-s md:gap-d-s pb-m-s md:pb-d-s">
+            <div class="bg-blue-200 pb-m-m md:pb-d-m rounded-default">
+                 <div class="relative">
                         <!-- SVG der trigges ved klik -->
-                        <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="lazy" class="animate-pulse w-40 md:w-1/2 absolute -top-28 md:-top-36 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+                        <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="lazy" class="animate-pulse w-40 md:w-1/2 absolute -top-24 md:-top-32 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
                         <!-- Skjult hjerte der flyver op ved klik -->
                         <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36  md:-top-36 w-12 h-12 text-pink-500 left-[125px] md:left-[200px] transform -translate-x-[125px] md:-translate-x-[200px]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                     </div>
-                        <article class="bg-blue-200 rounded-default h-[600px]">
-                        <Image id="klik_mig" src={basic} alt="Et billede af vores Basic Box med beige baggrund" loading="lazy" class="rounded-t-default"></Image>
-                        <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-                            <h4 class="pb-m-xs md:pb-d-xs">Basic Box</h4>
-                            <h3 class="pb-m-s md:pb-d-s text-blue-800">119 DKK/MD</h3>
-                            <p class="w-[360px]">En enkel løsning med alle de nødvendige produkter til din kat hver måned.</p>
-                            <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
-                            <span class="md:hidden">
-                                <a href="/formular">
-                                <Button variant="primary" size="mobile">Køb nu</Button>
-                                </a>
-                            </span>
-                            <span class="hidden md:block">
-                                <a href="/formular">
-                                <Button variant="primary" size="desktop">Køb nu</Button>
-                                </a>
-                            </span>
-                            <span class="md:hidden">
-                                <a href="/singleview">
-                                <Button variant="secondary" size="mobile">Se mere</Button>
-                                </a>
-                            </span>
-                            <span class="hidden md:block">
-                                <a href="/singleview">
-                                <Button variant="secondary" size="desktop">Se mere</Button>
-                                </a>
-                            </span>
-                            </div>
+                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-t-default"></Image>
+                    <div class="px-d-ml">
+                        <h4 class="py-d-xs">Basic Box</h4>
+                        <h3 class="pb-d-s">119 DKK/MD</h3>
+                        <p class="pb-d-xs">En enkel løsning med alle de nødvendige produkter til din kat hver måned.</p>
+                        <ul class="pb-d-xs pl-d-xs list-disc">
+                            <li>5 produkter i denne boks</li>
+                            <li>Vælg dine egne brands</li>
+                            <li>Opsig når som helst</li>
+                        </ul>
+                    <div class="flex flex-row justify-center gap-d-xxs">
+                        <a href="/formular">
+                            <span class="hidden md:block"
+                            ><Button variant="primary" size="desktop"
+                                ><input type="submit" value="Køb nu" /></Button
+                            ></span
+                            >
+                        </a>
+                        <a href="/formular">
+                            <span class="md:hidden flex"
+                            ><Button variant="primary" size="mobile"
+                                ><input type="submit" value="Køb nu" /></Button
+                            ></span
+                            >
+                        </a>
+                            <a href="/singleview">
+                            <span class="hidden md:block"
+                            ><Button variant="secondary" size="desktop"
+                                ><input type="submit" value="Se mere" /></Button
+                            ></span
+                            >
+                        </a>
+                        <a href="/singleview">
+                            <span class="md:hidden flex"
+                            ><Button variant="secondary" size="mobile"
+                                ><input type="submit" value="Se mere" /></Button
+                            ></span
+                            >
+                        </a>
                         </div>
-                    </article>
-                </div>
-
-                <div class="pb-m-m">
-                    <article class="bg-blue-200 rounded-default h-[700px]">
-                        <Image id="klik_mig" src={premium} alt="Et billede af vores Premium Box med orange baggrund" loading="lazy" class="rounded-t-default"></Image>
-                        <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-                            <h4 class="pb-m-xs md:pb-d-xs">Premium Box</h4>
-                            <h3 class="pb-m-s md:pb-d-s text-blue-800">149 DKK/MD</h3>
-                            <p class="w-[360px] pb-[99px]">En opgradering, der holder din kat mæt og underholdt med legetøj og snacks.</p>
-                            <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
-                            <span class="md:hidden">
-                                <a href="/formular">
-                                <Button variant="primary" size="mobile">Køb nu</Button>
-                                </a>
-                            </span>
-                            <span class="hidden md:block">
-                                <a href="/formular">
-                                <Button variant="primary" size="desktop">Køb nu</Button>
-                                </a>
-                            </span>
-                            <span class="md:hidden">
-                                <a href="/singleview">
-                                <Button variant="secondary" size="mobile">Se mere</Button>
-                                </a>
-                            </span>
-                            <span class="hidden md:block">
-                                <a href="/singleview">
-                                <Button variant="secondary" size="desktop">Se mere</Button>
-                                </a>
-                            </span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="relative pb-m-m">
-                    <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
-                    <article class="bg-blue-200 rounded-default h-[800px]">
-                        <Image id="klik_mig" src={deluxe} alt="Et billede af vores Deluxe Box med pink baggrund" loading="lazy" class="rounded-t-default"></Image>
-                        <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-                            <div class="">
-                                <h4 class="pb-m-xs md:pb-d-xs">Deluxe Box</h4>
-                                <h3 class="pb-m-s md:pb-d-s text-blue-800">199 DKK/MD</h3>
-                                <p class="w-[360px] pb-[170px]">En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks.</p>
-                            </div>
-                            <div class="pt-m-sm md:pt-d-sm flex justify-center gap-m-sm md:gap-d-sm">
-                                <span class="md:hidden">
-                                    <a href="/formular">
-                                    <Button variant="primary" size="mobile">Køb nu</Button>
-                                    </a>
-                                </span>
-                                <span class="hidden md:block">
-                                    <a href="/formular">
-                                    <Button variant="primary" size="desktop">Køb nu</Button>
-                                    </a>
-                                </span>
-                                <span class="md:hidden">
-                                    <a href="/singleview">
-                                    <Button variant="secondary" size="mobile">Se mere</Button>
-                                    </a>
-                                </span>
-                                <span class="hidden md:block">
-                                    <a href="/singleview">
-                                    <Button variant="secondary" size="desktop">Se mere</Button>
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                    </div>
             </div>
 
-                <CardProduct
+            <div class="bg-blue-200 pb-d-m rounded-default">
+                <Image src={deluxe} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-t-default"></Image>
+                    <div class="px-d-ml">
+                        <h4 class="py-d-xs">Premium Box</h4>
+                        <h3 class="pb-d-s">149 DKK/MD</h3>
+                        <p class="pb-d-xs">En opgradering, der holder din kat mæt og underholdt med legetøj og snacks.</p>
+                        <ul class="pb-d-xs pl-d-xs list-disc">
+                            <li>7 produkter i denne boks</li>
+                            <li>Vælg dine egne brands</li>
+                            <li>Opsig når som helst</li>
+                        </ul>
+                    <div class="flex flex-row justify-center gap-d-xxs">
+                        <a href="/formular">
+                            <span class="hidden md:block"
+                            ><Button variant="primary" size="desktop"
+                                ><input type="submit" value="Køb nu" /></Button
+                            ></span
+                            >
+                        </a>
+                        <a href="/formular">
+                            <span class="md:hidden flex"
+                            ><Button variant="primary" size="mobile"
+                                ><input type="submit" value="Køb nu" /></Button
+                            ></span
+                            >
+                        </a>
+                            <a href="/singleview">
+                            <span class="hidden md:block"
+                            ><Button variant="secondary" size="desktop"
+                                ><input type="submit" value="Se mere" /></Button
+                            ></span
+                            >
+                        </a>
+                        <a href="/singleview">
+                            <span class="md:hidden flex"
+                            ><Button variant="secondary" size="mobile"
+                                ><input type="submit" value="Se mere" /></Button
+                            ></span
+                            >
+                        </a>
+                        </div>
+                    </div>
+            </div>
+
+            <span class="relative">
+                 <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
+            <div class="bg-blue-200 pb-d-m rounded-default">
+                <Image src={premium} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-t-default"></Image>
+                    <div class="px-d-ml">
+                        <h4 class="py-d-xs">Deluxe Box</h4>
+                        <h3 class="pb-d-s">199 DKK/MD</h3>
+                        <p class="pb-d-xs">En purr box, der forkæler din kat lidt ekstra fra mæthed til kedsomhed med sjove legetøj og lækre kvalitets foder og snacks.</p>
+                        <ul class="pb-d-xs pl-d-xs list-disc">
+                            <li>9 produkter i denne boks</li>
+                            <li>Vælg dine egne brands</li>
+                            <li>Opsig når som helst</li>
+                        </ul>
+                    <div class="flex flex-row justify-center gap-d-xxs">
+                        <a href="/formular">
+                            <span class="hidden md:block"
+                            ><Button variant="primary" size="desktop"
+                                ><input type="submit" value="Køb nu" /></Button
+                            ></span
+                            >
+                        </a>
+                        <a href="/formular">
+                            <span class="md:hidden flex"
+                            ><Button variant="primary" size="mobile"
+                                ><input type="submit" value="Køb nu" /></Button
+                            ></span
+                            >
+                        </a>
+                            <a href="/singleview">
+                            <span class="hidden md:block"
+                            ><Button variant="secondary" size="desktop"
+                                ><input type="submit" value="Se mere" /></Button
+                            ></span
+                            >
+                        </a>
+                        <a href="/singleview">
+                            <span class="md:hidden flex"
+                            ><Button variant="secondary" size="mobile"
+                                ><input type="submit" value="Se mere" /></Button
+                            ></span
+                            >
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        </span>
+        </div>
+
+        <CardProduct
                     cardimage="../img/custom2.jpg"
                     cardimagealt="Et billede af vores Custom Box med gul baggrund"
                     titel="Vil du lave din egen Purr Box?"
@@ -166,8 +193,9 @@ import Button from '../components/Button.astro';
                     beskrivelse="Denne Purr Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment. Du kan vælge dine egne brands og op til 14 produkter!"
                     class="md:h-[635px]"
                 >
-                </CardProduct>
+        </CardProduct>
         </section>
+       
 
         <section class="px-m-sm pb-m-ml md:pb-d-ml md:px-d-3xl">
             <article class="pt-m-sm bg-yellow-200 rounded-default">
@@ -195,6 +223,52 @@ import Button from '../components/Button.astro';
                         <Image src={premium} alt="Premium Box" loading="lazy" class="md:rounded-tr-default"></Image>
                         <Image src={deluxe} alt="Deluxe Box" loading="lazy" class="rounded-bl-default md:rounded-none"></Image>
                         <Image src={custom} alt="Custom Box" loading="lazy" class="rounded-br-default"></Image>
+                    </div>
+                </div>
+            </article>
+
+
+
+
+
+
+
+            <article class="bg-blue-200 rounded-default md:grid md:grid-cols-2 md:place-items-center">
+                <div class="w-full">
+                     <div class="grid grid-cols-2 grid-rows-2">
+                        <Image src={basic} alt="Basic Box" loading="lazy"></Image>
+                        <Image src={premium} alt="Premium Box" loading="lazy" class="md:rounded-tr-default"></Image>
+                        <Image src={deluxe} alt="Deluxe Box" loading="lazy" class="rounded-bl-default md:rounded-none"></Image>
+                        <Image src={custom} alt="Custom Box" loading="lazy" class="rounded-br-default"></Image>
+                    </div>
+                </div>
+                <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
+                    
+                    <h3 class="pb-m-s md:pb-d-s text-center md:leading-10">Hvilken abonnements-plan er dit perfekte match?</h3>
+                    <p class="w-[360px] pb-m-sm">Ved du ikke hvilket abonnement du skal vælge? Vi har udviklet en quiz der skal hjælpe dig på vej til finde den perfekte Purr Box til dig og din kat.</p>
+                    <h3 class="pb-m-s md:pb-d-s">Tag vores quiz nu!</h3>
+
+                    <div class="pt-m-sm md:pt-d-sm flex justify-center md:justify-start gap-m-sm md:gap-d-sm">
+                    <span class="md:hidden">
+                        <a href="/formular">
+                        <Button variant="primary" size="mobile">Køb nu</Button>
+                        </a>
+                    </span>
+                    <span class="hidden md:block">
+                        <a href="/formular">
+                        <Button variant="primary" size="desktop">Køb nu</Button>
+                        </a>
+                    </span>
+                    <span class="md:hidden">
+                        <a href="/singleview">
+                        <Button variant="secondary" size="mobile">Se mere</Button>
+                        </a>
+                    </span>
+                    <span class="hidden md:block">
+                        <a href="/singleview">
+                        <Button variant="secondary" size="desktop">Se mere</Button>
+                        </a>
+                    </span>
                     </div>
                 </div>
             </article>
