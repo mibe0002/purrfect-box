@@ -15,6 +15,7 @@ import mouse from "../assets/images/mouse.svg";
 import shovel from "../assets/images/shovel.svg";
 import paw from "../assets/images/paw.svg";
 import cat1 from "../assets/images/singleview_kat.svg";
+import cat2 from "../assets/images/singleview_kat2.svg";
 import cc1 from "../assets/images/carousel1.jpg";
 import cc2 from "../assets/images/carousel2.jpg";
 import cc3 from "../assets/images/carousel3.jpg";
@@ -141,61 +142,52 @@ import cc4 from "../assets/images/carousel4.jpg";
         <HowTo></HowTo>
     </section>
 
-    <section class="pt-d-m text-center h-screen w-auto">
+    <section class="relative pl-d-3xl pt-d-m text-center h-screen w-auto">
         <h2 class="pb-d-m">Hvad meowner andre katte?</h2>
-        <div class="mx-auto pt-d-m pb-d-xl">
-
+        <div class="mx-auto pb-d-xl">
             <div class="mx-auto pt-4 pb-8">
-    <div class="overflow-hidden relative carousel-wrapper">
-        <!-- Carousel Wrapper -->
-        <div class="flex space-x-4 overflow-x-scroll no-scrollbar">
-            <!-- Slides -->
-            <div class="flex flex-nowrap">
-                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                <div class="overflow-hidden relative carousel-wrapper">
+                    <!-- Carousel Wrapper -->
+                    <div class="flex space-x-4 overflow-x-scroll no-scrollbar">
+                    <!-- Slides -->
+                    <div class="flex flex-nowrap">
+                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                    </div>
+
+                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                    <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                    </div>
+
+                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
                     <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                </div>
+                    </div>
 
-                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                   <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                </div>
+                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                    </div>
 
-                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                </div>
+                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                    <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                    </div>
 
-
-
-
-                  <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
                     <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                </div>
-
-                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                   <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                </div>
-
-                <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Navigation Knappen (pilene) -->
-        <button class="prev absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full">
-            ←
-        </button>
-        <button class="next absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full">
-            →
-        </button>
-    </div>
-</div>
 
+        <div class="relative">
+            <!-- SVG der trigges ved klik -->
+            <Image id="icon" src={cat2} alt="Pink Bingle" loading="lazy" class="animate-pulse absolute right-d-3xl -bottom-36 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
-
+            <!-- Skjult hjerte der flyver op ved klik -->
+            <svg id="fly-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute top-20  md:top-0 w-12 h-12 text-yellow-500 left-[125px] md:left-[1200px] transform -translate-x-[125px] md:-translate-x-[500px]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </div>
     </section>
-
-
-    
 </MainLayout>
 
 <style>
@@ -210,7 +202,7 @@ import cc4 from "../assets/images/carousel4.jpg";
 </style>
 
 <script>
-  // Funktion for klik-event på både ikon og eget svg-fil
+ // Funktion for klik-event på både ikon og eget svg-fil
   const handleClick = (iconId, heartId) => {
     const icon = document.getElementById(iconId);
     const heart = document.getElementById(heartId);
@@ -230,39 +222,5 @@ import cc4 from "../assets/images/carousel4.jpg";
   // Kald funktionen for begge elementer
   handleClick('klik_mig', 'heart-icon');
   handleClick('icon', 'fly-icon');
-
-
-
-
-
-
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const carousel = document.querySelector('.carousel-wrapper');
-
-// Type-cast til HTMLElement
-const slides = document.querySelectorAll('.carousel-slide') as NodeListOf<HTMLElement>;
-
-let currentSlide = 0;
-
-const slideWidth = slides[0].offsetWidth; // Hent bredden af én slide
-
-// Håndter venstre pil (tilbage)
-prevButton.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        currentSlide--;
-        carousel.scrollLeft -= slideWidth;
-    }
-});
-
-// Håndter højre pil (frem)
-nextButton.addEventListener('click', () => {
-    if (currentSlide < slides.length - 1) {
-        currentSlide++;
-        carousel.scrollLeft += slideWidth;
-    }
-});
-
-
 </script>
 
