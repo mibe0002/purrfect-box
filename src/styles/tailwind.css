@@ -56,6 +56,11 @@
     @apply text-m-h2;
   }
 
+  #accordion h4,
+  #accordion p {
+    @apply text-blue-50;
+  }
+
   header,
   body {
     @apply bg-blue-50;
