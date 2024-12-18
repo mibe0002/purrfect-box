@@ -13,6 +13,7 @@ import billede3 from "../assets/images/omos_verdi2.svg";
 import yarn from "../assets/images/yarn4.svg";
 import yarn2 from "../assets/images/yarn3.svg";
 import mus from "../assets/images/omos_vidstedu.svg";
+import lightbulb from "../assets/images/lightbulb.svg";
 import desktopImage from "../assets/images/omos_desktophero.png";
 import mobileImage from "../assets/images/omos_mobilehero.png";
 ---
@@ -140,6 +141,7 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
             <section class="">
                 <h2 class="mx-m-sm lg:mx-d-3xl">Historien om Purrfect Box</h2>
                 <article class="bg-blue-200 mx-m-sm lg:mx-80 rounded-default">
+                    <Image class="" src={lightbulb} alt="Billede der viser en kat" loading="lazy"/>
                     <h3>Ideen bag Purrfect Box</h3>
                     <div class="grid lg:grid-cols-2 lg:m-d-m">
                         <div class="">
@@ -256,15 +258,15 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
     animate( ".entrance", { opacity: [ 0, 1] }, { duration: 1 })
     })
 
-    /* Stagger animation */
-	inView( "#stagger" , () =>{
-		animate(
-		".staggeranimation",
-		{ opacity: [0, 1] },
-		{ 
-			delay: stagger(1, { start: 2 })
-		}
-		)
-	})
+        /* Stagger animation */
+    inView("#stagger", () => {
+        animate(
+        ".staggeranimation",
+        { opacity: [0, 1] },
+        {
+            delay: stagger(0.3, { start: 0.5 }), // Reduceret forsinkelse mellem elementer og starttidspunkt
+        }
+        );
+    });
     
 	</script>
