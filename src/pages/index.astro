@@ -7,7 +7,7 @@ import HowTo from "../components/HowTo.astro";
 import TrustpilotCard from "../components/TrustpilotCard.astro";
 import Accordion from "../components/Accordion.astro";
 import { Image } from "astro:assets";
-import desktopImage from "../assets/images/forside_hero.jpg";
+import desktopImage from "../assets/images/fh.jpg";
 import mobileImage from "../assets/images/mobil_img.png";
 import displaybox from "../assets/images/promo2.jpg";
 import pote from "../assets/images/paw.svg";
@@ -43,14 +43,19 @@ import trustpilot from "../assets/images/trustpilot.svg";
         class="absolute inset-0 bottom-60 flex items-center justify-center lg:bottom-20"
       >
         <span class="hidden md:block"
-          ><Button variant="primary" size="desktop"
+          >
+           <a href="/productlist">
+          <Button variant="primary" size="desktop"
             ><input type="submit" value="Bestil PurrBox abonnement" /></Button
-          ></span
+          ></a>
+        </span
         >
         <span class="md:hidden flex"
-          ><Button variant="primary" size="mobile"
+          ><a href="/productlist">
+          <Button variant="primary" size="mobile"
             ><input type="submit" value="Bestil PurrBox abonnement" /></Button
-          ></span
+          ></a>
+        </span
         >
       </div>
     </div>
@@ -59,7 +64,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
     <h2 class="font-bold pt-d-m leading-10 lg:pb-d-s">
       Alt din kat har brug for - leveret direkte til døren
     </h2>
-    <div class="lg:grid grid-cols-2">
+    <div class="lg:grid grid-cols-2 lg:items-center">
       <div class="lg:pr-d-ml">
         <h3 class="font-bold py-d-xs lg:py-d-s">Hvorfor PurrBox?</h3>
         <p class="pb-d-s">
@@ -134,13 +139,16 @@ import trustpilot from "../assets/images/trustpilot.svg";
   </section>
   <section>
     <div class="relative mt-d-lg">
-      <div class="z-100 flex flex-row-reverse">
-        <Image
-          class="absolute z-100"
-          src={kat1}
-          alt="En blå kat der sidder ovenpå banneret med brands og stirrer på brugeren"
-        />
+      <div class="relative">
+        <!-- SVG der trigges ved klik -->
+        <Image id="klik_mig" src={kat1} alt="Blue Bingle" loading="lazy" class="animate-pulse w-20 md:w-40 absolute -top-36 md:-top-52 right-10 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+
+        <!-- Skjult hjerte der flyver op ved klik -->
+        <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36 md:-top-52 w-12 h-12 text-pink-500 left-[125px] md:left-[1350px] transform -translate-x-[125px] md:-translate-x-[500px]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
       </div>
+
       <div
         class="rullende_brands bg-yellow-200 relative w-full h-auto overflow-hidden z-30 py-d-xs"
       >
@@ -225,7 +233,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
     <h2 class="font-bold pt-d-lg pb-d-sm leading-10">
       Hvilken Purr Box skal din kat have?
     </h2>
-    <div class="flex items-center flex-col lg:flex-row flex-wrap gap-d-sm">
+    <div class="flex items-center flex-col lg:flex-row flex-wrap lg:justify-center gap-d-sm">
       <CardForside
         cardimage="../img/basicbox2.jpg"
         cardimagealt="Et billede af vores Basic Box med beige baggrund"
@@ -299,15 +307,16 @@ import trustpilot from "../assets/images/trustpilot.svg";
       </div>
       <div>
         <div class="relative">
-          <!-- SVG der trigges ved klik -->
-          <Image
-            id="klik_mig"
-            src={kat2}
-            alt="Lyserød kat der ligger ned og stirrer"
-            loading="lazy"
-            class="-top-14 lg:-top-12 right-0 absolute"
-          />
-        </div>
+        <!-- SVG der trigges ved klik -->
+        <Image id="icon" src={kat2} alt="Lyserød kat der ligger ned og stirrer" loading="lazy" class="animate-pulse -top-14 lg:-top-12 right-0 absolute w-20 md:w-40 md:-top-14 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+
+        <!-- Skjult hjerte der flyver op ved klik -->
+        <svg id="fly-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-14 md:-top-14 w-12 h-12 text-yellow-500 left-[125px] md:left-[490px] transform -translate-x-[125px] md:-translate-x-[500px]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+
+        <div>
         <div class="py-d-s">
           <Image
             class="rounded-default"
@@ -484,3 +493,26 @@ import trustpilot from "../assets/images/trustpilot.svg";
     }
   </style>
 </MainLayout>
+
+<script>
+  // Funktion for klik-event på både ikon og eget svg-fil
+  const handleClick = (iconId, heartId) => {
+    const icon = document.getElementById(iconId);
+    const heart = document.getElementById(heartId);
+    
+    icon.addEventListener('click', () => {
+      heart.classList.remove('hidden');
+      heart.classList.add('fly-up-animation');
+      
+      // Timeout til at nulstille efter animationen
+      setTimeout(() => {
+        heart.classList.remove('fly-up-animation');
+        heart.classList.add('hidden');
+      }, 1000); // Samme varighed som animationen
+    });
+  };
+
+  // Kald funktionen for begge elementer
+  handleClick('klik_mig', 'heart-icon');
+  handleClick('icon', 'fly-icon');
+</script>
