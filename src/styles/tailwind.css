@@ -23,6 +23,11 @@
     @apply text-m-h1;
   }
 
+  h2 {
+    @apply text-blue-800;
+    @apply text-m-h2;
+  }
+
   h3 {
     @apply text-m-h3;
   }
@@ -51,11 +56,6 @@
     @apply text-blue-950;
   }
 
-  h2 {
-    @apply text-blue-800;
-    @apply text-m-h2;
-  }
-
   #accordion h4,
   #accordion p {
     @apply text-blue-50;
@@ -79,10 +79,12 @@
 
     h2 {
       @apply text-d-h2;
+      @apply leading-10;
     }
 
     h3 {
       @apply text-d-h3;
+      @apply leading-[30px];
     }
 
     h4 {
