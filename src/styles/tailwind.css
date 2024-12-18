@@ -89,6 +89,11 @@
       @apply font-regular;
     }
   }
+
+  a,
+  button {
+    @apply cursor-handcursor;
+  }
 }
 
 @layer utilities {

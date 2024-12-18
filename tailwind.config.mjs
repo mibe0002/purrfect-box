@@ -8,6 +8,10 @@ export default {
     // overwrite indstillinger her
     extend: {
       // extend indstillinger her
+      // cursor
+      cursor: {
+        handcursor: "url(/pawcursor.svg), pointer",
+      },
       /* Tilføj din egen farvepalette nedenfor */
       colors: {
         transparent: "transparent",
