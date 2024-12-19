@@ -146,37 +146,47 @@ import cc6 from "../assets/images/carousel6.jpg";
         <HowTo></HowTo>
     </section>
 
-    <section class="relative pl-m-sm md:pl-d-3xl md:pt-d-m text-center">
+    <section class="relative pl-m-sm md:pl-d-3xl text-center">
         <h2 class="pb-d-sm md:pb-d-sm">Hvad meowner andre katte?</h2>
         <div class="mx-auto pb-d-xl">
-            <div class="mx-auto pt-4 pb-8">
+            <div class="relative mx-auto pt-4 pb-8 flex items-end md:items-center">
+                 <!-- Animeret pil for scroll -->
+                <div class="absolute bottom-12 right-4 flex items-center animate-bounce z-20 bg-yellow-200/80 rounded-default">
+                    <span class="text-blue-950 font-montserrat font-bold md:text-d-h4 text-m-h4 md:pl-d-xs pl-m-s">Scroll</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-yellow-500 cursor-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+
                 <div class="overflow-hidden relative carousel-wrapper">
                     <!-- Carousel Wrapper -->
                     <div class="flex space-x-4 overflow-x-scroll no-scrollbar">
-                    <!-- Slides -->
-                    <div class="flex flex-nowrap">
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <!-- Slides -->
+                        <div class="flex flex-nowrap">
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                            <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc4} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                            <Image src={cc4} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc5} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc5} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc6} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc6} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
