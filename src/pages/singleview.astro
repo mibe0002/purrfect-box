@@ -42,8 +42,8 @@ import cc4 from "../assets/images/carousel4.jpg";
             <div class="col-span-2">
                 <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default"></Image>
             </div>
-            <div class="col-auto px-d-m gap-d-s flex flex-col justify-between min-w-[500px] h-auto">
-                <h2>Custom Box</h2>
+            <div class="col-auto px-d-m flex flex-col justify-between min-w-[500px] h-auto">
+                <h2 class="pb-m-sm md:pb-d-xxs">Custom Box</h2>
                 <p class="max-w-[430px]">Denne Purrfect Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment.
                     Vælg 14 valgfrie produkter af kvalitetsmærker.</p>
                 <ul class="grid grid-cols-2 grid-rows-3 gap-x-d-s w-full h-auto">
@@ -74,7 +74,7 @@ import cc4 from "../assets/images/carousel4.jpg";
                 </ul>
 
                 <div class="flex flex-col justify-start items-end pb-d-s">
-                    <h2 class="pb-d-s">299 DKK</h2>
+                    <h2 class="pb-d-sm md:pb-d-sm">299 DKK</h2>
                     <p>Faktureres månedligt. Opsig når som helst.</p>
                 </div>
                 
@@ -99,7 +99,7 @@ import cc4 from "../assets/images/carousel4.jpg";
     </section>
 
     <section class="px-d-3xl pb-d-m">
-        <h3 class="pb-d-m">Ikke sikker? Tjek vores andre Purrfect Boxes ud!</h3>
+        <h3 class="pb-d-s md:pb-d-s">Ikke sikker? Tjek vores andre Purrfect Boxes ud!</h3>
 
         <div class="flex justify-around items-center gap-d-s">
             <CardForside
@@ -138,12 +138,12 @@ import cc4 from "../assets/images/carousel4.jpg";
     </section>
 
     <section>
-        <h2 class="pb-d-m text-center">Hvordan køber jeg en Purrfect Box?</h2>
+        <h2 class="pb-d-sm md:pb-d-sm text-center">Hvordan køber jeg en Purrfect Box?</h2>
         <HowTo></HowTo>
     </section>
 
     <section class="relative pl-d-3xl pt-d-m text-center">
-        <h2 class="pb-d-m">Hvad meowner andre katte?</h2>
+        <h2 class="pb-d-sm md:pb-d-sm">Hvad meowner andre katte?</h2>
         <div class="mx-auto pb-d-xl">
             <div class="mx-auto pt-4 pb-8">
                 <div class="overflow-hidden relative carousel-wrapper">
@@ -180,13 +180,7 @@ import cc4 from "../assets/images/carousel4.jpg";
     </section>
 
     <div class="relative">
-            <!-- SVG der trigges ved klik -->
-            <Image id="icon" src={cat2} alt="Pink Bingle" loading="lazy" class="animate-pulse absolute right-d-3xl bottom-0 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
-
-            <!-- Skjult hjerte der flyver op ved klik -->
-            <svg id="fly-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute top-20  md:top-0 w-12 h-12 text-yellow-500 left-[125px] md:left-[1200px] transform -translate-x-[125px] md:-translate-x-[500px]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
+            <Image id="icon" src={cat2} alt="Pink Bingle" loading="lazy" class="absolute right-d-3xl -bottom-10 -z-10 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
         </div>
 </MainLayout>
 

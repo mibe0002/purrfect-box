@@ -21,10 +21,10 @@ import Button from './Button.astro';
         </div>
 
         <!-- Desktop links -->
-        <div class="hidden lg:flex items-center gap-d-lg">
+        <div class="hidden lg:flex items-center gap-d-m">
             <Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager"
                 class="hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></Link>
-            <ul class="items-center flex gap-d-lg">
+            <ul class="items-center flex gap-d-m">
                 <li><Link href="/#processen" variant="primary" size="large">Processen</Link></li>
                 <li><Link href="/#faq"  variant="primary" size="large">FAQ</Link></li>
                 <li class="text-nowrap"><Link href="/about" variant="primary" size="large">Om os</Link></li>
@@ -32,11 +32,11 @@ import Button from './Button.astro';
         </div>
 
         <!-- Purr Box Button og Cart for desktop -->
-        <div class="hidden lg:flex flex-row items-center gap-d-s">
+        <div class="hidden lg:flex flex-row items-center gap-d-m">
             <a href="/productlist">
                 <Button variant="primary" size="desktop"><span class="text-nowrap">PurrBox</span></Button>
             </a>
-            <div class="flex items-center group gap-m-s">
+            <div class="flex items-center group gap-d-xxs">
                 <Image id="cat-login-icon" src={catlogin} alt="Kattehovede ikon ved login" loading="eager" class="md:w-10 h-auto transition-transform duration-300"></Image>
                 <Link href="/#" variant="primary" size="standard" class="group">
                     Login

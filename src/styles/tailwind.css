@@ -23,6 +23,11 @@
     @apply text-m-h1;
   }
 
+  h2 {
+    @apply text-blue-800;
+    @apply text-m-h2;
+  }
+
   h3 {
     @apply text-m-h3;
   }
@@ -49,11 +54,6 @@
   h4,
   p {
     @apply text-blue-950;
-  }
-
-  h2 {
-    @apply text-blue-800;
-    @apply text-m-h2;
   }
 
   #accordion h4,
@@ -97,7 +97,9 @@
 
   a,
   button,
-  svg {
+  svg,
+  #klik_mig,
+  #icon {
     @apply cursor-handcursor;
   }
 }
