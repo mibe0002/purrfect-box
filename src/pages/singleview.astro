@@ -23,9 +23,9 @@ import cc4 from "../assets/images/carousel4.jpg";
 ---
 
 <MainLayout class="relative">
-    <section class="px-d-3xl pb-d-lg">
-        <nav class="pb-d-s">
-            <ul class="flex gap-d-xxs">
+    <section class="px-m-sm md:px-d-3xl pb-m-lg md:pb-d-lg">
+        <nav class="pb-d-s md:pb-d-s">
+            <ul class="flex gap-m-xxs md:gap-d-xxs">
                 <Link></Link>
                 <li class="hidden md:block"><Link href="/" variant="secondary" size="large">PurrfectBox ></Link></li>
                 <li class="md:hidden"><Link href="/" variant="secondary" size="standard">PurrfectBox ></Link></li>
@@ -38,15 +38,15 @@ import cc4 from "../assets/images/carousel4.jpg";
             </ul>
         </nav>
 
-        <div class="flex justify-items-center gap-d-xs">
+        <div class="md:flex md:justify-items-center gap-m-lg md:gap-d-lg">
             <div>
-                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default w-full h-full object-cover object-center"></Image>
+                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default w-full h-full object-cover object-center mb-m-sm"></Image>
             </div>
-            <div class="col-auto px-d-m flex flex-col justify-between min-w-[500px] h-auto">
+            <div class="md:col-auto md:px-d-m md:flex md:flex-col md:justify-between md:min-w-[500px] md:h-auto">
                 <h2 class="pb-m-sm md:pb-d-xxs">Custom Box</h2>
-                <p class="max-w-[430px]">Denne Purrfect Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment.
+                <p class="md:max-w-[430px]">Denne Purrfect Box kan indeholde, hvad du og din kat begærer ud fra vores sortiment.
                     Vælg 14 valgfrie produkter af kvalitetsmærker.</p>
-                <ul class="grid grid-cols-2 grid-rows-3 gap-x-d-s w-full h-auto">
+                <ul class="grid grid-cols-2 grid-rows-3 md:gap-x-d-s w-full h-auto">
                         <li class="flex gap-d-s items-center">
                             <Image src={can} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
                             <p>Vådfoder</p>
@@ -73,8 +73,8 @@ import cc4 from "../assets/images/carousel4.jpg";
                         </li>
                 </ul>
 
-                <div class="flex flex-col justify-start items-end pb-d-s">
-                    <h2 class="pb-d-sm md:pb-d-sm">299 DKK</h2>
+                <div class="flex flex-col justify-start items-end pb-m-s md:pb-d-s">
+                    <h2 class="pt-m-sm pb-m-xs md:pb-d-sm">299 DKK</h2>
                     <p>Faktureres månedligt. Opsig når som helst.</p>
                 </div>
                 
@@ -85,7 +85,7 @@ import cc4 from "../assets/images/carousel4.jpg";
                     <Button variant="primary" size="desktop">Køb nu</Button>
                 </span>
 
-                 <div class="relative">
+                 <div class="relative hidden md:block">
                         <!-- SVG der trigges ved klik -->
                         <Image id="klik_mig" src={cat1} alt="Pink Bingle" loading="lazy" class="animate-pulse absolute left-d-xxs bottom-4 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
@@ -98,51 +98,53 @@ import cc4 from "../assets/images/carousel4.jpg";
         </div>
     </section>
 
-    <section class="px-d-3xl pb-d-m">
-        <h3 class="px-d-m pb-d-s md:pb-d-sm">Ikke sikker? Tjek vores andre Purrfect Boxes ud!</h3>
+    <section class="px-m-sm md:px-d-3xl pb-m-lg md:pb-d-lg">
+        <div class="flex flex-col items-center px-m-sm md:px-d-5xl">
+            <h3 class="pb-d-s md:pb-d-sm">Ikke sikker? Tjek vores andre Purrfect Boxes ud!</h3>
 
-        <div class="flex justify-around items-center gap-d-s">
-            <CardForside
-                cardimage="../img/basicbox2.jpg"
-                cardimagealt="Et billede af vores Basic Box med beige baggrund"
-                navn="Basic Box"
-                pris="119 DKK/MD"
-                punkt1="5 produkter i denne boks"
-                punkt2="Vælg dine egne brands"
-                punkt3="Opsig når som helst"
-            >    
-            </CardForside>
+            <div class="flex flex-col md:flex-row justify-around items-center gap-m-s md:gap-d-s">
+                <CardForside
+                    cardimage="../img/basicbox2.jpg"
+                    cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                    navn="Basic Box"
+                    pris="119 DKK/MD"
+                    punkt1="5 produkter i denne boks"
+                    punkt2="Vælg dine egne brands"
+                    punkt3="Opsig når som helst"
+                >    
+                </CardForside>
 
-             <CardForside
-                cardimage="../img/premium2.jpg"
-                cardimagealt="Et billede af vores Basic Box med beige baggrund"
-                navn="Premium Box"
-                pris="149 DKK/MD"
-                punkt1="7 produkter i denne boks"
-                punkt2="Vælg dine egne brands"
-                punkt3="Opsig når som helst"
-            >    
-            </CardForside>
+                <CardForside
+                    cardimage="../img/premium2.jpg"
+                    cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                    navn="Premium Box"
+                    pris="149 DKK/MD"
+                    punkt1="7 produkter i denne boks"
+                    punkt2="Vælg dine egne brands"
+                    punkt3="Opsig når som helst"
+                >    
+                </CardForside>
 
-             <CardForside
-                cardimage="../img/deluxe2.jpg"
-                cardimagealt="Et billede af vores Basic Box med beige baggrund"
-                navn="Deluxe Box"
-                pris="199 DKK/MD"
-                punkt1="9 produkter i denne boks"
-                punkt2="Vælg dine egne brands"
-                punkt3="Opsig når som helst"
-            >    
-            </CardForside>
+                <CardForside
+                    cardimage="../img/deluxe2.jpg"
+                    cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                    navn="Deluxe Box"
+                    pris="199 DKK/MD"
+                    punkt1="9 produkter i denne boks"
+                    punkt2="Vælg dine egne brands"
+                    punkt3="Opsig når som helst"
+                >    
+                </CardForside>
+            </div>
         </div>
     </section>
 
-    <section>
+    <section class="pb-m-lg md:pb-d-lg">
         <h2 class="pb-d-sm md:pb-d-sm text-center">Hvordan køber jeg en Purrfect Box?</h2>
         <HowTo></HowTo>
     </section>
 
-    <section class="relative pl-d-3xl pt-d-m text-center">
+    <section class="relative pl-m-sm md:pl-d-3xl md:pt-d-m text-center">
         <h2 class="pb-d-sm md:pb-d-sm">Hvad meowner andre katte?</h2>
         <div class="mx-auto pb-d-xl">
             <div class="mx-auto pt-4 pb-8">
@@ -180,7 +182,7 @@ import cc4 from "../assets/images/carousel4.jpg";
     </section>
 
     <div class="relative">
-            <Image id="icon" src={cat2} alt="Pink Bingle" loading="lazy" class="absolute right-d-3xl -bottom-10 -z-10 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+            <Image id="icon" src={cat2} alt="Pink Bingle" loading="lazy" class="absolute right-m-5xl md:right-d-3xl -bottom-10 -z-10"></Image>
         </div>
 </MainLayout>
 
