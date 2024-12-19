@@ -27,18 +27,17 @@ import omos from "../assets/images/omos_desktophero.png";
 const schemamarkup = {
   "@context": "https://schema.org/",
   "@type": "WebSite",
-  "name": "purrfectbox",
-  "url": "https://purrfectbox.netlify.app/",
-  "potentialAction": {
+  name: "purrfectbox",
+  url: "https://purrfectbox.netlify.app/",
+  potentialAction: {
     "@type": "SearchAction",
-    "target": "{search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
+    target: "{search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
 ---
-<MainLayout title="Purrfect Box"
-title="purrfectbox"
->
+
+<MainLayout title="Purrfect Box" title="purrfectbox">
   <section>
     <div class="">
       <div class="w-full">
@@ -78,7 +77,7 @@ title="purrfectbox"
       Alt din kat har brug for - leveret direkte til døren
     </h2>
     <div class="lg:grid grid-cols-2 lg:items-center">
-      <div class="lg:pr-d-ml">
+      <div class="lg:pr-d-lg">
         <h3 class="font-bold py-d-s">Hvorfor PurrBox?</h3>
         <p id="stagger" class="pb-d-s">
           Vores abonnement til katteejere gør det nemt at tage sig af din kat.
