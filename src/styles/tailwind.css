@@ -200,8 +200,7 @@
   }
 
   .svg-filter:hover {
-    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg)
-      brightness(94%) contrast(89%);
+    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%);
   }
 
   .item .activeIcon {
@@ -243,5 +242,21 @@
 
   .fly-up-animation {
     animation: fly-up 1.5s ease forwards;
+  }
+
+  /* Custom Scrollbar */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: auto;
+  }
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #dff2ff;
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #e25182; /* Scrollbar thumb color */
+    border-radius: 15px;
+    border: 1px solid #f0f9ff; /* Border around the thumb */
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: #cd316d; /* Thumb color on hover */
   }
 }
