@@ -37,7 +37,7 @@ const schemamarkup = {
 };
 ---
 
-<MainLayout title="Purrfect Box" title="purrfectbox">
+<MainLayout title="Purrfect Box">
   <section>
     <div class="">
       <div class="w-full">
@@ -534,26 +534,31 @@ const schemamarkup = {
 </MainLayout>
 
 <script>
-  // Funktion for klik-event på både ikon og eget svg-fil
-  const handleClick = (iconId, heartId) => {
+  // Denne funktion håndterer klik på et ikon og viser et hjerte ved klik
+  function setupClickEvent(iconId, heartId) {
+    // Få fat i ikonet og hjertet med deres id'er
     const icon = document.getElementById(iconId);
     const heart = document.getElementById(heartId);
 
-    icon.addEventListener("click", () => {
-      heart.classList.remove("hidden");
-      heart.classList.add("fly-up-animation");
+    // Når man klikker på ikonet, sker denne kode
+    icon.addEventListener('click', function() {
+      // Vis hjertet ved at fjerne 'hidden' og tilføje flyve-animation
+      heart.classList.remove('hidden');
+      heart.classList.add('fly-up-animation');
 
-      // Timeout til at nulstille efter animationen
-      setTimeout(() => {
-        heart.classList.remove("fly-up-animation");
-        heart.classList.add("hidden");
-      }, 1000); // Samme varighed som animationen
+      // Efter 1 sekund (1000ms) skjuler vi hjertet igen
+      setTimeout(function() {
+        heart.classList.remove('fly-up-animation');
+        heart.classList.add('hidden');
+      }, 1000); // 1000ms er samme varighed som animationen
     });
-  };
+  }
 
-  // Kald funktionen for begge elementer
-  handleClick("klik_mig", "heart-icon");
-  handleClick("icon", "fly-icon");
+
+  
+  // Kald funktionen for hvert par af ikon og hjerte
+  setupClickEvent('klik_mig', 'heart-icon');
+  setupClickEvent('icon', 'fly-icon');
 
   import { animate, stagger, inView, scroll, timeline } from "motion";
 

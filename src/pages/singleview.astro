@@ -24,7 +24,7 @@ import cc5 from "../assets/images/carousel5.jpg";
 import cc6 from "../assets/images/carousel6.jpg";
 ---
 
-<MainLayout class="relative">
+<MainLayout titel="PurrBox" class="relative">
     <section class="px-m-sm md:px-d-3xl pb-m-lg md:pb-d-lg">
         <nav class="pb-d-s md:pb-d-s">
             <ul class="flex gap-m-xxs md:gap-d-xxs">
@@ -35,8 +35,8 @@ import cc6 from "../assets/images/carousel6.jpg";
                 <li class="hidden md:block"><Link href="/productlist" variant="secondary" size="large">PurrBox ></Link></li>
                 <li class="md:hidden"><Link href="/productlist" variant="secondary" size="standard">PurrBox ></Link></li>
 
-                <li class="hidden md:block underline underline-offset-8 decoration-pink-500"><a href="#">Custom Box</a></li>
-                <li class="md:hidden underline underline-offset-8 decoration-pink-500"><a href="#">Custom Box</a></li>
+                <li id="custom-box" class="hidden md:block"><a href="/singleview">Custom Box</a></li>
+                <li id="custom-box-mobile" class="md:hidden"><a href="/singleview">Custom Box</a></li>
             </ul>
         </nav>
 
@@ -89,7 +89,7 @@ import cc6 from "../assets/images/carousel6.jpg";
 
                  <div class="relative hidden md:block">
                         <!-- SVG der trigges ved klik -->
-                        <Image id="klik_mig" src={cat1} alt="Pink Bingle" loading="lazy" class="animate-pulse absolute left-d-xxs bottom-4 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+                        <Image id="klik_mig" src={cat1} alt="Blue Bingle" loading="lazy" class="opacity-100 wobble-hor-bottom absolute left-d-xxs bottom-4 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
                         <!-- Skjult hjerte der flyver op ved klik -->
                         <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36  md:-top-36 w-12 h-12 text-pink-500 left-[125px] md:left-[40px] transform -translate-x-[125px] md:-translate-x-[40px]" fill="currentColor" viewBox="0 0 24 24">
@@ -118,7 +118,7 @@ import cc6 from "../assets/images/carousel6.jpg";
 
                 <CardForside
                     cardimage="../img/premium2.jpg"
-                    cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                    cardimagealt="Et billede af vores Premium Box med orange baggrund"
                     navn="Premium Box"
                     pris="149 DKK/MD"
                     punkt1="7 produkter i denne boks"
@@ -129,7 +129,7 @@ import cc6 from "../assets/images/carousel6.jpg";
 
                 <CardForside
                     cardimage="../img/deluxe2.jpg"
-                    cardimagealt="Et billede af vores Basic Box med beige baggrund"
+                    cardimagealt="Et billede af vores Deluxe Box med pink baggrund"
                     navn="Deluxe Box"
                     pris="199 DKK/MD"
                     punkt1="9 produkter i denne boks"
@@ -164,27 +164,27 @@ import cc6 from "../assets/images/carousel6.jpg";
                         <!-- Slides -->
                         <div class="flex flex-nowrap">
                         <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                            <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                            <Image src={cc1} alt="Kat hopper og bider efter drillepind" loading="lazy" class="w-full h-auto rounded-lg"></Image>
                         </div>
 
                         <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        <Image src={cc2} alt="Kat ligger ned og holder fast i sin drillepind" loading="lazy" class="w-full h-auto rounded-lg"></Image>
                         </div>
 
                         <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        <Image src={cc3} alt="Kat kigger mod kameraet og foran er der noget mad" loading="lazy" class="w-full h-auto rounded-lg"></Image>
                         </div>
 
                         <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                            <Image src={cc4} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                            <Image src={cc4} alt="Kat holder fast i sin drillepind" loading="lazy" class="w-full h-auto rounded-lg"></Image>
                         </div>
 
                         <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc5} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        <Image src={cc5} alt="Kat står op ad kradsetræ og kigger på en drillepind" loading="lazy" class="w-full h-auto rounded-lg"></Image>
                         </div>
 
                         <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc6} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        <Image src={cc6} alt="Kat ligger ned med sin lille bamse" loading="lazy" class="w-full h-auto rounded-lg"></Image>
                         </div>
                         </div>
                     </div>
@@ -206,29 +206,44 @@ import cc6 from "../assets/images/carousel6.jpg";
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
 </style>
 
 <script>
- // Funktion for klik-event på både ikon og eget svg-fil
-  const handleClick = (iconId, heartId) => {
+  // Denne funktion håndterer klik på et ikon og viser et hjerte ved klik
+  function setupClickEvent(iconId, heartId) {
+    // Få fat i ikonet og hjertet med deres id'er
     const icon = document.getElementById(iconId);
     const heart = document.getElementById(heartId);
-    
-    icon.addEventListener('click', () => {
+
+    // Når man klikker på ikonet, sker denne kode
+    icon.addEventListener('click', function() {
+      // Vis hjertet ved at fjerne 'hidden' og tilføje flyve-animation
       heart.classList.remove('hidden');
       heart.classList.add('fly-up-animation');
-      
-      // Timeout til at nulstille efter animationen
-      setTimeout(() => {
+
+      // Efter 1 sekund (1000ms) skjuler vi hjertet igen
+      setTimeout(function() {
         heart.classList.remove('fly-up-animation');
         heart.classList.add('hidden');
-      }, 1000); // Samme varighed som animationen
+      }, 1000); // 1000ms er samme varighed som animationen
     });
-  };
+  }
 
-  // Kald funktionen for begge elementer
-  handleClick('klik_mig', 'heart-icon');
-  handleClick('icon', 'fly-icon');
+  // Kald funktionen for hvert par af ikon og hjerte
+  setupClickEvent('klik_mig', 'heart-icon');
+  setupClickEvent('icon', 'fly-icon');
+
+
+
+  // Få den aktuelle sti fra URL'en 
+  const currentPath = window.location.pathname;
+
+  // Tjek om vi er på 'singleview' siden
+  if (currentPath === '/singleview') {
+    // Tilføj understregningsklasse for den rigtige breadcrumb
+    document.getElementById('custom-box').classList.add('underline', 'underline-offset-8', 'decoration-pink-500');
+    document.getElementById('custom-box-mobile').classList.add('underline', 'underline-offset-8', 'decoration-pink-500');
+  }
 </script>
+
 

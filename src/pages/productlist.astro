@@ -26,7 +26,7 @@ import Button from '../components/Button.astro';
                     desktopImgUrl={desktopImage}
                     alt="Hero billede med en Blå Bingle i højre hjørne, i baggrunden er katte hovede ikonet gentaget som et mønster."
                 />
-                <div class="absolute inset-0 md:flex md:flex-col md:justify-center md:items-center md:w-[1068px] px-m-sm md:px-d-3xl py-m-lg md:py-d-lg">
+                <div class="absolute animate__animated animate__bounceInDown inset-0 md:flex md:flex-col md:justify-center md:items-center md:w-[1068px] px-m-sm md:px-d-3xl py-m-lg md:py-d-lg">
                     <div class="text-left">
                         <h1 class="pb-m-m md:pb-d-m">Purrfect Boxes</h1>
                         <h2 class="pb-m-sm md:pb-d-sm">Overblik over vores PurrBoxes</h2>
@@ -42,14 +42,14 @@ import Button from '../components/Button.astro';
             <div class="bg-blue-200 pb-m-m md:pb-d-m rounded-default">
                  <div class="relative">
                         <!-- SVG der trigges ved klik -->
-                        <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="lazy" class="animate-pulse w-40 md:w-1/2 absolute -top-24 md:-top-32 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+                        <Image id="klik_mig" src={cot} alt="Pink Bingle" loading="eager" class="wobble-hor-bottom opacity-100 w-40 md:w-1/2 absolute -top-24 md:-top-32 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
 
                         <!-- Skjult hjerte der flyver op ved klik -->
                         <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36  md:-top-36 w-12 h-12 text-pink-500 left-[125px] md:left-[200px] transform -translate-x-[125px] md:-translate-x-[200px]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                     </div>
-                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-t-default"></Image>
+                <Image src={basic} alt="Et billede af vores Basic Box med beige baggrund" loading="eager" class="rounded-t-default"></Image>
                     <div class="px-d-ml">
                         <h4 class="py-d-xs">Basic Box</h4>
                         <h3 class="pb-d-s text-blue-800">119 DKK/MD</h3>
@@ -93,7 +93,7 @@ import Button from '../components/Button.astro';
             </div>
 
             <div class="bg-blue-200 pb-d-m rounded-default">
-                <Image src={deluxe} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-t-default"></Image>
+                <Image src={premium} alt="Et billede af vores Premium Box med orange baggrund" loading="eager" class="rounded-t-default"></Image>
                     <div class="px-d-ml">
                         <h4 class="py-d-xs">Premium Box</h4>
                         <h3 class="pb-d-s text-blue-800">149 DKK/MD</h3>
@@ -137,9 +137,9 @@ import Button from '../components/Button.astro';
             </div>
 
             <span class="relative">
-                 <Image src={banner} alt="Mest for pengene banner" loading="lazy" class="absolute top-0 rounded-default right-0"></Image>
+                 <Image src={banner} alt="Mest for pengene banner" loading="eager" class="absolute top-0 rounded-default right-0"></Image>
             <div class="bg-blue-200 pb-d-m rounded-default">
-                <Image src={premium} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-t-default"></Image>
+                <Image src={deluxe} alt="Et billede af vores Deluxe Box med pink baggrund" loading="eager" class="rounded-t-default"></Image>
                     <div class="px-d-ml">
                         <h4 class="py-d-xs">Deluxe Box</h4>
                         <h3 class="pb-d-s text-blue-800">199 DKK/MD</h3>
@@ -229,32 +229,36 @@ import Button from '../components/Button.astro';
                 </div>
             </article>
 
-            <div class="absolute bottom-0 right-4">
+            <div class="absolute bottom-0 right-6">
                 <Image id="fly-icon" src={cqs} alt="Spørgsmålstegn ikon" loading="lazy" class="hidden absolute -top-14 right-[40px] transform -translate-x-[10px] fly-up-animation"></Image>
-                <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="animate-pulse w-24 md:w-40 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+                <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="wobble-hor-bottom opacity-100 w-24 md:w-40 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
             </div>
         </section>
 </MainLayout>
 
 <script>
-  // Funktion for klik-event på både ikon og eget svg-fil
-  const handleClick = (iconId, heartId) => {
+  // Denne funktion håndterer klik på et ikon og viser et hjerte ved klik
+  function setupClickEvent(iconId, heartId) {
+    // Få fat i ikonet og hjertet med deres id'er
     const icon = document.getElementById(iconId);
     const heart = document.getElementById(heartId);
-    
-    icon.addEventListener('click', () => {
+
+    // Når man klikker på ikonet, sker denne kode
+    icon.addEventListener('click', function() {
+      // Vis hjertet ved at fjerne 'hidden' og tilføje flyve-animation
       heart.classList.remove('hidden');
       heart.classList.add('fly-up-animation');
-      
-      // Timeout til at nulstille efter animationen
-      setTimeout(() => {
+
+      // Efter 1 sekund (1000ms) skjuler vi hjertet igen
+      setTimeout(function() {
         heart.classList.remove('fly-up-animation');
         heart.classList.add('hidden');
-      }, 1000); // Samme varighed som animationen
+      }, 1000); // 1000ms er samme varighed som animationen
     });
-  };
+  }
 
-  // Kald funktionen for begge elementer
-  handleClick('klik_mig', 'heart-icon');
-  handleClick('icon', 'fly-icon');
+  // Kald funktionen for hvert par af ikon og hjerte
+  setupClickEvent('klik_mig', 'heart-icon');
+  setupClickEvent('icon', 'fly-icon');
 </script>
+

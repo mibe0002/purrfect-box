@@ -25,9 +25,9 @@ import Button from './Button.astro';
             <Link href="/"><Image src={logo} alt="Purrfect Box's Logo" loading="eager"
                 class="hover:-rotate-12 hover:scale-105 transition-all duration-300"></Image></Link>
             <ul class="items-center flex gap-d-m">
-                <li><Link href="/#processen" variant="primary" size="large">Processen</Link></li>
-                <li><Link href="/#faq"  variant="primary" size="large">FAQ</Link></li>
-                <li class="text-nowrap"><Link href="/about" variant="primary" size="large">Om os</Link></li>
+                <li id="processen-link"><Link href="/#processen" variant="primary" size="large">Processen</Link></li>
+                <li id="faq-link"><Link href="/#faq"  variant="primary" size="large">FAQ</Link></li>
+                <li id="about-link" class="text-nowrap"><Link href="/about" variant="primary" size="large">Om os</Link></li>
             </ul>
         </div>
 
@@ -84,4 +84,32 @@ window.onclick = (e) => {
         document.getElementById('mobile-menu').classList.add('hidden');
     }
 };
+
+
+
+ // Funktion der håndterer at tilføje underlinje på aktivt link
+  const handleActiveLink = () => {
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+
+    // Fjern eksisterende aktive klasser
+    document.getElementById('about-link').classList.remove('underline', 'underline-offset-8', 'decoration-pink-500');
+    document.getElementById('faq-link').classList.remove('underline', 'underline-offset-8', 'decoration-pink-500');
+    document.getElementById('processen-link').classList.remove('underline', 'underline-offset-8', 'decoration-pink-500');
+
+    // Tilføj understregningsklasse baseret på den aktuelle sti eller hash
+    if (currentPath === '/about') {
+      document.getElementById('about-link').classList.add('underline', 'underline-offset-8', 'decoration-pink-500');
+    } else if (currentHash === '#faq') {
+      document.getElementById('faq-link').classList.add('underline', 'underline-offset-8', 'decoration-pink-500');
+    } else if (currentHash === '#processen') {
+      document.getElementById('processen-link').classList.add('underline', 'underline-offset-8', 'decoration-pink-500');
+    }
+  };
+
+  // Kald funktionen ved sideload
+  handleActiveLink();
+
+  // Lyt til hash-ændringer for at opdatere aktivt link, når brugeren navigerer
+  window.addEventListener('hashchange', handleActiveLink);
 </script>
