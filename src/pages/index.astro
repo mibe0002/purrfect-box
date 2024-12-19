@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import HeroVideo from "../components/HeroVideo.astro";
 import MyCustomImage from "../components/MyCustomImage.astro";
 import Button from "../components/Button.astro";
 import CardForside from "../components/CardForside.astro";
@@ -39,7 +40,8 @@ const schemamarkup = {
 
 <MainLayout title="Purrfect Box" title="purrfectbox">
   <section>
-    <div class="">
+    <HeroVideo />
+    <!-- <div class="">
       <div class="w-full">
         <MyCustomImage
           mobileImgUrl={mobileImage}
@@ -70,7 +72,7 @@ const schemamarkup = {
           >
         </span>
       </div>
-    </div>
+    </div> -->
   </section>
   <section class="mx-m-sm lg:mx-d-5xl entrance">
     <h2 class="font-bold leading-10 mt-d-lg">
