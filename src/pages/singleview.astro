@@ -23,7 +23,7 @@ import cc4 from "../assets/images/carousel4.jpg";
 ---
 
 <MainLayout class="relative">
-    <section class="px-d-3xl py-d-m">
+    <section class="px-d-3xl pb-d-lg">
         <nav class="pb-d-m">
             <ul class="flex gap-d-xxs">
                 <Link></Link>
@@ -38,9 +38,9 @@ import cc4 from "../assets/images/carousel4.jpg";
             </ul>
         </nav>
 
-        <div class="grid grid-cols-3 justify-items-center gap-d-s">
-            <div class="col-span-2">
-                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default"></Image>
+        <div class="flex justify-items-center gap-d-xs">
+            <div>
+                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default w-full h-full object-cover object-center"></Image>
             </div>
             <div class="col-auto px-d-m flex flex-col justify-between min-w-[500px] h-auto">
                 <h2 class="pb-m-sm md:pb-d-xxs">Custom Box</h2>
@@ -49,27 +49,27 @@ import cc4 from "../assets/images/carousel4.jpg";
                 <ul class="grid grid-cols-2 grid-rows-3 gap-x-d-s w-full h-auto">
                         <li class="flex gap-d-s items-center">
                             <Image src={can} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
-                            <p>X Vådfoder</p>
+                            <p>Vådfoder</p>
                         </li>
                         <li class="flex gap-d-s items-center">
                             <Image src={bag} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
-                            <p>X Tørfoder</p>
+                            <p>Tørfoder</p>
                         </li>
                         <li class="flex gap-d-s items-center">
                             <Image src={fish} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
-                            <p>X Snacks</p>
+                            <p>Snacks</p>
                         </li>
                         <li class="flex gap-d-s items-center">
                             <Image src={mouse} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
-                            <p class="text-nowrap">X Stk. legetøj</p>
+                            <p class="text-nowrap">Stk. legetøj</p>
                         </li>
                         <li class="flex gap-d-s items-center">
                             <Image src={shovel} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
-                            <p>X Kattegrus</p>
+                            <p>Kattegrus</p>
                         </li>
                         <li class="flex gap-d-s items-center">
                             <Image src={paw} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
-                            <p>X Pleje</p>
+                            <p>Pleje</p>
                         </li>
                 </ul>
 
@@ -79,10 +79,10 @@ import cc4 from "../assets/images/carousel4.jpg";
                 </div>
                 
                 <span class="md:hidden flex justify-end">
-                    <Button variant="primary" size="mobile">Start her</Button>
+                    <Button variant="primary" size="mobile">Køb nu</Button>
                 </span>
                 <span class="hidden md:flex justify-end">
-                    <Button variant="primary" size="desktop">Start her</Button>
+                    <Button variant="primary" size="desktop">Køb nu</Button>
                 </span>
 
                  <div class="relative">

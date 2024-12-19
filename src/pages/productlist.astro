@@ -143,7 +143,8 @@ import Button from '../components/Button.astro';
                     <div class="px-d-ml">
                         <h4 class="py-d-xs">Deluxe Box</h4>
                         <h3 class="pb-d-s">199 DKK/MD</h3>
-                        <p class="pb-d-xs">Med sjovt legetøj, kvalitetsfoder og snacks sikrer denne boks, at din kat bliver både mæt og underholdt. Perfekt til at give din kat noget ekstra at glæde sig over – og samtidig få mest for pengene.</p>
+                        <p class="pb-d-xs">Med sjovt legetøj, kvalitetsfoder og snacks sikrer denne boks, at din kat bliver både mæt og underholdt.
+                            Perfekt til at give din kat noget ekstra at glæde sig over – og samtidig få mest for pengene.</p>
                         <ul class="pb-d-xs pl-d-xs list-disc">
                             <li>9 produkter i denne boks</li>
                             <li>Vælg dine egne brands</li>
@@ -197,44 +198,28 @@ import Button from '../components/Button.astro';
         </section>
        
 
-        <section class="px-m-sm pb-m-ml md:pb-d-ml md:px-d-3xl">
-            <article class="pt-m-sm bg-yellow-200 rounded-default">
-                <div class="pt-m-sm md:grid md:grid-cols-2 md:content-start">
-                    <div class="relative">
-                        <div class="px-m-ml flex flex-col justify-stretch">
-                            <h3 class="text-center pb-m-s md:pb-d-s md:leading-10">Hvilken abonnements-plan er dit perfekte match?</h3>
-                            <p class="w-[360px] pb-m-sm">Ved du ikke hvilket abonnement du skal vælge? Vi har udviklet en quiz der skal hjælpe dig på vej til finde den perfekte Purr Box til dig og din kat.</p>
-                            <h3 class="pb-m-s md:pb-d-s">Tag vores quiz nu!</h3>
-                            <span class="md:hidden">
-                                <Button variant="primary" size="mobile">Start her</Button>
-                            </span>
-                            <span class="hidden md:block">
-                                <Button variant="primary" size="desktop">Start her</Button>
-                            </span>
-                        </div>
-                        <div class="absolute bottom-0 right-0">
-                            <Image id="fly-icon" src={cqs} alt="Spørgsmålstegn ikon" loading="lazy" class="hidden absolute -top-14 left-[10px] transform -translate-x-[10px] fly-up-animation"></Image>
-                            <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="animate-pulse w-20 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 grid-rows-2">
-                        <Image src={basic} alt="Basic Box" loading="lazy"></Image>
-                        <Image src={premium} alt="Premium Box" loading="lazy" class="md:rounded-tr-default"></Image>
-                        <Image src={deluxe} alt="Deluxe Box" loading="lazy" class="rounded-bl-default md:rounded-none"></Image>
-                        <Image src={custom} alt="Custom Box" loading="lazy" class="rounded-br-default"></Image>
+        <section class="relative px-m-sm pb-m-ml md:pb-d-ml md:px-d-3xl">
+            <article class="bg-blue-200 rounded-default md:grid md:grid-cols-2 md:place-items-center">
+                <div class="px-m-ml md:px-d-ml py-m-sm flex flex-col items-center justify-center">
+                    <h3 class="pb-m-s md:pb-d-s text-center md:leading-10">Hvilken abonnements-plan er dit perfekte match?</h3>
+                    <p class="md:w-[400px] pb-m-sm">Ved du ikke hvilket abonnement du skal vælge? <br class="hidden md:block"> Vi har udviklet en quiz, der skal hjælpe dig på vej til finde den perfekte Purr Box til dig og din kat.</p>
+                    <h3 class="pb-m-s md:pb-d-s">Tag vores quiz nu!</h3>
+
+                    <div class="pt-m-sm md:pt-d-sm flex justify-center md:justify-start gap-m-sm md:gap-d-sm">
+                    <span class="md:hidden">
+                        <a href="#">
+                        <Button variant="primary" size="mobile">Start her</Button>
+                        </a>
+                    </span>
+                    <span class="hidden md:block">
+                        <a href="#">
+                        <Button variant="primary" size="desktop">Start her</Button>
+                        </a>
+                    </span>
                     </div>
                 </div>
-            </article>
 
-
-
-
-
-
-
-            <article class="bg-blue-200 rounded-default md:grid md:grid-cols-2 md:place-items-center">
-                <div class="w-full">
+                <div>
                      <div class="grid grid-cols-2 grid-rows-2">
                         <Image src={basic} alt="Basic Box" loading="lazy"></Image>
                         <Image src={premium} alt="Premium Box" loading="lazy" class="md:rounded-tr-default"></Image>
@@ -242,36 +227,12 @@ import Button from '../components/Button.astro';
                         <Image src={custom} alt="Custom Box" loading="lazy" class="rounded-br-default"></Image>
                     </div>
                 </div>
-                <div class="px-m-ml md:px-d-ml py-m-sm md:py-d-sm">
-                    
-                    <h3 class="pb-m-s md:pb-d-s text-center md:leading-10">Hvilken abonnements-plan er dit perfekte match?</h3>
-                    <p class="w-[360px] pb-m-sm">Ved du ikke hvilket abonnement du skal vælge? Vi har udviklet en quiz der skal hjælpe dig på vej til finde den perfekte Purr Box til dig og din kat.</p>
-                    <h3 class="pb-m-s md:pb-d-s">Tag vores quiz nu!</h3>
-
-                    <div class="pt-m-sm md:pt-d-sm flex justify-center md:justify-start gap-m-sm md:gap-d-sm">
-                    <span class="md:hidden">
-                        <a href="/formular">
-                        <Button variant="primary" size="mobile">Køb nu</Button>
-                        </a>
-                    </span>
-                    <span class="hidden md:block">
-                        <a href="/formular">
-                        <Button variant="primary" size="desktop">Køb nu</Button>
-                        </a>
-                    </span>
-                    <span class="md:hidden">
-                        <a href="/singleview">
-                        <Button variant="secondary" size="mobile">Se mere</Button>
-                        </a>
-                    </span>
-                    <span class="hidden md:block">
-                        <a href="/singleview">
-                        <Button variant="secondary" size="desktop">Se mere</Button>
-                        </a>
-                    </span>
-                    </div>
-                </div>
             </article>
+
+            <div class="absolute bottom-0 right-4">
+                <Image id="fly-icon" src={cqs} alt="Spørgsmålstegn ikon" loading="lazy" class="hidden absolute -top-14 right-[40px] transform -translate-x-[10px] fly-up-animation"></Image>
+                <Image id="icon" src={cq} alt="Blue Bingle" loading="lazy" class="animate-pulse w-24 md:w-40 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+            </div>
         </section>
 </MainLayout>
 
