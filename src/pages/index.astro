@@ -22,6 +22,7 @@ import kat1 from "../assets/images/forside_kat.svg";
 import kat2 from "../assets/images/forside_kat2.svg";
 import kat3 from "../assets/images/forside_kat3.svg";
 import trustpilot from "../assets/images/trustpilot.svg";
+import omos from "../assets/images/omos_desktophero.png";
 ---
 
 <MainLayout title="Purrfect Box">
@@ -42,97 +43,77 @@ import trustpilot from "../assets/images/trustpilot.svg";
       <div
         class="absolute inset-0 bottom-60 flex items-center justify-center lg:bottom-20"
       >
-        <span class="hidden md:block"
+        <span class="hidden md:block">
+          <a href="/productlist">
+            <Button variant="primary" size="desktop"
+              ><input type="submit" value="Bestil PurrBox abonnement" /></Button
+            ></a
           >
-           <a href="/productlist">
-          <Button variant="primary" size="desktop"
-            ><input type="submit" value="Bestil PurrBox abonnement" /></Button
-          ></a>
-        </span
-        >
+        </span>
         <span class="md:hidden flex"
           ><a href="/productlist">
-          <Button variant="primary" size="mobile"
-            ><input type="submit" value="Bestil PurrBox abonnement" /></Button
-          ></a>
-        </span
-        >
+            <Button variant="primary" size="mobile"
+              ><input type="submit" value="Bestil PurrBox abonnement" /></Button
+            ></a
+          >
+        </span>
       </div>
     </div>
   </section>
-  <section class="mx-m-sm lg:mx-d-5xl">
-    <h2 class="font-bold pt-d-m leading-10 lg:pb-d-s">
+  <section class="mx-m-sm lg:mx-d-5xl entrance">
+    <h2 class="font-bold leading-10 mt-d-lg">
       Alt din kat har brug for - leveret direkte til døren
     </h2>
     <div class="lg:grid grid-cols-2 lg:items-center">
       <div class="lg:pr-d-ml">
-        <h3 class="font-bold py-d-xs lg:py-d-s">Hvorfor PurrBox?</h3>
-        <p class="pb-d-s">
+        <h3 class="font-bold py-d-s">Hvorfor PurrBox?</h3>
+        <p id="stagger" class="pb-d-s">
           Vores abonnement til katteejere gør det nemt at tage sig af din kat.
           Hver måned får du de vigtigste produkter som tørfoder, vådfoder,
           kattegrus og andre uundværlige ting. Spar tid, undgå besværet, og
           forkæl din kat med alt, den elsker – uden at løfte en pote!
         </p>
-        <div class="pb-d-xs flex flex-row gap-1">
-          <Image
-            class=""
-            src={pote}
-            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
-          />
+        <div class="pb-d-xxs lg:pb-d-xs flex flex-row gap-1">
+          <Image class="" src={pote} alt="Brun kattepote" loading="lazy" />
           <p>
             <span class="font-bold">Leveret til døren</span> – Ingen tunge løft.
           </p>
         </div>
         <div class="pb-d-xs flex flex-row gap-1">
-          <Image
-            class=""
-            src={pote}
-            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
-          />
+          <Image class="" src={pote} alt="Brun kattepote" />
           <p>
             <span class="font-bold">Altid på lager</span> – Slut med at løbe tør
             for nødvendigheder.
           </p>
         </div>
         <div class="pb-d-xs flex flex-row gap-1">
-          <Image
-            class=""
-            src={pote}
-            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
-          />
+          <Image class="" src={pote} alt="Brun kattepote" loading="lazy" />
           <p>
             <span class="font-bold">Fleksibelt</span> – Juster, pause, stop når som
             helst.
           </p>
         </div>
         <div class="pb-d-xs flex flex-row gap-1">
-          <Image
-            class=""
-            src={pote}
-            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
-          />
+          <Image class="" src={pote} alt="Brun kattepote" loading="lazy" />
           <p>
             <span class="font-bold">Tilpasset din kat</span> – Produkter din kat
             elsker.
           </p>
         </div>
         <div class="pb-d-xs flex flex-row gap-1">
-          <Image
-            class=""
-            src={pote}
-            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
-          />
+          <Image class="" src={pote} alt="Brun kattepote" loading="lazy" />
           <p>
             <span class="font-bold">Høj kvalitet</span> – Kun det bedste for din
             kat.
           </p>
         </div>
       </div>
-      <div class="py-d-s">
+      <div class="">
         <Image
-          class="rounded-default"
+          class="w-3/5"
           src={displaybox}
           alt="Billede der viser en promovering af PurrBox på en grå baggrund"
+          loading="lazy"
         />
       </div>
     </div>
@@ -141,11 +122,25 @@ import trustpilot from "../assets/images/trustpilot.svg";
     <div class="relative mt-d-lg">
       <div class="relative">
         <!-- SVG der trigges ved klik -->
-        <Image id="klik_mig" src={kat1} alt="Blue Bingle" loading="lazy" class="animate-pulse w-20 md:w-40 absolute -top-36 md:-top-52 right-10 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+        <Image
+          id="klik_mig"
+          src={kat1}
+          alt="Blue Bingle"
+          loading="lazy"
+          class="animate-pulse w-20 md:w-40 absolute -top-24 lg:-top-52 right-10 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"
+        />
 
         <!-- Skjult hjerte der flyver op ved klik -->
-        <svg id="heart-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-36 md:-top-52 w-12 h-12 text-pink-500 left-[125px] md:left-[1350px] transform -translate-x-[125px] md:-translate-x-[500px]" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        <svg
+          id="heart-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="hidden absolute -top-36 md:-top-52 w-12 h-12 text-pink-500 left-[125px] md:left-[1350px] transform -translate-x-[125px] md:-translate-x-[500px]"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          ></path>
         </svg>
       </div>
 
@@ -159,81 +154,97 @@ import trustpilot from "../assets/images/trustpilot.svg";
             class="w-[120px] mr-m-lg"
             src={royal}
             alt="Brand logo af Royal Canin for katte"
+            loading="lazy"
           />
           <Image
             class="w-[70px] mr-m-lg"
             src={hills1}
             alt="Brand logo af Hills for katte"
+            loading="lazy"
           />
           <Image
             class="w-[70px] mr-m-lg"
             src={cosma}
             alt="Brand logo af Cosma for katte"
+            loading="lazy"
           />
           <Image
             class="w-[120px] mr-m-lg"
             src={purina}
             alt="Brand logo af Purina for katte"
+            loading="lazy"
           />
           <Image
             class="w-[90px] mr-m-lg"
             src={feringa}
             alt="Brand logo af Feringa for katte"
+            loading="lazy"
           />
           <Image
             class="w-[100px] mr-m-lg"
             src={hills2}
             alt="Brand logo af Hills Prescription Diet for katte"
+            loading="lazy"
           />
           <Image
             class="w-[90px] mr-m-lg"
             src={concept}
             alt="Brand logo af Concept For Life for katte"
+            loading="lazy"
           />
           <Image
             class="w-[120px] mr-m-lg"
             src={royal}
             alt="Brand logo af Royal Canin for katte"
+            loading="lazy"
           />
           <Image
             class="w-[70px] mr-m-lg"
             src={hills1}
             alt="Brand logo af Hills for katte"
+            loading="lazy"
           />
           <Image
             class="w-[70px] mr-m-lg"
             src={cosma}
             alt="Brand logo af Cosma for katte"
+            loading="lazy"
           />
           <Image
             class="w-[120px] mr-m-lg"
             src={purina}
             alt="Brand logo af Purina for katte"
+            loading="lazy"
           />
           <Image
             class="w-[90px] mr-m-lg"
             src={feringa}
             alt="Brand logo af Feringa for katte"
+            loading="lazy"
           />
           <Image
             class="w-[100px] mr-m-lg"
             src={hills2}
             alt="Brand logo af Hills Prescription Diet for katte"
+            loading="lazy"
           />
           <Image
             class="w-[90px] mr-m-lg"
             src={concept}
             alt="Brand logo af Concept For Life for katte"
+            loading="lazy"
           />
         </div>
       </div>
     </div>
   </section>
-  <section class="mx-m-sm lg:mx-d-ml">
-    <h2 class="font-bold pt-d-lg pb-d-sm leading-10">
+  <section class="mx-m-sm mt-d-lg lg:mx-d-ml">
+    <h2 class="font-bold leading-10 pb-d-s">
       Hvilken Purr Box skal din kat have?
     </h2>
-    <div class="flex items-center flex-col lg:flex-row flex-wrap lg:justify-center gap-d-sm">
+    <div
+      class="animate__animated animate__backInLeft flex items-center flex-col lg:flex-row flex-wrap lg:justify-center gap-d-s"
+    >
       <CardForside
         cardimage="../img/basicbox2.jpg"
         cardimagealt="Et billede af vores Basic Box med beige baggrund"
@@ -272,15 +283,13 @@ import trustpilot from "../assets/images/trustpilot.svg";
       />
     </div>
   </section>
-  <section id="processen" class="py-d-lg">
-    <h2 class="font-bold text-center pt-d-lg pb-d-sm">
-      Hvordan fungerer Purrfect Box?
-    </h2>
+  <section id="processen" class="mt-d-lg">
+    <h2 class="font-bold text-center pb-d-s">Hvordan fungerer Purrfect Box?</h2>
     <div>
       <HowTo />
     </div>
   </section>
-  <section class="mx-m-sm lg:mx-d-5xl py-d-lg">
+  <section class="mx-m-sm mt-d-lg lg:mx-d-5xl">
     <div class="lg:grid grid-cols-2">
       <div class="lg:pr-d-lg">
         <h2 class="font-bold leading-10">Hvem står bag Purrfect Box?</h2>
@@ -292,7 +301,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
           løsning. Med fokus på kvalitet og kærlighed til katte er vi her for at
           sikre, at din kat altid har det bedste.
         </p>
-        <div class="pb-d-xs flex flex-row gap-1">
+        <div class="pb-d-s flex flex-row gap-1">
           <span class="hidden md:block"
             ><Button variant="primary" size="desktop"
               ><input type="submit" value="Læs mere" /></Button
@@ -307,37 +316,55 @@ import trustpilot from "../assets/images/trustpilot.svg";
       </div>
       <div>
         <div class="relative">
-        <!-- SVG der trigges ved klik -->
-        <Image id="icon" src={kat2} alt="Lyserød kat der ligger ned og stirrer" loading="lazy" class="animate-pulse -top-14 lg:-top-12 right-0 absolute w-20 md:w-40 md:-top-14 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"></Image>
+          <!-- SVG der trigges ved klik -->
+          <Image
+            id="icon"
+            src={kat2}
+            alt="Lyserød kat der ligger ned og stirrer"
+            loading="lazy"
+            class="animate-pulse -top-8 lg:-top-12 right-0 absolute w-20 md:w-40 md:-top-14 cursor-pointer active:scale-105 md:hover:scale-105 transition-all duration-300"
+          />
 
-        <!-- Skjult hjerte der flyver op ved klik -->
-        <svg id="fly-icon" xmlns="http://www.w3.org/2000/svg" class="hidden absolute -top-14 md:-top-14 w-12 h-12 text-yellow-500 left-[125px] md:left-[490px] transform -translate-x-[125px] md:-translate-x-[500px]" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      </div>
+          <!-- Skjult hjerte der flyver op ved klik -->
+          <svg
+            id="fly-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="hidden absolute -top-14 md:-top-14 w-12 h-12 text-yellow-500 left-[125px] md:left-[490px] transform -translate-x-[125px] md:-translate-x-[500px]"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            ></path>
+          </svg>
+        </div>
 
         <div>
-        <div class="py-d-s">
-          <Image
-            class="rounded-default"
-            src={displaybox}
-            alt="Billede der viser en promovering af PurrBox på en grå baggrund"
-          />
+          <div class="">
+            <Image
+              class="rounded-default"
+              src={omos}
+              alt="Billede der viser indehaverne af Purrfect Box"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="mx-m-sm lg:mx-d-5xl py-d-lg">
+  <section class="mx-m-sm mt-d-lg lg:mx-d-5xl">
     <h2 class="font-bold pb-d-m">Hvad siger vores brugere?</h2>
     <div class="bg-blue-200 rounded-default flex flex-col items-center">
       <Image
         class="rounded-default py-d-sm w-64"
         src={trustpilot}
         alt="TrustPilot logo med grøn stjerne og under står der 4.8 med 5 stjerner"
+        loading="lazy"
       />
     </div>
     <div
-      class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] pt-d-s trustpilotcards overflow-hidden"
+      class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] pt-d-s justify-items-center
+	   trustpilotcards overflow-hidden gap-d-s"
     >
       <TrustpilotCard
         navn="William D. Birch"
@@ -368,7 +395,7 @@ import trustpilot from "../assets/images/trustpilot.svg";
       />
     </div>
   </section>
-  <section id="faq" class="py-d-sm">
+  <section id="faq" class="mt-d-lg">
     <div class="bg-[url('../img/forside_nyhedsbrev.svg')] pt-d-sm pb-d-s">
       <h2 class="font-bold text-center mx-m-sm leading-10 lg:mx-0">
         Ik' mis de særlige tilbud og nyheder
@@ -405,9 +432,9 @@ import trustpilot from "../assets/images/trustpilot.svg";
       </form>
     </div>
   </section>
-  <section class="mx-m-sm lg:mx-d-5xl">
-    <h2 class="font-bold pb-d-sm">FAQ</h2>
-    <div class="pb-d-xl lg:grid grid-cols-2">
+  <section class="mx-m-sm mt-d-lg lg:mx-d-5xl">
+    <h2 class="font-bold pb-d-s">FAQ</h2>
+    <div class="pb-d-lg lg:grid grid-cols-2">
       <Accordion
         titel="Hvordan fungerer abonnementet?"
         indhold="Vores abonnement er enkelt: Du vælger, hvad din kat har brug for, og vi leverer det direkte til din dør hver måned. Du kan altid tilpasse det til din kats behov."
@@ -499,20 +526,37 @@ import trustpilot from "../assets/images/trustpilot.svg";
   const handleClick = (iconId, heartId) => {
     const icon = document.getElementById(iconId);
     const heart = document.getElementById(heartId);
-    
-    icon.addEventListener('click', () => {
-      heart.classList.remove('hidden');
-      heart.classList.add('fly-up-animation');
-      
+
+    icon.addEventListener("click", () => {
+      heart.classList.remove("hidden");
+      heart.classList.add("fly-up-animation");
+
       // Timeout til at nulstille efter animationen
       setTimeout(() => {
-        heart.classList.remove('fly-up-animation');
-        heart.classList.add('hidden');
+        heart.classList.remove("fly-up-animation");
+        heart.classList.add("hidden");
       }, 1000); // Samme varighed som animationen
     });
   };
 
   // Kald funktionen for begge elementer
-  handleClick('klik_mig', 'heart-icon');
-  handleClick('icon', 'fly-icon');
+  handleClick("klik_mig", "heart-icon");
+  handleClick("icon", "fly-icon");
+
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  inView(".entrance", () => {
+    animate(".entrance", { opacity: [0, 1] }, { duration: 1 });
+  });
+
+  /* Stagger animation */
+  inView("#stagger", () => {
+    animate(
+      ".staggeranimation",
+      { opacity: [0, 1] },
+      {
+        delay: stagger(0.3, { start: 0.5 }), // Reduceret forsinkelse mellem elementer og starttidspunkt
+      }
+    );
+  });
 </script>

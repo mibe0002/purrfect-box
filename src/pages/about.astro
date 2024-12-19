@@ -79,7 +79,7 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
         </div>
        </section>
 
-       <div class="gradient relative -z-20 pb-d-lg">
+       <div class="gradient relative -z-20 pb-64">
             <section class="mx-m-sm lg:mb-d-lg lg:mx-d-3xl pt-m-lg lg:pt-d-lg overflow-hidden">
                 <h2 class="font-bold mb-m-s lg:mb-d-s">Mød teamet</h2>
 
@@ -189,7 +189,55 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
                 </div>
             </section>
 
-            <section class="lg:mx-d-3xl mb-d-lg z-50">
+    
+
+            <div class="absolute bottom-0 -z-10 lg:invisible">
+                    <Image class="h-full " src={yarn2} alt="Billede der viser en kat" loading="lazy"/>
+                </div>
+            <div class="flex justify-center overflow-hidden">
+                 <Image class="h-full absolute lg:pb-d-s top-0 -z-10 invisible lg:visible" src={yarn} alt="Billede der viser en kat" loading="lazy"/>
+             </div>
+       </div>
+
+       <section id="faq" class="pb-d-sm">
+    <div class="bg-[url('../img/forside_nyhedsbrev.svg')] pt-d-sm pb-d-s">
+      <h2 class="font-bold text-center mx-m-sm leading-10 lg:mx-0">
+        Ik' mis de særlige tilbud og nyheder
+      </h2>
+      <form
+        action="/subscribe"
+        method="post"
+        data-netlify="true"
+        class="flex flex-col items-center pt-d-s"
+      >
+        <div class="flex gap-m-xs md:gap-d-xxs md:w-fit">
+          <label for="email" class="pb-m-xs"></label>
+          <input
+            id="email"
+            name="email"
+            placeholder="Email-adresse"
+            type="email"
+            autocomplete="email"
+            required
+            class="block w-full md:w-[267px] rounded-knapper shadow-drop10 bg-blue-50 border text-blue-800 text-sm focus:ring-blue-500 focus:border-blue-500 p-2.5 placeholder-blue-800"
+          />
+
+          <span class="hidden md:block"
+            ><Button variant="primary" size="desktop"
+              ><input type="submit" value="Send" /></Button
+            ></span
+          >
+          <span class="md:hidden flex"
+            ><Button variant="primary" size="mobile"
+              ><input type="submit" value="Send" /></Button
+            ></span
+          >
+        </div>
+      </form>
+    </div>
+  </section>
+
+       <section class="lg:mx-d-3xl mb-d-lg z-50">
                 <h2 class="font-bold mx-m-sm pb-d-s pt-m-lg lg:pt-d-lg">FAQ</h2>
                 <div class="pb-d-sm lg:grid grid-cols-2">
                 <Accordion
@@ -220,14 +268,6 @@ import mobileImage from "../assets/images/omos_mobilehero.png";
 
                 
             </section>
-
-            <div class="absolute bottom-0 -z-10 lg:invisible">
-                    <Image class="h-full " src={yarn2} alt="Billede der viser en kat" loading="lazy"/>
-                </div>
-            <div class="flex justify-center overflow-hidden">
-                 <Image class="h-full absolute top-0 -z-10 invisible lg:visible" src={yarn} alt="Billede der viser en kat" loading="lazy"/>
-             </div>
-       </div>
 
 </MainLayout>
 
