@@ -23,9 +23,22 @@ import kat2 from "../assets/images/forside_kat2.svg";
 import kat3 from "../assets/images/forside_kat3.svg";
 import trustpilot from "../assets/images/trustpilot.svg";
 import omos from "../assets/images/omos_desktophero.png";
----
 
-<MainLayout title="Purrfect Box">
+const schemamarkup = {
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "purrfectbox",
+  "url": "https://purrfectbox.netlify.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+---
+<MainLayout title="Purrfect Box"
+title="purrfectbox"
+>
   <section>
     <div class="">
       <div class="w-full">
@@ -560,3 +573,5 @@ import omos from "../assets/images/omos_desktophero.png";
     );
   });
 </script>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemamarkup)} />
