@@ -20,6 +20,8 @@ import cc1 from "../assets/images/carousel1.jpg";
 import cc2 from "../assets/images/carousel2.jpg";
 import cc3 from "../assets/images/carousel3.jpg";
 import cc4 from "../assets/images/carousel4.jpg";
+import cc5 from "../assets/images/carousel5.jpg";
+import cc6 from "../assets/images/carousel6.jpg";
 ---
 
 <MainLayout class="relative">
@@ -40,7 +42,7 @@ import cc4 from "../assets/images/carousel4.jpg";
 
         <div class="md:flex md:justify-items-center gap-m-lg md:gap-d-lg">
             <div>
-                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="rounded-default w-full h-full object-cover object-center mb-m-sm"></Image>
+                <Image src={custom} alt="Et billede af vores Custom Box med gul baggrund" loading="eager" class="rounded-default w-full h-full object-cover object-center mb-m-sm"></Image>
             </div>
             <div class="md:col-auto md:px-d-m md:flex md:flex-col md:justify-between md:min-w-[500px] md:h-auto">
                 <h2 class="pb-m-sm md:pb-d-xxs">Custom Box</h2>
@@ -48,27 +50,27 @@ import cc4 from "../assets/images/carousel4.jpg";
                     Vælg 14 valgfrie produkter af kvalitetsmærker.</p>
                 <ul class="grid grid-cols-2 grid-rows-3 md:gap-x-d-s w-full h-auto">
                         <li class="flex gap-d-s items-center">
-                            <Image src={can} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <Image src={can} alt="Et ikon af vådfoder fra dåse" loading="eager" class="w-[40px] h-auto"></Image>
                             <p>Vådfoder</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={bag} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <Image src={bag} alt="Et ikon af tørfoder" loading="eager" class="w-[40px] h-auto"></Image>
                             <p>Tørfoder</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={fish} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <Image src={fish} alt="Et ikon af en en fisk som skal symbolisere katte snacks" loading="eager" class="w-[40px] h-auto"></Image>
                             <p>Snacks</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={mouse} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <Image src={mouse} alt="Et ikon af en mus som" loading="eager" class="w-[40px] h-auto"></Image>
                             <p class="text-nowrap">Stk. legetøj</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={shovel} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <Image src={shovel} alt="Et ikon af en kattebakke skovl/ske" loading="eager" class="w-[40px] h-auto"></Image>
                             <p>Kattegrus</p>
                         </li>
                         <li class="flex gap-d-s items-center">
-                            <Image src={paw} alt="Et ikon af en dåse" loading="lazy" class="w-[40px] h-auto"></Image>
+                            <Image src={paw} alt="Et ikon af en katte pote" loading="eager" class="w-[40px] h-auto"></Image>
                             <p>Pleje</p>
                         </li>
                 </ul>
@@ -79,10 +81,10 @@ import cc4 from "../assets/images/carousel4.jpg";
                 </div>
                 
                 <span class="md:hidden flex justify-end">
-                    <Button variant="primary" size="mobile">Køb nu</Button>
+                    <Link href="/formular"><Button variant="primary" size="mobile">Køb nu</Button></Link>
                 </span>
                 <span class="hidden md:flex justify-end">
-                    <Button variant="primary" size="desktop">Køb nu</Button>
+                    <Link href="/formular"><Button variant="primary" size="desktop">Køb nu</Button></Link>
                 </span>
 
                  <div class="relative hidden md:block">
@@ -140,41 +142,51 @@ import cc4 from "../assets/images/carousel4.jpg";
     </section>
 
     <section class="pb-m-lg md:pb-d-lg">
-        <h2 class="pb-d-sm md:pb-d-sm text-center">Hvordan køber jeg en Purrfect Box?</h2>
+        <h2 class="pb-d-sm md:pb-d-sm text-center">Hvordan fungerer Purrfect Box?</h2>
         <HowTo></HowTo>
     </section>
 
-    <section class="relative pl-m-sm md:pl-d-3xl md:pt-d-m text-center">
+    <section class="relative pl-m-sm md:pl-d-3xl text-center">
         <h2 class="pb-d-sm md:pb-d-sm">Hvad meowner andre katte?</h2>
         <div class="mx-auto pb-d-xl">
-            <div class="mx-auto pt-4 pb-8">
+            <div class="relative mx-auto pt-4 pb-8 flex items-end md:items-center">
+                 <!-- Animeret pil for scroll -->
+                <div class="absolute bottom-12 right-4 flex items-center animate-bounce z-20 bg-yellow-200/80 rounded-default">
+                    <span class="text-blue-950 font-montserrat font-bold md:text-d-h4 text-m-h4 md:pl-d-xs pl-m-s">Scroll</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-yellow-500 cursor-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+
                 <div class="overflow-hidden relative carousel-wrapper">
                     <!-- Carousel Wrapper -->
                     <div class="flex space-x-4 overflow-x-scroll no-scrollbar">
-                    <!-- Slides -->
-                    <div class="flex flex-nowrap">
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                        <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <!-- Slides -->
+                        <div class="flex flex-nowrap">
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                            <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
-
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
-
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
                         <Image src={cc2} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc1} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
-                    </div>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
 
-                    <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
-                    <Image src={cc3} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                            <Image src={cc4} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
+
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc5} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
+
+                        <div class="carousel-slide min-w-full md:min-w-[33.3333%] p-4">
+                        <Image src={cc6} alt="Et billede af vores Custom Box med gul baggrund" loading="lazy" class="w-full h-auto rounded-lg"></Image>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
