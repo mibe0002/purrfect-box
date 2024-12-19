@@ -61,6 +61,10 @@
     @apply text-blue-50;
   }
 
+  #accordion h4 {
+    @apply font-medium;
+  }
+
   header,
   body {
     @apply bg-blue-50;
@@ -196,7 +200,8 @@
   }
 
   .svg-filter:hover {
-    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg) brightness(94%) contrast(89%);
+    filter: invert(26%) sepia(74%) saturate(3556%) hue-rotate(317deg)
+      brightness(94%) contrast(89%);
   }
 
   .item .activeIcon {
